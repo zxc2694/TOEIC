@@ -16,6 +16,8 @@
 
 <img src = "http://i.imgur.com/Bj1AEEs.png" width=1000>
 
+<img src = "http://i.imgur.com/0HJscUx.png" width=600>
+
 ## Development
 
 * The tool is made by MFC of Visual Studio based on C/C++ programming.
