@@ -12,6 +12,17 @@ typedef struct
 	CString ps[32];
 } Words;
 
+typedef struct
+{
+	int number[3000];
+	CString word[3000];
+	CString chinese[3000];
+	CString connect[3000];
+	int number_arrange[3000];
+	char wordChar[3000][50];
+	char word_arrange[3000][50];
+} Words_All;
+
 int button_Read(int *d);
 void getDayWord(int Day, Words &myWords);
 void getWords_Day1(Words &words);

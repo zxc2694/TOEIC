@@ -195,13 +195,8 @@ void test_Dlg::OnBnClickedRadioCToE()
 		out_Num.Format(_T("Rank: %d"), test_number[i]);
 		GetDlgItem(IDC_ANSEDIT1 + i)->SetWindowText(out_Num);
 
-		CString out_Num2;
-		out_Num2.Format(_T("Rank: %d"), test_number[i]);
-		GetDlgItem(IDC_ANSEDIT1 + i)->SetWindowText(out_Num + out_Num2);
-
 		GetDlgItem(IDC_EDIT1 + i)->SetWindowText(_T(""));
 		GetDlgItem(IDC_EDIT_CHIN1 + i)->SetWindowText(test_chinese[i]);
-
 		
 		//chinese[i] = test_chinese[i].GetBuffer(test_chinese[i].GetLength());
 		//test_chinese[i].ReleaseBuffer();

@@ -1110,7 +1110,57 @@ void CMFCApplicationDlg::OnMenuDay()
 
 void CMFCApplicationDlg::OnMenuAll()
 {
+	Words tempWords;
+	int count = 0;
+	
+	for (int j = 30; j > 22; j--)
+	{
+		getDayWord(j, tempWords);
+		for (int i = 0; i < 32; i++)
+		{
+			allWords.word[count] = tempWords.word[i];
+			allWords.number[count] = tempWords.number[i];
+			allWords.chinese[count] = tempWords.chinese[i];
+			count++;
+		}
+	}
+	char wordChar[20];
+	const TCHAR* unicode_string[3000];
+	for (int i = 0; i < count; i++)
+	{
+		unicode_string[i] = (LPCTSTR)allWords.word[i];
+		int size = wcslen(unicode_string[i]);
+		wcstombs(wordChar, unicode_string[i], size + 1);
+		strcpy(allWords.wordChar[i], wordChar);
+	}
 
+	for (int i = 0; i < count; i++)
+	{
+		strcpy(allWords.word_arrange[i], allWords.wordChar[i]);
+		allWords.number_arrange[i] = allWords.number[i];
+	}
+
+	char buffer[20];
+	int numberBuffer;
+	for (int i = 0; i < count; ++i)
+	{
+		for (int j = i + 1; j < count; ++j)
+		{
+			if (strcmp(allWords.word_arrange[i], allWords.word_arrange[j]) > 0)
+			{
+				// Directly exchange two values
+				strcpy(buffer, allWords.word_arrange[i]);
+				strcpy(allWords.word_arrange[i], allWords.word_arrange[j]);
+				strcpy(allWords.word_arrange[j], buffer);
+
+				numberBuffer = allWords.number_arrange[i];
+				allWords.number_arrange[i] = allWords.number_arrange[j];
+				allWords.number_arrange[j] = numberBuffer;
+			}
+		}
+	}
+	int a = 0;
+	a++;
 }
 
 

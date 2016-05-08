@@ -12,6 +12,7 @@ class CMFCApplicationDlg : public CDialogEx
 public:
 	int day[31], getDay[30];
 	Words myWords;
+	Words_All allWords;
 
 	CMFCApplicationDlg(CWnd* pParent = NULL);	// 標準建構函式
 
