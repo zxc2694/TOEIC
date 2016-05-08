@@ -4,7 +4,7 @@
 
 * This is a useful tool about learning English words. 
 
-* The tool can test English words according to select ranges by yourself. 
+* The tool can test English words according to choosing ranges by yourself. 
 
 *  Suggest that you can reference the [book](http://www.cavesbooks.com.tw/ec/books_prod_content.aspx?SHOPID=WSP2012121214014620V&GID=GDS20131109234517Z9K) to study. 
 
