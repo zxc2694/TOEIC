@@ -167,12 +167,78 @@ void getWords_Day19(Words &words)
 }
 void getWords_Day20(Words &words)
 {
+
 }
 void getWords_Day21(Words &words)
 {
+	words.word[0] = _T("speculation"); words.number[0] = 2001; words.chinese[0] = _T("n. 臆測、猜測、投機");	 words.ps[0] = _T("\r\nps. speculate (v) 思索、推測、投機；speculator (n) 投機者");
+	words.word[1] = _T("feasible"); words.number[1] = 2003; words.chinese[1] = _T("adj. (意見、計畫等)可實行的、可能的");	 words.ps[1] = _T("\r\nps. feasibility (n) 可行性");
+	words.word[2] = _T("ventilation"); words.number[2] = 2007; words.chinese[2] = _T("n. 通風、空氣流通");	 words.ps[2] = _T("\r\nps. ventilate (v) 使空氣流通、使通風");
+	words.word[3] = _T("fragile"); words.number[3] = 2010; words.chinese[3] = _T("adj. 易碎的、脆弱的");	 words.ps[3] = _T("");
+	words.word[4] = _T("consist"); words.number[4] = 2013; words.chinese[4] = _T("v. 由~構成、存在於");	 words.ps[4] = _T("");
+	words.word[5] = _T("deteriorate"); words.number[5] = 2016; words.chinese[5] = _T("v. 使惡化、變壞");	 words.ps[5] = _T("\r\nps. deterioration (n) 惡化");
+	words.word[6] = _T("perceive"); words.number[6] = 2018; words.chinese[6] = _T("v. 察覺、理解為");	 words.ps[6] = _T("\r\nps. perception (n) 認知、察覺");
+	words.word[7] = _T("initiate"); words.number[7] = 2019; words.chinese[7] = _T("v. 開始、發起");	 words.ps[7] = _T("\r\nps. initial  (adj) 最初的 (576)；initivative (n) 主動行動、主動權、率先");
+	words.word[8] = _T("fluent"); words.number[8] = 2027; words.chinese[8] = _T("adj. 流暢的、流利的");	 words.ps[8] = _T("\r\nps. fluently (adv) 流暢地；fluency (n) 流暢");
+	words.word[9] = _T("housing"); words.number[9] = 2030; words.chinese[9] = _T("n. 住宅、住宅供給");	 words.ps[9] = _T("\r\nps. house (v)提供(居住、場所)；(n)房子");
+	words.word[10] = _T("attribute"); words.number[10] = 2032; words.chinese[10] = _T("v. 把~歸因於；n. 屬性、特質");	 words.ps[10] = _T("\r\nps. attribution (n) 歸屬、歸因");
+	words.word[11] = _T("chronicle"); words.number[11] = 2035; words.chinese[11] = _T("n. 編年史、記事；v. 紀錄");	 words.ps[11] = _T("\r\nps. chronological (adj) 編年的、依時間先後記載的");
+	words.word[12] = _T("municipal"); words.number[12] = 2039; words.chinese[12] = _T("adj. 市政的、自治的");	 words.ps[12] = _T("");
+	words.word[13] = _T("acquaintance"); words.number[13] = 2041; words.chinese[13] = _T("n. 認識的人、相識");	 words.ps[13] = _T("\r\nps. acquaint (v) 使熟悉、使了解");
+	words.word[14] = _T("periodical"); words.number[14] = 2045; words.chinese[14] = _T("n. 期刊、雜誌");	 words.ps[14] = _T("\r\nps. period (n) 期間；periodic (adj) 定期的、週期的；\r\n    periodically (adv) 定期地、週期性地");
+	words.word[15] = _T("partition"); words.number[15] = 2049; words.chinese[15] = _T("n. 隔板、間隔、分割；v. 分割、隔開");	 words.ps[15] = _T("");
+	words.word[16] = _T("principle"); words.number[16] = 2054; words.chinese[16] = _T("n. 原則、原理、信念、定律");	 words.ps[16] = _T("");
+	words.word[17] = _T("reminder"); words.number[17] = 2057; words.chinese[17] = _T("n. 提醒函、提醒事物");	 words.ps[17] = _T("\r\nps. remind (v) 使記起、提醒；remainder (n) 其餘 = others");
+	words.word[18] = _T("column"); words.number[18] = 2061; words.chinese[18] = _T("n. 圓柱、攔、專欄");	 words.ps[18] = _T("");
+	words.word[19] = _T("cater"); words.number[19] = 2063; words.chinese[19] = _T("v. 準備宴席、提共飲食");	 words.ps[19] = _T("\r\nps. catering (n) 承辦酒席；caterer (n) 外燴業者");
+	words.word[20] = _T("consecutive"); words.number[20] = 2065; words.chinese[20] = _T("adj. 連續的");	 words.ps[20] = _T("\r\nps. consecutively (adv) 連續地");
+	words.word[21] = _T("contrary"); words.number[21] = 2068; words.chinese[21] = _T("adj. 相反的、對立的");	 words.ps[21] = _T("");
+	words.word[22] = _T("furnished"); words.number[22] = 2071; words.chinese[22] = _T("adj. 配備傢俱的、具備的");	 words.ps[22] = _T("\r\nps. furnish (v) 配置傢俱、供給；furnishings (n) 居家陳設品");
+	words.word[23] = _T("browse"); words.number[23] = 2075; words.chinese[23] = _T("v. 瀏覽、檢索(資訊)；n. 瀏覽");	 words.ps[23] = _T("");
+	words.word[24] = _T("moderate"); words.number[24] = 2077; words.chinese[24] = _T("adj. 適度的、溫和的；v. 使適中、主持");	 words.ps[24] = _T("\r\nps. moderately (adv) 適度地、過得去地；moderation (n) 緩和、適度、節制");
+	words.word[25] = _T("ample"); words.number[25] = 2078; words.chinese[25] = _T("adj. 充分的、豐富的");	 words.ps[25] = _T("\r\nps. 相似詞：sufficient (729)；amply (adv) 充分地");
+	words.word[26] = _T("primary"); words.number[26] = 2085; words.chinese[26] = _T("adj. 主要的、初級的");	 words.ps[26] = _T("\r\nps. primarily (adv) 主要地");
+	words.word[27] = _T("optimistic"); words.number[27] = 2056; words.chinese[27] = _T("adj. 樂觀的");	 words.ps[27] = _T("\r\nps. 樂: optimistic = postive <--> 悲: pessimistic = negative；\r\n    optimize (v) 使完善、使有效的；optimism (n) 樂觀(主義)");
+	words.word[28] = _T("attitude"); words.number[28] = 2090; words.chinese[28] = _T("n. 態度、意見、姿勢");	 words.ps[28] = _T("");
+	words.word[29] = _T("soar"); words.number[29] = 2092; words.chinese[29] = _T("v. 飛漲、翱翔");	 words.ps[29] = _T("");
+	words.word[30] = _T("conversion"); words.number[30] = 2095; words.chinese[30] = _T("n. 改變、轉換");	 words.ps[30] = _T("\r\nps. convert (v) 轉換、轉變；(n) 改變信仰者");
+	words.word[31] = _T("alleviate"); words.number[31] = 2098; words.chinese[31] = _T("v. 減輕、緩和(問題、病痛等)");	 words.ps[31] = _T("\r\nps. 相似詞：relieve (1844)；alleviation (n) 緩和、鎮痛物");
+
 }
 void getWords_Day22(Words &words)
 {
+	words.word[0] = _T("practical"); words.number[0] = 2101; words.chinese[0] = _T("adj. 切實可行的、實際的、實用的");	 words.ps[0] = _T("\r\nps. 相反詞：impractical 不切實際的、不實用的");
+	words.word[1] = _T("yield"); words.number[1] = 2105; words.chinese[1] = _T("n. 利潤、產量");	 words.ps[1] = _T("");
+	words.word[2] = _T("sensitivity"); words.number[2] = 2108; words.chinese[2] = _T("n. 敏感性、敏銳度、感受性");	 words.ps[2] = _T("\r\nps. sensitive (adj) 敏感的；sensible (adj) 意識到的、合情理的");
+	words.word[3] = _T("intersection"); words.number[3] = 2110; words.chinese[3] = _T("n. 交叉路口");	 words.ps[3] = _T("");
+	words.word[4] = _T("bare"); words.number[4] = 2115; words.chinese[4] = _T("adj. 空的(山等)、光裸的；v. 使赤裸、露出");	 words.ps[4] = _T("\r\nps. barely (adv) 僅僅、剛剛、幾乎不");
+	words.word[5] = _T("tension"); words.number[5] = 2117; words.chinese[5] = _T("n. 緊張、(經濟關係)緊張狀況、對立");	 words.ps[5] = _T("\r\nps. tense (adj) 緊張的、緊繃的；(v) 使緊張");
+	words.word[6] = _T("downturn"); words.number[6] = 2120; words.chinese[6] = _T("n. (經濟)衰退、不景氣、下降");	 words.ps[6] = _T("");
+	words.word[7] = _T("insight"); words.number[7] = 2124; words.chinese[7] = _T("n. 見地、見識、洞察力、眼光");	 words.ps[7] = _T("\r\nps. insightful (adj) 具洞察力的、有深刻見解的");
+	words.word[8] = _T("evident"); words.number[8] = 2127; words.chinese[8] = _T("adj. 明顯的、清楚的");	 words.ps[8] = _T("\r\nps. evidently (adv) 明顯地、顯然地；evidence (n) 證據");
+	words.word[9] = _T("pave"); words.number[9] = 2130; words.chinese[9] = _T("v. 鋪(路)");	 words.ps[9] = _T("\r\nps. pavement (n) 鋪過的路、人行道");
+	words.word[10] = _T("legislation"); words.number[10] = 2134; words.chinese[10] = _T("n. 立法、法令、法規");	 words.ps[10] = _T("\r\nps. legislate (v) 制定法律、立法；legislator (n) 立法者；\r\n    legislative (adj) 立法的");
+	words.word[11] = _T("amendment"); words.number[11] = 2137; words.chinese[11] = _T("n. 修訂、修正、修正事項");	 words.ps[11] = _T("\r\nps. amend (v) 修訂、修正");
+	words.word[12] = _T("parcel"); words.number[12] = 2142; words.chinese[12] = _T("n. 包裹、小包；v. 打包、裹好");	 words.ps[12] = _T("\r\nps. 相似詞：package (n)");
+	words.word[13] = _T("conscious"); words.number[13] = 2145; words.chinese[13] = _T("adj. 意識到的、察覺到的");	 words.ps[13] = _T("\r\nps. consciousness (n) 意識、知覺；相反詞：unconscious (adj) 無意識的");
+	words.word[14] = _T("foreseeable"); words.number[14] = 2147; words.chinese[14] = _T("adj. 可預見的、可預測的");	 words.ps[14] = _T("\r\nps. foresee (v) 預見、預知；unforeseen (adj) 預料之外的");
+	words.word[15] = _T("shred"); words.number[15] = 2149; words.chinese[15] = _T("v. 切碎、撕");	 words.ps[15] = _T("");
+	words.word[16] = _T("convey"); words.number[16] = 2153; words.chinese[16] = _T("v. 傳送、運送");	 words.ps[16] = _T("");
+	words.word[17] = _T("restrain"); words.number[17] = 2156; words.chinese[17] = _T("v. 控制、抑制、阻止");	 words.ps[17] = _T("\r\nps. restraint (n) 限制、管制、制止");
+	words.word[18] = _T("successive"); words.number[18] = 2159; words.chinese[18] = _T("adj. 連續的、相繼的");	 words.ps[18] = _T("\r\nps. 相似詞: consecutive (2065)；successful (adj) 成功的");
+	words.word[19] = _T("parallel"); words.number[19] = 2162; words.chinese[19] = _T("adj. adv. 平行的(地)；v. 與~相似；n. 類似的人事物");	 words.ps[19] = _T("");
+	words.word[20] = _T("unanimously"); words.number[20] = 2164; words.chinese[20] = _T("adv. 全體一致地、無異議地");	 words.ps[20] = _T("\r\nps. unanimous (adj) 無異議的、全體一致的");
+	words.word[21] = _T("resemblance"); words.number[21] = 2167; words.chinese[21] = _T("n. 相似點、相似");	 words.ps[21] = _T("");
+	words.word[22] = _T("subordinate"); words.number[22] = 2170; words.chinese[22] = _T("n. 部屬；adj. 次要的、隸屬的");	 words.ps[22] = _T("");
+	words.word[23] = _T("cultivate"); words.number[23] = 2175; words.chinese[23] = _T("v. 培育、耕作");	 words.ps[23] = _T("\r\nps. cultivation (n) 培育、耕作；cultivated (adj) 有教養的、耕作的");
+	words.word[24] = _T("utmost"); words.number[24] = 2178; words.chinese[24] = _T("n. 最大可能、極限；adj. 最大限度");	 words.ps[24] = _T("");
+	words.word[25] = _T("dividend"); words.number[25] = 2181; words.chinese[25] = _T("n. 股息、股利");	 words.ps[25] = _T("\r\nps. divide (v) 分配、劃分；division (n) 分割(公司的)、部門");
+	words.word[26] = _T("allocate"); words.number[26] = 2182; words.chinese[26] = _T("v. 分配、分派");	 words.ps[26] = _T("\r\nps. allocation (n) 分配物、分配");
+	words.word[27] = _T("exclusive"); words.number[27] = 2186; words.chinese[27] = _T("adj. 獨家的、獨佔的、專用的、排外的");	 words.ps[27] = _T("\r\nps. 相反詞：inclusive (adj) 包含的；exclusively (adv) 獨佔地、專有地；\r\n    exclude (v) 將~排除在外；exclusion (n) 排除在外");
+	words.word[28] = _T("contamination"); words.number[28] = 2191; words.chinese[28] = _T("n. 汙染、玷汙");	 words.ps[28] = _T("\r\nps. contaminate (v) 汙染、玷汙；contaminant (n) 汙染物質");
+	words.word[29] = _T("punctuality"); words.number[29] = 2194; words.chinese[29] = _T("n. 守時、準時");	 words.ps[29] = _T("\r\nps. punctual (adj) 守時的");
+	words.word[30] = _T("intention"); words.number[30] = 2199; words.chinese[30] = _T("n. 意圖、目的");	 words.ps[30] = _T("\r\nps. intend (v) 意圖、想要；intentional (adj) 有意的");
+	words.word[31] = _T("culminate"); words.number[31] = 2200; words.chinese[31] = _T("v. 結束、告終");	 words.ps[31] = _T("\r\nps. culmination (n) 頂點、高潮");
 }
 void getWords_Day23(Words &words)
 {
