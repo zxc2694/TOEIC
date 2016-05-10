@@ -276,6 +276,20 @@ void CMFCApplicationDlg::OnBnClickedTestbn() // 測試單字
 		// Reset count to avoid error counting
 		testDlg->resetCount();
 
+		int getNumArr[10];
+
+		// 不同的數字作為初始值
+		getNumArr[0] = 100;
+		getNumArr[1] = 101;
+		getNumArr[2] = 102;
+		getNumArr[3] = 103;
+		getNumArr[4] = 104;
+		getNumArr[5] = 105;
+		getNumArr[6] = 106;
+		getNumArr[7] = 107;
+		getNumArr[8] = 108;
+		getNumArr[9] = 109;
+
 		while (count < 10) // Test 10 words
 		{
 			int readNum = button_Read(day);
@@ -284,17 +298,37 @@ void CMFCApplicationDlg::OnBnClickedTestbn() // 測試單字
 
 			getDayWord(bingoDay, myWords);
 
-			int bingoWord = rand() % 32;			
+			int bingoWord = rand() % 32;
+
+			getNumArr[count] = bingoWord;
+
+
+			// 避免出現重複的單字
+			while (1)
+			{
+				int c = 0;
+				for (int i = 0; i < 10; i++)
+				{
+					for (int j = i + 1; j < 10; j++)
+					{
+						if (getNumArr[i] == getNumArr[j])
+						{
+							bingoWord = rand() % 32;
+							getNumArr[count] = bingoWord;
+							c = 0;
+						}
+						else
+							c++;
+					}
+				}
+
+				if (c == 45)
+					break;
+			}
 
 			testDlg->trasferData_English(myWords.word[bingoWord]);
 			testDlg->trasferData_number(myWords.number[bingoWord]);
 			testDlg->trasferData_chienese(myWords.chinese[bingoWord]);
-
-			/*char *FixChinese, dest[200];
-			FixChinese = (char*)(LPCTSTR)myWords.chinese[bingoWord];
-			FixChinese = (char*)(LPCTSTR)myWords.word[5];
-			char *temp = strstr(FixChinese,"ps.");
-			int tempLength = strlen(temp);*/
 
 			count++;
 		}	
@@ -1128,6 +1162,7 @@ void CMFCApplicationDlg::OnMenuAll()
 	const TCHAR* unicode_string[3000];
 	for (int i = 0; i < count; i++)
 	{
+		//Convert CString to char*
 		unicode_string[i] = (LPCTSTR)allWords.word[i];
 		int size = wcslen(unicode_string[i]);
 		wcstombs(wordChar, unicode_string[i], size + 1);

@@ -11,6 +11,8 @@
 
 CString test_chinese[10];
 CString test_English[10];
+char *test_chinese_ch[10];
+char *test_English_ch[10];
 int test_number[10];
 int getDayT[30];
 char *chinese[10];
@@ -72,12 +74,24 @@ void test_Dlg::resetCount()
 void test_Dlg::trasferData_chienese(CString string)
 {
 	test_chinese[count1] = string;
+
+	const TCHAR* unicode_string;
+	unicode_string = (LPCTSTR)string;
+	int size = wcslen(unicode_string);
+	wcstombs(test_chinese_ch[count1], unicode_string, size + 1);
+
 	count1++;
 }
 
 void test_Dlg::trasferData_English(CString string)
 {
 	test_English[count2] = string;
+
+	const TCHAR* unicode_string;
+	unicode_string = (LPCTSTR)string;
+	int size = wcslen(unicode_string);
+	wcstombs(test_English_ch[count2], unicode_string, size + 1);
+
 	count2++;
 }
 
@@ -217,6 +231,21 @@ void test_Dlg::OnBnClickedButtonUpdate()
 	{
 		// Get random words
 		int count = 0, bingoDay = 0, bingoWord = 0, i = 0;
+		bool error = false;
+		int getNumArr[10];
+		
+		// 不同的數字作為初始值
+		getNumArr[0] = 100;
+		getNumArr[1] = 101;
+		getNumArr[2] = 102;
+		getNumArr[3] = 103;
+		getNumArr[4] = 104;
+		getNumArr[5] = 105;
+		getNumArr[6] = 106;
+		getNumArr[7] = 107;
+		getNumArr[8] = 108;
+		getNumArr[9] = 109;
+
 
 		// How many days are selected
 		int c = 0;
@@ -234,8 +263,37 @@ void test_Dlg::OnBnClickedButtonUpdate()
 
 			getDayWord(bingoDay, myWords);
 
+			// Get random word
 			int bingoWord = rand() % 32;
 
+
+			getNumArr[count] = bingoWord;
+
+
+			// 避免出現重複的單字
+			while (1)
+			{
+				int c = 0;
+				for (int i = 0; i < 10; i++)
+				{
+					for (int j = i + 1; j < 10; j++)
+					{
+						if (getNumArr[i] == getNumArr[j])
+						{
+							bingoWord = rand() % 32;
+							getNumArr[count] = bingoWord;
+							c = 0;
+						}
+						else
+							c++;
+					}
+				}
+				
+				if (c == 45)
+					break;
+			}
+
+			// Transfer selected value to array we will show
 			trasferData_English(myWords.word[bingoWord]);
 			trasferData_number(myWords.number[bingoWord]);
 			trasferData_chienese(myWords.chinese[bingoWord]);
