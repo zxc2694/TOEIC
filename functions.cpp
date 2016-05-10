@@ -167,6 +167,38 @@ void getWords_Day19(Words &words)
 }
 void getWords_Day20(Words &words)
 {
+	words.word[0] = _T("enthusiastic"); words.number[0] = 1901; words.chinese[0] = _T("adj. 熱情的、熱烈的");	 words.ps[0] = _T("\r\nps. enthusiastically (adv) 熱心地、滿懷熱情地；enthusiasm (n) 熱情");
+	words.word[1] = _T("literacy"); words.number[1] = 1905; words.chinese[1] = _T("n. 讀寫能力");	 words.ps[1] = _T("\r\nps. 相反詞：illiteracy (n) 文盲；literacy (adj) 有讀寫能力的");
+	words.word[2] = _T("discard"); words.number[2] = 1908; words.chinese[2] = _T("v. 丟棄、拋棄");	 words.ps[2] = _T("");
+	words.word[3] = _T("dominate"); words.number[3] = 1912; words.chinese[3] = _T("v. 控制、支配、佔優勢");	 words.ps[3] = _T("\r\nps. dominant (adj) 佔優勢的、支配的；domination (n) 支配、控制");
+	words.word[4] = _T("prosecute"); words.number[4] = 1915; words.chinese[4] = _T("v. 起訴、告發、繼續從事");	 words.ps[4] = _T("\r\nps. prosecution (n) 起訴、檢舉；prosecutor (n) 檢察官");
+	words.word[5] = _T("declaration"); words.number[5] = 1917; words.chinese[5] = _T("n. 申報、聲明、宣告");	 words.ps[5] = _T("\r\nps. declare (v) 宣告、宣布；聲明、申報(納稅品等)");
+	words.word[6] = _T("quota"); words.number[6] = 1921; words.chinese[6] = _T("n. 配額、限額、定額");	 words.ps[6] = _T("");
+	words.word[7] = _T("insert"); words.number[7] = 1925; words.chinese[7] = _T("v. 插入、放入；n. 插頁、夾頁");	 words.ps[7] = _T("\r\nps. insertion (n) 插入、置入物");
+	words.word[8] = _T("numerical"); words.number[8] = 1927; words.chinese[8] = _T("adj. 數字的、以數字表示的");	 words.ps[8] = _T("\r\nps. numerous (adj)(1462) 很多的；numeral (n) 數字");
+	words.word[9] = _T("overview"); words.number[9] = 1928; words.chinese[9] = _T("n. (大略的)綜述、概要");	 words.ps[9] = _T("");
+	words.word[10] = _T("possess"); words.number[10] = 1931; words.chinese[10] = _T("v. 擁有、具有、控制、支配");	 words.ps[10] = _T("\r\nps. possession (n) 所有物");
+	words.word[11] = _T("preceding"); words.number[11] = 1937; words.chinese[11] = _T("adj. 在前的、在先的");	 words.ps[11] = _T("\r\nps. 相似詞：previous；precede (v) 在~之前；precedent (n) 慣例、先例；\r\n    unprecedented (adj) 無前例的");
+	words.word[12] = _T("forfeit"); words.number[12] = 1941; words.chinese[12] = _T("v. 失去、喪失(權力等)；n. 罰金、被沒收");	 words.ps[12] = _T("\r\nps. forfeiture (n) (財產等)被沒收、(權力等)喪失");
+	words.word[13] = _T("outcome"); words.number[13] = 1944; words.chinese[13] = _T("n. 結論、結果");	 words.ps[13] = _T("");
+	words.word[14] = _T("workout"); words.number[14] = 1946; words.chinese[14] = _T("n. (運動上的)練習、訓練");	 words.ps[14] = _T("");
+	words.word[15] = _T("incur"); words.number[15] = 1949; words.chinese[15] = _T("v. 帶來、招致");	 words.ps[15] = _T("");
+	words.word[16] = _T("morale"); words.number[16] = 1954; words.chinese[16] = _T("n. 士氣、民心");	 words.ps[16] = _T("");
+	words.word[17] = _T("respectable"); words.number[17] = 1956; words.chinese[17] = _T("adj. 相當好的、值得尊敬的");	 words.ps[17] = _T("\r\nps. respected  (n)(1031) 尊敬、敬意、方面；(v) 尊敬、尊重");
+	words.word[18] = _T("concur"); words.number[18] = 1960; words.chinese[18] = _T("v. 同意、贊成、同時發生");	 words.ps[18] = _T("\r\nps. concurrence (n) 同意、同時發生；concurrent (adj) 同時發生的、協力的；\r\n    concurrently (adv) 同時發生地");
+	words.word[19] = _T("mature"); words.number[19] = 1963; words.chinese[19] = _T("adj. 成熟的、懂事的、到期的；v. 使成熟、使到期");	 words.ps[19] = _T("\r\nps. 相反詞：immature (adj) 未成熟的");
+	words.word[20] = _T("enormous"); words.number[20] = 1965; words.chinese[20] = _T("adj. 龐大的、巨大的");	 words.ps[20] = _T("\r\nps. enormously (adv) 龐大地");
+	words.word[21] = _T("complicated"); words.number[21] = 1967; words.chinese[21] = _T("adj. 複雜的、難懂的");	 words.ps[21] = _T("\r\nps. 相似詞：complex；complicate (v) 使複雜化；\r\n    complication (n) 複雜、糾葛、困難");
+	words.word[22] = _T("widespread"); words.number[22] = 1973; words.chinese[22] = _T("adj. 擴散的、分布廣的、普遍的");	 words.ps[22] = _T("");
+	words.word[23] = _T("momentum"); words.number[23] = 1975; words.chinese[23] = _T("n. 動力、動能、推進力");	 words.ps[23] = _T("");
+	words.word[24] = _T("surpass"); words.number[24] = 1977; words.chinese[24] = _T("v. 超過、勝過、優於");	 words.ps[24] = _T("");
+	words.word[25] = _T("adhere"); words.number[25] = 1980; words.chinese[25] = _T("v. 附著、黏附");	 words.ps[25] = _T("\r\nps. adherence (n) (信念的)堅持、遵守；adherent (n) 擁護者；(adj) 黏著的\r\n    ahesive (n) 膠著劑；(adj) 有黏性的");
+	words.word[26] = _T("bound"); words.number[26] = 1984; words.chinese[26] = _T("adj. 前往~的、有義務的、必然的");	 words.ps[26] = _T("");
+	words.word[27] = _T("refrain"); words.number[27] = 1988; words.chinese[27] = _T("v. 避免、克制、忍住、節制");	 words.ps[27] = _T("");
+	words.word[28] = _T("perspective"); words.number[28] = 1990; words.chinese[28] = _T("n. 觀點、見解、洞察力、遠景");	 words.ps[28] = _T("");
+	words.word[29] = _T("disrupt"); words.number[29] = 1993; words.chinese[29] = _T("v. 擾亂、使混亂、使中斷");	 words.ps[29] = _T("\r\nps. disruption (n) 中斷、擾亂；disruptive (adj) 擾亂的");
+	words.word[30] = _T("apparel"); words.number[30] = 1997; words.chinese[30] = _T("n. 服裝、衣著");	 words.ps[30] = _T("");
+	words.word[31] = _T("principal"); words.number[31] = 2000; words.chinese[31] = _T("n. 校長、主要演員；adj. 主要的、資本的");	 words.ps[31] = _T("\r\nps. 相似詞：main 主要的；principle (n) 原則、法規");
 
 }
 void getWords_Day21(Words &words)

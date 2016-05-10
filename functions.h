@@ -10,6 +10,7 @@ typedef struct
 	CString chinese[32];
 	CString sentence[32];
 	CString ps[32];
+	int Rselect;
 } Words;
 
 typedef struct
