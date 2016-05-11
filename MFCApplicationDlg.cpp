@@ -150,8 +150,9 @@ BOOL CMFCApplicationDlg::OnInitDialog()
 	
 	this->menu.LoadMenu(IDR_MENU1);
 	SetMenu(&this->menu);
-	//this->menu.CheckMenuRadioItem(ID_MENU_DAY, ID_MENU_ALL, ID_MENU_END, MF_BYCOMMAND);
-	Init_hideItem();
+
+	//Hide all items at first
+	ControlDisplay_DAY(SW_HIDE);
 
 	for (int i = 0; i < 30; i++)
 	{
@@ -353,28 +354,56 @@ void CMFCApplicationDlg::OnBnClickedWordshow() // 顯示全部單字按鈕
 			GetDlgItem(i)->InvalidateRect(NULL);
 		}
 
-		for (int i = 0, x = 0; i < 31; i++)
+		if (mode == 1)
 		{
-			if (day[i] == 1)
+			for (int i = 0, x = 0; i < 31; i++)
 			{
-				getDay[x] = i;
-				break;
+				if (day[i] == 1)
+				{
+					getDay[x] = i;
+					break;
+				}
 			}
-		}
 
-		getDayWord(getDay[0], myWords);
-		
-		for (int i = 0; i < 32; i++)
-			GetDlgItem(IDC_EDIT1 + i)->SetWindowText(myWords.word[i]);
+			getDayWord(getDay[0], myWords);
+
+			for (int i = 0; i < 32; i++)
+				GetDlgItem(IDC_EDIT1 + i)->SetWindowText(myWords.word[i]);
+		}
+		if (mode == 2)
+		{
+			for (int i = 0, x = 0; i < 27; i++)
+			{
+				if (day[i] == 1)
+				{
+					getDay[x] = i;
+					break;
+				}
+			}
+
+
+
+
+		}
 	}
 	else
 	{
-		//亂按時，單字格不顯示東西
+		// clean 
+		GetDlgItem(IDC_SOL)->SetWindowText(_T(""));
+		GetDlgItem(IDC_NUM)->SetWindowText(_T(""));
 		for (int i = 0; i < 32; i++)
 			GetDlgItem(IDC_EDIT1 + i)->SetWindowText(_T(""));
 
-		GetDlgItem(IDC_SOL)->SetWindowText(_T("顯示單字: 只能選擇一個DAY\r\n隨機測驗: 可以選擇多個DAY，並隨機抽考10個\r\n\r\n(請再案一次已選取的DAY，可以取消......)"));
+		if (mode == 1)
+		{
+			GetDlgItem(IDC_SOL)->SetWindowText(_T("顯示單字: 只能選擇一個DAY\r\n隨機測驗: 可以選擇多個DAY，並隨機抽考10個\r\n\r\n(請再案一次已選取的DAY，可以取消......)"));
+		}
+		if (mode == 2)
+		{
+			GetDlgItem(IDC_SOL)->SetWindowText(_T("顯示單字: 只能選擇一個字母\r\n隨機測驗: 可以選擇多個字母，並隨機抽考10個\r\n\r\n(請再案一次已選取的字母，可以取消......)"));
+		}
 	}
+	memset(day, 0, 31 * sizeof(int));
 }
 
 
@@ -398,7 +427,12 @@ void CMFCApplicationDlg::OnBnClickedButton1()
 	}
 	else
 	{
-		GetDlgItem(IDC_BUTTON1)->SetWindowText(_T("DAY1"));
+		if (mode == 1)
+			GetDlgItem(IDC_BUTTON1)->SetWindowText(_T("DAY1"));
+
+		if (mode == 2)
+			GetDlgItem(IDC_BUTTON1)->SetWindowText(_T("A"));
+
 		day[1] = 0;
 	}
 	n++;
@@ -414,8 +448,13 @@ void CMFCApplicationDlg::OnBnClickedButton2()
 	}
 	else
 	{
-		GetDlgItem(IDC_BUTTON2)->SetWindowText(_T("DAY2"));
-		day[2] = 0;
+		if (mode == 1)
+			GetDlgItem(IDC_BUTTON2)->SetWindowText(_T("DAY2"));
+
+		if (mode == 2)
+			GetDlgItem(IDC_BUTTON2)->SetWindowText(_T("B"));
+
+		day[1] = 0;
 	}
 	n++;
 }
@@ -430,8 +469,13 @@ void CMFCApplicationDlg::OnBnClickedButton3()
 	}
 	else
 	{
-		GetDlgItem(IDC_BUTTON3)->SetWindowText(_T("DAY3"));
-		day[3] = 0;
+		if (mode == 1)
+			GetDlgItem(IDC_BUTTON3)->SetWindowText(_T("DAY3"));
+
+		if (mode == 2)
+			GetDlgItem(IDC_BUTTON3)->SetWindowText(_T("C"));
+
+		day[1] = 0;
 	}
 	n++;
 }
@@ -446,8 +490,13 @@ void CMFCApplicationDlg::OnBnClickedButton4()
 	}
 	else
 	{
-		GetDlgItem(IDC_BUTTON4)->SetWindowText(_T("DAY4"));
-		day[4] = 0;
+		if (mode == 1)
+			GetDlgItem(IDC_BUTTON4)->SetWindowText(_T("DAY4"));
+
+		if (mode == 2)
+			GetDlgItem(IDC_BUTTON4)->SetWindowText(_T("D"));
+
+		day[1] = 0;
 	}
 	n++;
 }
@@ -462,8 +511,13 @@ void CMFCApplicationDlg::OnBnClickedButton5()
 	}
 	else
 	{
-		GetDlgItem(IDC_BUTTON5)->SetWindowText(_T("DAY5"));
-		day[5] = 0;
+		if (mode == 1)
+			GetDlgItem(IDC_BUTTON5)->SetWindowText(_T("DAY5"));
+
+		if (mode == 2)
+			GetDlgItem(IDC_BUTTON5)->SetWindowText(_T("E"));
+
+		day[1] = 0;
 	}
 	n++;
 }
@@ -479,8 +533,13 @@ void CMFCApplicationDlg::OnBnClickedButton6()
 	}
 	else
 	{
-		GetDlgItem(IDC_BUTTON6)->SetWindowText(_T("DAY6"));
-		day[6] = 0;
+		if (mode == 1)
+			GetDlgItem(IDC_BUTTON6)->SetWindowText(_T("DAY6"));
+
+		if (mode == 2)
+			GetDlgItem(IDC_BUTTON6)->SetWindowText(_T("F"));
+
+		day[1] = 0;
 	}
 	n++;
 }
@@ -496,8 +555,13 @@ void CMFCApplicationDlg::OnBnClickedButton7()
 	}
 	else
 	{
-		GetDlgItem(IDC_BUTTON7)->SetWindowText(_T("DAY7"));
-		day[7] = 0;
+		if (mode == 1)
+			GetDlgItem(IDC_BUTTON7)->SetWindowText(_T("DAY7"));
+
+		if (mode == 2)
+			GetDlgItem(IDC_BUTTON7)->SetWindowText(_T("G"));
+
+		day[1] = 0;
 	}
 	n++;
 }
@@ -513,8 +577,13 @@ void CMFCApplicationDlg::OnBnClickedButton8()
 	}
 	else
 	{
-		GetDlgItem(IDC_BUTTON8)->SetWindowText(_T("DAY8"));
-		day[8] = 0;
+		if (mode == 1)
+			GetDlgItem(IDC_BUTTON8)->SetWindowText(_T("DAY8"));
+
+		if (mode == 2)
+			GetDlgItem(IDC_BUTTON8)->SetWindowText(_T("H"));
+
+		day[1] = 0;
 	}
 	n++;
 }
@@ -530,8 +599,13 @@ void CMFCApplicationDlg::OnBnClickedButton9()
 	}
 	else
 	{
-		GetDlgItem(IDC_BUTTON9)->SetWindowText(_T("DAY9"));
-		day[9] = 0;
+		if (mode == 1)
+			GetDlgItem(IDC_BUTTON9)->SetWindowText(_T("DAY9"));
+
+		if (mode == 2)
+			GetDlgItem(IDC_BUTTON9)->SetWindowText(_T("I"));
+
+		day[1] = 0;
 	}
 	n++;
 }
@@ -547,8 +621,13 @@ void CMFCApplicationDlg::OnBnClickedButton10()
 	}
 	else
 	{
-		GetDlgItem(IDC_BUTTON10)->SetWindowText(_T("DAY10"));
-		day[10] = 0;
+		if (mode == 1)
+			GetDlgItem(IDC_BUTTON10)->SetWindowText(_T("DAY10"));
+
+		if (mode == 2)
+			GetDlgItem(IDC_BUTTON10)->SetWindowText(_T("J"));
+
+		day[1] = 0;
 	}
 	n++;
 }
@@ -564,8 +643,13 @@ void CMFCApplicationDlg::OnBnClickedButton11()
 	}
 	else
 	{
-		GetDlgItem(IDC_BUTTON11)->SetWindowText(_T("DAY11"));
-		day[11] = 0;
+		if (mode == 1)
+			GetDlgItem(IDC_BUTTON11)->SetWindowText(_T("DAY11"));
+
+		if (mode == 2)
+			GetDlgItem(IDC_BUTTON11)->SetWindowText(_T("K"));
+
+		day[1] = 0;
 	}
 	n++;
 }
@@ -581,8 +665,13 @@ void CMFCApplicationDlg::OnBnClickedButton12()
 	}
 	else
 	{
-		GetDlgItem(IDC_BUTTON12)->SetWindowText(_T("DAY12"));
-		day[12] = 0;
+		if (mode == 1)
+			GetDlgItem(IDC_BUTTON12)->SetWindowText(_T("DAY12"));
+
+		if (mode == 2)
+			GetDlgItem(IDC_BUTTON12)->SetWindowText(_T("L"));
+
+		day[1] = 0;
 	}
 	n++;
 }
@@ -598,8 +687,13 @@ void CMFCApplicationDlg::OnBnClickedButton13()
 	}
 	else
 	{
-		GetDlgItem(IDC_BUTTON13)->SetWindowText(_T("DAY13"));
-		day[13] = 0;
+		if (mode == 1)
+			GetDlgItem(IDC_BUTTON13)->SetWindowText(_T("DAY13"));
+
+		if (mode == 2)
+			GetDlgItem(IDC_BUTTON13)->SetWindowText(_T("M"));
+
+		day[1] = 0;
 	}
 	n++;
 }
@@ -615,8 +709,13 @@ void CMFCApplicationDlg::OnBnClickedButton14()
 	}
 	else
 	{
-		GetDlgItem(IDC_BUTTON14)->SetWindowText(_T("DAY14"));
-		day[14] = 0;
+		if (mode == 1)
+			GetDlgItem(IDC_BUTTON14)->SetWindowText(_T("DAY14"));
+
+		if (mode == 2)
+			GetDlgItem(IDC_BUTTON14)->SetWindowText(_T("N"));
+
+		day[1] = 0;
 	}
 	n++;
 }
@@ -632,8 +731,13 @@ void CMFCApplicationDlg::OnBnClickedButton15()
 	}
 	else
 	{
-		GetDlgItem(IDC_BUTTON15)->SetWindowText(_T("DAY15"));
-		day[15] = 0;
+		if (mode == 1)
+			GetDlgItem(IDC_BUTTON15)->SetWindowText(_T("DAY15"));
+
+		if (mode == 2)
+			GetDlgItem(IDC_BUTTON15)->SetWindowText(_T("O"));
+
+		day[1] = 0;
 	}
 	n++;
 }
@@ -649,8 +753,13 @@ void CMFCApplicationDlg::OnBnClickedButton16()
 	}
 	else
 	{
-		GetDlgItem(IDC_BUTTON16)->SetWindowText(_T("DAY16"));
-		day[16] = 0;
+		if (mode == 1)
+			GetDlgItem(IDC_BUTTON16)->SetWindowText(_T("DAY16"));
+
+		if (mode == 2)
+			GetDlgItem(IDC_BUTTON16)->SetWindowText(_T("P"));
+
+		day[1] = 0;
 	}
 	n++;
 }
@@ -666,8 +775,13 @@ void CMFCApplicationDlg::OnBnClickedButton17()
 	}
 	else
 	{
-		GetDlgItem(IDC_BUTTON17)->SetWindowText(_T("DAY17"));
-		day[17] = 0;
+		if (mode == 1)
+			GetDlgItem(IDC_BUTTON17)->SetWindowText(_T("DAY17"));
+
+		if (mode == 2)
+			GetDlgItem(IDC_BUTTON17)->SetWindowText(_T("Q"));
+
+		day[1] = 0;
 	}
 	n++;
 }
@@ -683,8 +797,13 @@ void CMFCApplicationDlg::OnBnClickedButton18()
 	}
 	else
 	{
-		GetDlgItem(IDC_BUTTON18)->SetWindowText(_T("DAY18"));
-		day[18] = 0;
+		if (mode == 1)
+			GetDlgItem(IDC_BUTTON18)->SetWindowText(_T("DAY18"));
+
+		if (mode == 2)
+			GetDlgItem(IDC_BUTTON18)->SetWindowText(_T("R"));
+
+		day[1] = 0;
 	}
 	n++;
 }
@@ -700,8 +819,13 @@ void CMFCApplicationDlg::OnBnClickedButton19()
 	}
 	else
 	{
-		GetDlgItem(IDC_BUTTON19)->SetWindowText(_T("DAY19"));
-		day[19] = 0;
+		if (mode == 1)
+			GetDlgItem(IDC_BUTTON19)->SetWindowText(_T("DAY19"));
+
+		if (mode == 2)
+			GetDlgItem(IDC_BUTTON19)->SetWindowText(_T("S"));
+
+		day[1] = 0;
 	}
 	n++;
 }
@@ -717,8 +841,13 @@ void CMFCApplicationDlg::OnBnClickedButton20()
 	}
 	else
 	{
-		GetDlgItem(IDC_BUTTON20)->SetWindowText(_T("DAY20"));
-		day[20] = 0;
+		if (mode == 1)
+			GetDlgItem(IDC_BUTTON20)->SetWindowText(_T("DAY20"));
+
+		if (mode == 2)
+			GetDlgItem(IDC_BUTTON20)->SetWindowText(_T("T"));
+
+		day[1] = 0;
 	}
 	n++;
 }
@@ -734,8 +863,13 @@ void CMFCApplicationDlg::OnBnClickedButton21()
 	}
 	else
 	{
-		GetDlgItem(IDC_BUTTON21)->SetWindowText(_T("DAY21"));
-		day[21] = 0;
+		if (mode == 1)
+			GetDlgItem(IDC_BUTTON21)->SetWindowText(_T("DAY21"));
+
+		if (mode == 2)
+			GetDlgItem(IDC_BUTTON21)->SetWindowText(_T("U"));
+
+		day[1] = 0;
 	}
 	n++;
 }
@@ -751,8 +885,13 @@ void CMFCApplicationDlg::OnBnClickedButton22()
 	}
 	else
 	{
-		GetDlgItem(IDC_BUTTON22)->SetWindowText(_T("DAY22"));
-		day[22] = 0;
+		if (mode == 1)
+			GetDlgItem(IDC_BUTTON22)->SetWindowText(_T("DAY22"));
+
+		if (mode == 2)
+			GetDlgItem(IDC_BUTTON22)->SetWindowText(_T("V"));
+
+		day[1] = 0;
 	}
 	n++;
 }
@@ -768,8 +907,13 @@ void CMFCApplicationDlg::OnBnClickedButton23()
 	}
 	else
 	{
-		GetDlgItem(IDC_BUTTON23)->SetWindowText(_T("DAY23"));
-		day[23] = 0;
+		if (mode == 1)
+			GetDlgItem(IDC_BUTTON23)->SetWindowText(_T("DAY23"));
+
+		if (mode == 2)
+			GetDlgItem(IDC_BUTTON23)->SetWindowText(_T("W"));
+
+		day[1] = 0;
 	}
 	n++;
 }
@@ -785,8 +929,13 @@ void CMFCApplicationDlg::OnBnClickedButton24()
 	}
 	else
 	{
-		GetDlgItem(IDC_BUTTON24)->SetWindowText(_T("DAY24"));
-		day[24] = 0;
+		if (mode == 1)
+			GetDlgItem(IDC_BUTTON24)->SetWindowText(_T("DAY24"));
+
+		if (mode == 2)
+			GetDlgItem(IDC_BUTTON24)->SetWindowText(_T("X"));
+
+		day[1] = 0;
 	}
 	n++;
 }
@@ -802,8 +951,13 @@ void CMFCApplicationDlg::OnBnClickedButton25()
 	}
 	else
 	{
-		GetDlgItem(IDC_BUTTON25)->SetWindowText(_T("DAY25"));
-		day[25] = 0;
+		if (mode == 1)
+			GetDlgItem(IDC_BUTTON25)->SetWindowText(_T("DAY25"));
+
+		if (mode == 2)
+			GetDlgItem(IDC_BUTTON25)->SetWindowText(_T("Y"));
+
+		day[1] = 0;
 	}
 	n++;
 }
@@ -819,8 +973,13 @@ void CMFCApplicationDlg::OnBnClickedButton26()
 	}
 	else
 	{
-		GetDlgItem(IDC_BUTTON26)->SetWindowText(_T("DAY26"));
-		day[26] = 0;
+		if (mode == 1)
+			GetDlgItem(IDC_BUTTON26)->SetWindowText(_T("DAY26"));
+
+		if (mode == 2)
+			GetDlgItem(IDC_BUTTON26)->SetWindowText(_T("Z"));
+
+		day[1] = 0;
 	}
 	n++;
 }
@@ -1103,7 +1262,6 @@ void CMFCApplicationDlg::buttonFunction(int ID)
 		GetDlgItem(i)->InvalidateRect(NULL);
 	}
 }
-
 HBRUSH CMFCApplicationDlg::OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor)
 {
 	HBRUSH hbr = CDialogEx::OnCtlColor(pDC, pWnd, nCtlColor);
@@ -1135,18 +1293,11 @@ void strchrn(char *dest, char *src, char b, char e)
 	dest[len] = '\0';
 }
 
-
-void CMFCApplicationDlg::OnMenuDay()
-{
-	ControlDisplay_DAY1(SW_SHOW);
-}
-
-
-void CMFCApplicationDlg::OnMenuAll()
+void CMFCApplicationDlg::getAllWords()
 {
 	Words tempWords;
 	int count = 0;
-	
+
 	for (int j = 30; j > 22; j--)
 	{
 		getDayWord(j, tempWords);
@@ -1194,9 +1345,10 @@ void CMFCApplicationDlg::OnMenuAll()
 			}
 		}
 	}
-	int a = 0;
-	a++;
 }
+
+
+
 
 
 void CMFCApplicationDlg::OnMenuEnd()
@@ -1216,12 +1368,7 @@ void CMFCApplicationDlg::OnMenuSetting()
 	// TODO: Add your command handler code here
 }
 
-void CMFCApplicationDlg::Init_hideItem()
-{
-	ControlDisplay_DAY1(SW_HIDE);
-}
-
-void CMFCApplicationDlg::ControlDisplay_DAY1(int show)
+void CMFCApplicationDlg::ControlDisplay_DAY(int show)
 {
 	GetDlgItem(IDC_BUTTON1)->ShowWindow(show);
 	GetDlgItem(IDC_BUTTON2)->ShowWindow(show);
@@ -1325,4 +1472,108 @@ void CMFCApplicationDlg::ControlDisplay_DAY1(int show)
 	GetDlgItem(IDC_SOL)->ShowWindow(show);
 	GetDlgItem(IDC_NUM)->ShowWindow(show);
 	GetDlgItem(IDC_PRON)->ShowWindow(show);
+}
+
+void CMFCApplicationDlg::nameID_DAY()
+{
+	GetDlgItem(IDC_BUTTON1)->SetWindowText(_T("DAY1"));
+	GetDlgItem(IDC_BUTTON2)->SetWindowText(_T("DAY2"));
+	GetDlgItem(IDC_BUTTON3)->SetWindowText(_T("DAY3"));
+	GetDlgItem(IDC_BUTTON4)->SetWindowText(_T("DAY4"));
+	GetDlgItem(IDC_BUTTON5)->SetWindowText(_T("DAY5"));
+	GetDlgItem(IDC_BUTTON6)->SetWindowText(_T("DAY6"));
+	GetDlgItem(IDC_BUTTON7)->SetWindowText(_T("DAY7"));
+	GetDlgItem(IDC_BUTTON8)->SetWindowText(_T("DAY8"));
+	GetDlgItem(IDC_BUTTON9)->SetWindowText(_T("DAY9"));
+	GetDlgItem(IDC_BUTTON10)->SetWindowText(_T("DAY10"));
+	GetDlgItem(IDC_BUTTON11)->SetWindowText(_T("DAY11"));
+	GetDlgItem(IDC_BUTTON12)->SetWindowText(_T("DAY12"));
+	GetDlgItem(IDC_BUTTON13)->SetWindowText(_T("DAY13"));
+	GetDlgItem(IDC_BUTTON14)->SetWindowText(_T("DAY14"));
+	GetDlgItem(IDC_BUTTON15)->SetWindowText(_T("DAY15"));
+	GetDlgItem(IDC_BUTTON16)->SetWindowText(_T("DAY16"));
+	GetDlgItem(IDC_BUTTON17)->SetWindowText(_T("DAY17"));
+	GetDlgItem(IDC_BUTTON18)->SetWindowText(_T("DAY18"));
+	GetDlgItem(IDC_BUTTON19)->SetWindowText(_T("DAY19"));
+	GetDlgItem(IDC_BUTTON20)->SetWindowText(_T("DAY20"));
+	GetDlgItem(IDC_BUTTON21)->SetWindowText(_T("DAY21"));
+	GetDlgItem(IDC_BUTTON22)->SetWindowText(_T("DAY22"));
+	GetDlgItem(IDC_BUTTON23)->SetWindowText(_T("DAY23"));
+	GetDlgItem(IDC_BUTTON24)->SetWindowText(_T("DAY24"));
+	GetDlgItem(IDC_BUTTON25)->SetWindowText(_T("DAY25"));
+	GetDlgItem(IDC_BUTTON26)->SetWindowText(_T("DAY26"));
+	GetDlgItem(IDC_BUTTON27)->SetWindowText(_T("DAY27"));
+	GetDlgItem(IDC_BUTTON28)->SetWindowText(_T("DAY28"));
+	GetDlgItem(IDC_BUTTON29)->SetWindowText(_T("DAY29"));
+	GetDlgItem(IDC_BUTTON30)->SetWindowText(_T("DAY30"));
+
+}
+
+void CMFCApplicationDlg::nameID_AtoZ()
+{
+	GetDlgItem(IDC_BUTTON1)->SetWindowText(_T("A"));
+	GetDlgItem(IDC_BUTTON2)->SetWindowText(_T("B"));
+	GetDlgItem(IDC_BUTTON3)->SetWindowText(_T("C"));
+	GetDlgItem(IDC_BUTTON4)->SetWindowText(_T("D"));
+	GetDlgItem(IDC_BUTTON5)->SetWindowText(_T("E"));
+	GetDlgItem(IDC_BUTTON6)->SetWindowText(_T("F"));
+	GetDlgItem(IDC_BUTTON7)->SetWindowText(_T("G"));
+	GetDlgItem(IDC_BUTTON8)->SetWindowText(_T("H"));
+	GetDlgItem(IDC_BUTTON9)->SetWindowText(_T("I"));
+	GetDlgItem(IDC_BUTTON10)->SetWindowText(_T("J"));
+	GetDlgItem(IDC_BUTTON11)->SetWindowText(_T("K"));
+	GetDlgItem(IDC_BUTTON12)->SetWindowText(_T("L"));
+	GetDlgItem(IDC_BUTTON13)->SetWindowText(_T("M"));
+	GetDlgItem(IDC_BUTTON14)->SetWindowText(_T("N"));
+	GetDlgItem(IDC_BUTTON15)->SetWindowText(_T("O"));
+	GetDlgItem(IDC_BUTTON16)->SetWindowText(_T("P"));
+	GetDlgItem(IDC_BUTTON17)->SetWindowText(_T("Q"));
+	GetDlgItem(IDC_BUTTON18)->SetWindowText(_T("R"));
+	GetDlgItem(IDC_BUTTON19)->SetWindowText(_T("S"));
+	GetDlgItem(IDC_BUTTON20)->SetWindowText(_T("T"));
+	GetDlgItem(IDC_BUTTON21)->SetWindowText(_T("U"));
+	GetDlgItem(IDC_BUTTON22)->SetWindowText(_T("V"));
+	GetDlgItem(IDC_BUTTON23)->SetWindowText(_T("W"));
+	GetDlgItem(IDC_BUTTON24)->SetWindowText(_T("X"));
+	GetDlgItem(IDC_BUTTON25)->SetWindowText(_T("Y"));
+	GetDlgItem(IDC_BUTTON26)->SetWindowText(_T("Z"));
+	/*GetDlgItem(IDC_BUTTON27)->SetWindowText(_T("DAY27"));
+	GetDlgItem(IDC_BUTTON28)->SetWindowText(_T("DAY28"));
+	GetDlgItem(IDC_BUTTON29)->SetWindowText(_T("DAY29"));
+	GetDlgItem(IDC_BUTTON30)->SetWindowText(_T("DAY30"));*/
+}
+void CMFCApplicationDlg::OnMenuDay()
+{
+	mode = 1;
+	ControlDisplay_DAY(SW_SHOW);
+	nameID_DAY();
+
+	// clean 
+	GetDlgItem(IDC_SOL)->SetWindowText(_T(""));
+	GetDlgItem(IDC_NUM)->SetWindowText(_T(""));
+	for (int i = 0; i < 32; i++)
+		GetDlgItem(IDC_EDIT1 + i)->SetWindowText(_T(""));
+}
+
+
+void CMFCApplicationDlg::OnMenuAll()
+{
+	mode = 2;
+	ControlDisplay_DAY(SW_SHOW);
+	GetDlgItem(IDC_BUTTON27)->ShowWindow(SW_HIDE);
+	GetDlgItem(IDC_BUTTON28)->ShowWindow(SW_HIDE);
+	GetDlgItem(IDC_BUTTON29)->ShowWindow(SW_HIDE);
+	GetDlgItem(IDC_BUTTON30)->ShowWindow(SW_HIDE);
+	GetDlgItem(IDC_PRON)->ShowWindow(SW_HIDE);
+	nameID_AtoZ();
+
+	// clean 
+	GetDlgItem(IDC_SOL)->SetWindowText(_T(""));
+	GetDlgItem(IDC_NUM)->SetWindowText(_T(""));
+	for (int i = 0; i < 32; i++)
+		GetDlgItem(IDC_EDIT1 + i)->SetWindowText(_T(""));
+
+	getAllWords(); // 轉換為紀錄所有單字的陣列
+
+
 }

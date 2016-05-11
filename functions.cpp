@@ -164,6 +164,39 @@ void getWords_Day18(Words &words)
 }
 void getWords_Day19(Words &words)
 {
+	words.word[0] = _T("remainder"); words.number[0] = 1802; words.chinese[0] = _T("n. 餘數、剩餘物、其餘的人");	 words.ps[0] = _T("\r\nps. remain (v) 剩餘、停留、扔然是；remaining (adj) 剩餘的");
+	words.word[1] = _T("solicit"); words.number[1] = 1804; words.chinese[1] = _T("v. 懇求、請求、籌集、索求");	 words.ps[1] = _T("");
+	words.word[2] = _T("continuous"); words.number[2] = 1809; words.chinese[2] = _T("adj. 持續的、不斷的");	 words.ps[2] = _T("\r\nps. continuously (adv) 持續地；continue (v) 繼續");
+	words.word[3] = _T("compartment"); words.number[3] = 1811; words.chinese[3] = _T("n. 隔間、隔層");	 words.ps[3] = _T("");
+	words.word[4] = _T("rigorous"); words.number[4] = 1816; words.chinese[4] = _T("adj. 嚴格的、精密的");	 words.ps[4] = _T("\r\nps. rigor (n) 嚴格、縝密、艱苦；rigorously (adj) 嚴格地、嚴酷地");
+	words.word[5] = _T("cite"); words.number[5] = 1818; words.chinese[5] = _T("v. 提及、引用、引~為證、舉出");	 words.ps[5] = _T("\r\nps. citation (n) 引用、引證");
+	words.word[6] = _T("multiple"); words.number[6] = 1821; words.chinese[6] = _T("adj. 多種的、多數的、複合的");	 words.ps[6] = _T("\r\nps. multiply (v) 成倍增加、相乘；mulitplication (n) 增加");
+	words.word[7] = _T("bulletin"); words.number[7] = 1825; words.chinese[7] = _T("n. 公布、公告");	 words.ps[7] = _T("");
+	words.word[8] = _T("discipline"); words.number[8] = 1826; words.chinese[8] = _T("n. 學科、紀律、訓練");	 words.ps[8] = _T("\r\nps. disciplinary (adj) 訓練的、紀律的");
+	words.word[9] = _T("characteristic"); words.number[9] = 1829; words.chinese[9] = _T("n. 特性、特質、性格；adj. 獨特的");	 words.ps[9] = _T("");
+	words.word[10] = _T("precise"); words.number[10] = 1834; words.chinese[10] = _T("adj. 精確的、明確的");	 words.ps[10] = _T("\r\nps. precisely (adv) 精確地、恰恰好；precision (n) 精確、精密");
+	words.word[11] = _T("supplement"); words.number[11] = 1836; words.chinese[11] = _T("v. 增補、補充；n. 補充、附錄");	 words.ps[11] = _T("\r\nps. supplementary (adj) 補充的、外加的");
+	words.word[12] = _T("ownership"); words.number[12] = 1839; words.chinese[12] = _T("n. 所有權、物主身分");	 words.ps[12] = _T("\r\nps. own (v) 所有的、擁有；owner (n) 所有人");
+	words.word[13] = _T("conflict"); words.number[13] = 1843; words.chinese[13] = _T("n. 衝突、矛盾；v. 衝突、牴觸");	 words.ps[13] = _T("");
+	words.word[14] = _T("relieve"); words.number[14] = 1844; words.chinese[14] = _T("v. 解除、減輕(痛苦)、緩和");	 words.ps[14] = _T("\r\nps. 相似詞：alleviate 緩和 (2098)。relieved (adj) 放心的、寬慰的；\r\n    relief (n) 解脫、減輕");
+	words.word[15] = _T("vacuum"); words.number[15] = 1849; words.chinese[15] = _T("v. 吸塵、清掃；n. 真空、真空吸塵器");	 words.ps[15] = _T("");
+	words.word[16] = _T("contrast"); words.number[16] = 1852; words.chinese[16] = _T("v. 比較、對照；v. 比較、對照");	 words.ps[16] = _T("");
+	words.word[17] = _T("portolio"); words.number[17] = 1854; words.chinese[17] = _T("n. 投資組合、文件夾、公事包、作品集");	 words.ps[17] = _T("");
+	words.word[18] = _T("driveway"); words.number[18] = 1858; words.chinese[18] = _T("n. 汽車道、私人車道");	 words.ps[18] = _T("");
+	words.word[19] = _T("extent"); words.number[19] = 1861; words.chinese[19] = _T("n. 範圍、程度、限度");	 words.ps[19] = _T("");
+	words.word[20] = _T("inclined"); words.number[20] = 1865; words.chinese[20] = _T("adj. 有~傾向的、想要做~的；adj. 不願的、無意於");	 words.ps[20] = _T("\r\nps. 相反詞：disinclined (adj) 無意於、不願的；\r\n    inclination  (n) (性格上)傾向、愛好");
+	words.word[21] = _T("typical"); words.number[21] = 1868; words.chinese[21] = _T("adj. 典型的、有代表性的");	 words.ps[21] = _T("\r\nps. typically (adv) 典型地、代表性地");
+	words.word[22] = _T("appearance"); words.number[22] = 1872; words.chinese[22] = _T("n. 外觀、外表、出現");	 words.ps[22] = _T("\r\nps. appear (v) 登場、出現");
+	words.word[23] = _T("grateful"); words.number[23] = 1875; words.chinese[23] = _T("adj. 感恩的、感謝的");	 words.ps[23] = _T("\r\nps. gratitude (n) 感謝之情、謝意 (1509)");
+	words.word[24] = _T("accustomed"); words.number[24] = 1878; words.chinese[24] = _T("adj. 習慣的、慣常的、適應的");	 words.ps[24] = _T("\r\nps. accustom (v) 使習慣");
+	words.word[25] = _T("convince"); words.number[25] = 1880; words.chinese[25] = _T("v. 說服、使確信、使信服");	 words.ps[25] = _T("\r\nps. convinced (adj) 確信的；convincing (adj) 有說服力的");
+	words.word[26] = _T("observance"); words.number[26] = 1883; words.chinese[26] = _T("n. 紀念、遵守、儀式");	 words.ps[26] = _T("\r\nps. observe (v) 遵守、觀察、慶祝；observation (n) 觀察");
+	words.word[27] = _T("pension"); words.number[27] = 1885; words.chinese[27] = _T("n. 退休金、養老金");	 words.ps[27] = _T("");
+	words.word[28] = _T("vendor"); words.number[28] = 1889; words.chinese[28] = _T("n. 賣主、攤販、銷售業者");	 words.ps[28] = _T("\r\nps. vend (v) 販賣");
+	words.word[29] = _T("compromise"); words.number[29] = 1891; words.chinese[29] = _T("v. 妥協、讓步、折衷");	 words.ps[29] = _T("");
+	words.word[30] = _T("civic"); words.number[30] = 1893; words.chinese[30] = _T("adj. 市民的、城市的");	 words.ps[30] = _T("");
+	words.word[31] = _T("recall"); words.number[31] = 1900; words.chinese[31] = _T("v. 招回、回收、使想起、罷免；n. 回收、勾起、記性、罷免");	 words.ps[31] = _T("");
+
 }
 void getWords_Day20(Words &words)
 {

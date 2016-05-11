@@ -14,6 +14,8 @@ public:
 	Words myWords;
 	Words_All allWords;
 
+	int mode; // mode 1: show 30 days; mode 2: show frome a to z
+
 	CMFCApplicationDlg(CWnd* pParent = NULL);	// 標準建構函式
 
 // 對話方塊資料
@@ -35,9 +37,11 @@ protected:
 	DECLARE_MESSAGE_MAP()
 public:
 	CMenu menu;
+	void getAllWords();
 	void buttonFunction(int ID);
-	void Init_hideItem();
-	void ControlDisplay_DAY1(int show);
+	void nameID_DAY();
+	void nameID_AtoZ();
+	void ControlDisplay_DAY(int show);
 	afx_msg void OnBnClickedButton1();
 	afx_msg void OnBnClickedButton2();
 	afx_msg void OnBnClickedButton3();
