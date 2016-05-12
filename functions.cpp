@@ -161,6 +161,39 @@ void getWords_Day17(Words &words)
 }
 void getWords_Day18(Words &words)
 {
+	words.word[0] = _T("bear"); words.number[0] = 1702; words.chinese[0] = _T("v. 帶有、具有、忍受、承擔、生(小孩)	");	 words.ps[0] = _T("\r\nps. bearer (n) 持有者、傳遞者；bearable (adj) 可忍受的；\r\n    unbearably (adv) 無法忍受地	");
+	words.word[1] = _T("consent"); words.number[1] = 1704; words.chinese[1] = _T("n. 同意、贊成、答應；v. 同意、贊成、答應	");	 words.ps[1] = _T("");
+	words.word[2] = _T("outage"); words.number[2] = 1707; words.chinese[2] = _T("n. (水、電等)中斷供應	");	 words.ps[2] = _T("");
+	words.word[3] = _T("deserve"); words.number[3] = 1711; words.chinese[3] = _T("v. 應得(賞罰)、該得	");	 words.ps[3] = _T("");
+	words.word[4] = _T("foreman"); words.number[4] = 1714; words.chinese[4] = _T("n. (工地)主任、領班	");	 words.ps[4] = _T("");
+	words.word[5] = _T("largely"); words.number[5] = 1717; words.chinese[5] = _T("adv. 主要地、大大地、大部分	");	 words.ps[5] = _T("\r\nps. 相似詞：mainly、mostly	");
+	words.word[6] = _T("managerial"); words.number[6] = 1720; words.chinese[6] = _T("adj. 管理的、經理人的	");	 words.ps[6] = _T("\r\nps. management (n) 管理、管理部門；manageable (adj) 可管理的、可操控的	");
+	words.word[7] = _T("omission"); words.number[7] = 1725; words.chinese[7] = _T("n. 遺漏、省略、刪除	");	 words.ps[7] = _T("\r\nps. omit (v) 省略、遺漏、刪去	");
+	words.word[8] = _T("province"); words.number[8] = 1727; words.chinese[8] = _T("n. (行政單位的)省、州	");	 words.ps[8] = _T("\r\nps. provincial (adj) 省的、地方的、守舊的；(n) 鄉下人、路五的人	");
+	words.word[9] = _T("emerge"); words.number[9] = 1729; words.chinese[9] = _T("v. 出現、浮現、顯露	");	 words.ps[9] = _T("\r\nps. emerging (adj) 新興的；emergence (n) 出現	");
+	words.word[10] = _T("flavor"); words.number[10] = 1735; words.chinese[10] = _T("n. 味道、風味；v. 給~調味	");	 words.ps[10] = _T("\r\nps. flavoring (n) 香料、調味料；flavored (adj) 有~風味的	");
+	words.word[11] = _T("hazard"); words.number[11] = 1737; words.chinese[11] = _T("n. 危險、有害物	");	 words.ps[11] = _T("\r\nps. hazardous (adj) 有危險的、biohazard (n) 生化危機	");
+	words.word[12] = _T("advocate"); words.number[12] = 1740; words.chinese[12] = _T("n. 提倡者、擁護者、辯護者、律師	");	 words.ps[12] = _T("");
+	words.word[13] = _T("classified"); words.number[13] = 1742; words.chinese[13] = _T("adj. 分類的、機密的；n. 分類廣告	");	 words.ps[13] = _T("\r\nps. classify (v) 將~分類；classification (n) 分類、分級	");
+	words.word[14] = _T("embassy"); words.number[14] = 1745; words.chinese[14] = _T("n. 大使館、大使館全體人員	");	 words.ps[14] = _T("\r\nps. ambassador (n) 大使	");
+	words.word[15] = _T("violation"); words.number[15] = 1750; words.chinese[15] = _T("n. 牴觸、違反、侵犯	");	 words.ps[15] = _T("\r\nps. violate (v) 違反、違背、侵犯	");
+	words.word[16] = _T("proofread"); words.number[16] = 1751; words.chinese[16] = _T("v. 校對	");	 words.ps[16] = _T("\r\nps. proofreading (n) 校對工作	");
+	words.word[17] = _T("subcontractor"); words.number[17] = 1753; words.chinese[17] = _T("n. 分包商、分包者	");	 words.ps[17] = _T("\r\nps. subcontract (v) 轉包、分包；(n)轉/分包契約	");
+	words.word[18] = _T("adapt"); words.number[18] = 1758; words.chinese[18] = _T("v. 修改、使適合	");	 words.ps[18] = _T("\r\nps. adaptation (n) 適應、調整；adaptable (adj) 可適應的、適應力強的	");
+	words.word[19] = _T("venue"); words.number[19] = 1759; words.chinese[19] = _T("n. (會議、表演的) 地點、場地	");	 words.ps[19] = _T("");
+	words.word[20] = _T("protest"); words.number[20] = 1764; words.chinese[20] = _T("v. 抗議、提出異議；n. 抗議、反對	");	 words.ps[20] = _T("\r\nps. protester (n) 反對者、抗議者	");
+	words.word[21] = _T("argument"); words.number[21] = 1766; words.chinese[21] = _T("n. 論點、爭論、辯論、理由	");	 words.ps[21] = _T("\r\nps. argue (v) 爭辯、爭吵；arguable (adj) 可辯論的、可議的	");
+	words.word[22] = _T("cordial"); words.number[22] = 1772; words.chinese[22] = _T("adj. 友好的、真摯的	");	 words.ps[22] = _T("\r\nps. cordially (adv) 真摯地、友好地	");
+	words.word[23] = _T("liability"); words.number[23] = 1775; words.chinese[23] = _T("n. (法律上的)責任、負債、債務	");	 words.ps[23] = _T("\r\nps. liable (adj) 負有法律責任的、可能做~的	");
+	words.word[24] = _T("poll"); words.number[24] = 1777; words.chinese[24] = _T("n. 民意調查、投票數；v. 進行民意調查、獲取(票數)	");	 words.ps[24] = _T("");
+	words.word[25] = _T("privilege"); words.number[25] = 1779; words.chinese[25] = _T("n. 特權、優惠	");	 words.ps[25] = _T("");
+	words.word[26] = _T("subscribe"); words.number[26] = 1781; words.chinese[26] = _T("v. 訂閱	");	 words.ps[26] = _T("\r\nps. subscription (n) 訂閱；subscriber (n) 訂閱者	");
+	words.word[27] = _T("assess"); words.number[27] = 1786; words.chinese[27] = _T("v. 估價、評定	");	 words.ps[27] = _T("\r\nps. assessment (n)估價、評定	");
+	words.word[28] = _T("disposal"); words.number[28] = 1789; words.chinese[28] = _T("n. 處理、處置	");	 words.ps[28] = _T("\r\nps. dispose (v) 處理、處置	");
+	words.word[29] = _T("boost"); words.number[29] = 1794; words.chinese[29] = _T("v. 增加、提升、推動；n. 提高、幫助、增加	");	 words.ps[29] = _T("");
+	words.word[30] = _T("conventional"); words.number[30] = 1797; words.chinese[30] = _T("adj. 傳統的、依慣例的	");	 words.ps[30] = _T("\r\nps. convention (n) 會議、習俗、慣例、常規	");
+	words.word[31] = _T("intermission"); words.number[31] = 1800; words.chinese[31] = _T("n. 中場休息、暫歇	");	 words.ps[31] = _T("");
+
 }
 void getWords_Day19(Words &words)
 {

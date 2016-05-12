@@ -11,6 +11,7 @@ class CMFCApplicationDlg : public CDialogEx
 // «Øºc
 public:
 	int day[31], getDay[30];
+	int push[31];
 	Words myWords;
 	Words_All allWords;
 
@@ -42,6 +43,8 @@ public:
 	void nameID_DAY();
 	void nameID_AtoZ();
 	void ControlDisplay_DAY(int show);
+	void ch_alphabet(int alphabet);
+	void leftButtonControl(int ID);
 	afx_msg void OnBnClickedButton1();
 	afx_msg void OnBnClickedButton2();
 	afx_msg void OnBnClickedButton3();
