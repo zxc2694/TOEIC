@@ -10,6 +10,11 @@
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
+#include <iostream>
+#include <fstream>
+#include<io.h>
+#include<stdio.h>
+#include "vfw.h"
 
 using namespace std;
 
@@ -138,6 +143,7 @@ BEGIN_MESSAGE_MAP(CMFCApplicationDlg, CDialogEx)
 	ON_COMMAND(ID_MENU_END, &CMFCApplicationDlg::OnMenuEnd)
 	ON_COMMAND(ID_MENU_EXPLAIN, &CMFCApplicationDlg::OnMenuExplain)
 	ON_COMMAND(ID_MENU_SETTING, &CMFCApplicationDlg::OnMenuSetting)
+	ON_BN_CLICKED(IDC_PRON, &CMFCApplicationDlg::OnBnClickedPron)
 END_MESSAGE_MAP()
 
 
@@ -146,7 +152,7 @@ END_MESSAGE_MAP()
 BOOL CMFCApplicationDlg::OnInitDialog()
 {
 	CDialogEx::OnInitDialog();
-	
+	m_Video = NULL;
 	this->menu.LoadMenu(IDR_MENU1);
 	SetMenu(&this->menu);
 
@@ -1661,5 +1667,21 @@ void CMFCApplicationDlg::OnMenuAll()
 
 	getAllWords(); // 轉換為紀錄所有單字的陣列
 
+
+}
+
+// http://www.codeproject.com/Articles/1191/A-very-simple-MP-Player
+void CMFCApplicationDlg::OnBnClickedPron()
+{
+	// Create test dialog
+	voiceDlg *voice_Dlg = new voiceDlg(this);
+	BOOL kk = voice_Dlg->Create(IDD_VOICE, NULL);
+	voice_Dlg->ShowWindow(SW_SHOWNORMAL);  // 注意: 一定要 showWindow 否則秀不出來
+
+	CRect m_rect;
+	this->GetWindowRect(m_rect);
+	CRect m_rect2;
+	voice_Dlg->GetWindowRect(m_rect2);
+	voice_Dlg->SetWindowPos(&wndTop, m_rect.left + m_rect.Width() - m_rect2.Width(), m_rect.bottom, 0, 0, SWP_SHOWWINDOW | SWP_NOSIZE);
 
 }

@@ -2,8 +2,11 @@
 
 #pragma once
 
+
+#include "voiceDlg.h"
 #include "test_Dlg.h"
 #include "functions.h"
+
 
 // CMFCApplicationDlg ¹ï¸Ü¤è¶ô
 class CMFCApplicationDlg : public CDialogEx
@@ -14,6 +17,8 @@ public:
 	int push[31];
 	Words myWords;
 	Words_All allWords;
+	HWND m_Video;
+	BOOL Pause;
 
 	int mode; // mode 1: show 30 days; mode 2: show frome a to z
 
@@ -115,6 +120,7 @@ public:
 	afx_msg void OnMenuEnd();
 	afx_msg void OnMenuExplain();
 	afx_msg void OnMenuSetting();
+	afx_msg void OnBnClickedPron();
 };
 
 void strchrn(char *dest, char *src, char b, char e);
