@@ -110,51 +110,579 @@ void getDayWord(int Day, Words &myWords)
 
 void getWords_Day1(Words &words)
 {
+	words.word[0] = _T("employee"); words.number[0] = 2; words.chinese[0] = _T("n. 員工、受雇者");	 words.ps[0] = _T("\r\nps. employment (n) 雇用、工作、就業；employer (n) 雇主");
+	words.word[1] = _T("provide"); words.number[1] = 5; words.chinese[1] = _T("v. 提供、供給");	 words.ps[1] = _T("\r\nps. provided (1578)(conj) 以~為條件、假如；provision (n) 供應、供給");
+	words.word[2] = _T("conference"); words.number[2] = 8; words.chinese[2] = _T("n. 會議、會談");	 words.ps[2] = _T("");
+	words.word[3] = _T("due"); words.number[3] = 11; words.chinese[3] = _T("adj. 到期的、預定的、由於、因為~的緣故");	 words.ps[3] = _T("");
+	words.word[4] = _T("attend"); words.number[4] = 151; words.chinese[4] = _T("v. 參加、出席、注意");	 words.ps[4] = _T("\r\nps. attendance (n) 參與、出席；attendee (n) 參與者、參加者");
+	words.word[5] = _T("account"); words.number[5] = 19; words.chinese[5] = _T("n. 帳戶、帳目；v. 是~的原因、把~視為");	 words.ps[5] = _T("\r\nps. accountant (n) 會計師");
+	words.word[6] = _T("purchase"); words.number[6] = 22; words.chinese[6] = _T("n. 購買、採購、購買物；v. 購買、換得");	 words.ps[6] = _T("");
+	words.word[7] = _T("research"); words.number[7] = 25; words.chinese[7] = _T("n. 研究、調查；v. 研究、調查");	 words.ps[7] = _T("");
+	words.word[8] = _T("supply"); words.number[8] = 29; words.chinese[8] = _T("v. 供給、提供；n. 供給、日用品");	 words.ps[8] = _T("\r\nps. 相似詞：provide (v)。supplier (n) 供應商");
+	words.word[9] = _T("submit"); words.number[9] = 31; words.chinese[9] = _T("v. 提交、遞呈");	 words.ps[9] = _T("\r\nps. submission (n) 提交、遞呈");
+	words.word[10] = _T("facility"); words.number[10] = 34; words.chinese[10] = _T("n. 設備、設施");	 words.ps[10] = _T("");
+	words.word[11] = _T("notice"); words.number[11] = 38; words.chinese[11] = _T("n. 公告、通知；v. 注意到、察覺");	 words.ps[11] = _T("\r\nps. noticeable (adj) 明顯的、顯著的；noticeably (adv) 顯著地、明顯地");
+	words.word[12] = _T("available"); words.number[12] = 41; words.chinese[12] = _T("adj. 可得的、可用的、有空的");	 words.ps[12] = _T("\r\nps. avail (v) 使用、利用；availability (n) 可用性、可用的人/物。\r\n    相反詞：unavailable (adj) 不可用的");
+	words.word[13] = _T("representative"); words.number[13] = 44; words.chinese[13] = _T("n. 代表、代理人；adj. 代表的、代理的");	 words.ps[13] = _T("\r\nps. represent (v) 代表、表示");
+	words.word[14] = _T("corporation"); words.number[14] = 47; words.chinese[14] = _T("n. 公司、法人");	 words.ps[14] = _T("\r\nps. corporate (adj) 法人團體的、公司的；cooperation (n) 合作；\r\n    cooperative (n) 合作社 (adj) 和藹可親的、合作的");
+	words.word[15] = _T("charge"); words.number[15] = 50; words.chinese[15] = _T("n. 費用、責任");	 words.ps[15] = _T("");
+	words.word[16] = _T("process"); words.number[16] = 52; words.chinese[16] = _T("n. 程序、過程；v. 加工、處理");	 words.ps[16] = _T("\r\nps. processing (n) 加工、處理");
+	words.word[17] = _T("improve"); words.number[17] = 55; words.chinese[17] = _T("v. 改善、改良、好轉");	 words.ps[17] = _T("\r\nps. improvement (n) 改善、進步");
+	words.word[18] = _T("prefer"); words.number[18] = 58; words.chinese[18] = _T("v. 較喜歡、偏好");	 words.ps[18] = _T("\r\nps. preferable (adj) 較好的、更可取的；preference (n) 喜好、偏好");
+	words.word[19] = _T("inquire"); words.number[19] = 61; words.chinese[19] = _T("v. 詢問、調查");	 words.ps[19] = _T("\r\nps. inquiry (n) 諮詢、詢問");
+	words.word[20] = _T("apply"); words.number[20] = 64; words.chinese[20] = _T("v. 應徵、申請、適用");	 words.ps[20] = _T("\r\nps. applicant (n) 應徵者；application (n) 申請、應用、採用、意見");
+	words.word[21] = _T("management"); words.number[21] = 67; words.chinese[21] = _T("n. 管理部門、經營階層；管理、經營");	 words.ps[21] = _T("\r\nps. managerical (1720)(adj) 管理的、經營的；manage (v) 管理");
+	words.word[22] = _T("supervisor"); words.number[22] = 71; words.chinese[22] = _T("n. 主管、監督者、管理人");	 words.ps[22] = _T("\r\nps. supervise (v) 監督、管理；supervisory (adj) 監督的、管理的");
+	words.word[23] = _T("deliver"); words.number[23] = 74; words.chinese[23] = _T("v. 運送、傳送");	 words.ps[23] = _T("\r\nps. delivery (n) 運送、投遞");
+	words.word[24] = _T("arrange"); words.number[24] = 77; words.chinese[24] = _T("v. 安排、籌備、排列");	 words.ps[24] = _T("\r\nps. arrangement (n) 安排、整理、籌備\r\n    rearrange (v) 重新安排、改變~的秩序");
+	words.word[25] = _T("budget"); words.number[25] = 80; words.chinese[25] = _T("n. 預算；v. 編列預算");	 words.ps[25] = _T("");
+	words.word[26] = _T("performance"); words.number[26] = 84; words.chinese[26] = _T("n. 成果、表現、演出");	 words.ps[26] = _T("\r\nps. perform (v) 執行、履行、表演");
+	words.word[27] = _T("consider"); words.number[27] = 87; words.chinese[27] = _T("v. 考慮、顧及");	 words.ps[27] = _T("\r\nps. considerble (896)(adj) 相當的；consideration (n) 考慮、顧及、體諒");
+	words.word[28] = _T("recommend"); words.number[28] = 90; words.chinese[28] = _T("v. 建議、推薦");	 words.ps[28] = _T("\r\nps. recommendation (n) 推薦、建議；recommendable (adj) 值得推薦的");
+	words.word[29] = _T("annual"); words.number[29] = 93; words.chinese[29] = _T("adj. 每年的");	 words.ps[29] = _T("\r\nps. annually (adv) 每年；biannual (adj) 每半年的、每年兩次的");
+	words.word[30] = _T("policy"); words.number[30] = 96; words.chinese[30] = _T("n. 政策、方針、策略");	 words.ps[30] = _T("\r\nps. n. 政策、方針、測略");
+	words.word[31] = _T("committee"); words.number[31] = 100; words.chinese[31] = _T("n. 委員會、委員");	 words.ps[31] = _T("\r\nps. n. 委員會、委員");
+
 }
 void getWords_Day2(Words &words)
 {
+	words.word[0] = _T("property"); words.number[0] = 203; words.chinese[0] = _T("n.財產、所有物、不動產");	 words.ps[0] = _T("");
+	words.word[1] = _T("consumer"); words.number[1] = 206; words.chinese[1] = _T("n. 消費者");	 words.ps[1] = _T("\r\nps. consume (v) 消費；consumption (n) 消費");
+	words.word[2] = _T("raise"); words.number[2] = 208; words.chinese[2] = _T("n. 提高；v. 升起、使向上");	 words.ps[2] = _T("");
+	words.word[3] = _T("indicate"); words.number[3] = 211; words.chinese[3] = _T("v. 表示、指出、代表、象徵");	 words.ps[3] = _T("\r\nps. indication (n) 指示、徵兆；indicator (n) 指示器、指針；\r\n    indicative (adj) 表示的、暗示的");
+	words.word[4] = _T("permit"); words.number[4] = 214; words.chinese[4] = _T("v. 許可、允許；n. 許可(證)");	 words.ps[4] = _T("\r\nps. permission (n) 許可、允許");
+	words.word[5] = _T("rent"); words.number[5] = 216; words.chinese[5] = _T("v. (房屋、土地等)租借；n. 租借、租金、房租");	 words.ps[5] = _T("\r\nps. rental (n) 租借、出租(物)；(adj) 供出租的");
+	words.word[6] = _T("shipment"); words.number[6] = 218; words.chinese[6] = _T("n. 運送、裝運");	 words.ps[6] = _T("\r\nps. shipping (n) 運輸(業)；ship (n) 船、艦");
+	words.word[7] = _T("distribute"); words.number[7] = 222; words.chinese[7] = _T("v. 分發、分配");	 words.ps[7] = _T("\r\nps. distribution (n) 分發、分配；distributor (n) 批發商");
+	words.word[8] = _T("stock"); words.number[8] = 226; words.chinese[8] = _T("n. 股票 (=share)、庫存、儲藏；v. 存貨");	 words.ps[8] = _T("\r\nps. stockholder (n) 股東");
+	words.word[9] = _T("regulation"); words.number[9] = 229; words.chinese[9] = _T("n. 規定、規範、法規");	 words.ps[9] = _T("\r\nps. regulate (v) 規範、管理、調整");
+	words.word[10] = _T("exhibit"); words.number[10] = 233; words.chinese[10] = _T("v. 展示、顯露；n. 展示");	 words.ps[10] = _T("\r\nps. exhibition (n) 展示會");
+	words.word[11] = _T("estimate"); words.number[11] = 236; words.chinese[11] = _T("n. 估價、報價、估計、評價；v. 估價");	 words.ps[11] = _T("");
+	words.word[12] = _T("quarter"); words.number[12] = 241; words.chinese[12] = _T("n. 季節、三個月、四分之一；adj. 四分之一的；v. 把~四等份");	 words.ps[12] = _T("\r\nps. quarterly (adj) 季的；(adv) 一季地");
+	words.word[13] = _T("necessary"); words.number[13] = 244; words.chinese[13] = _T("adj. 必要的、不能沒有的；n. 必需品");	 words.ps[13] = _T("\r\nps. necessity (n) 必要、必需品；necessitate (v) 使成為必需");
+	words.word[14] = _T("encourage"); words.number[14] = 245; words.chinese[14] = _T("v. 鼓勵、促進");	 words.ps[14] = _T("\r\nps. encouragement (n) 獎勵、促進");
+	words.word[15] = _T("resume"); words.number[15] = 248; words.chinese[15] = _T("n. 履歷表；v. 重新開始、恢復、繼續");	 words.ps[15] = _T("");
+	words.word[16] = _T("responsible"); words.number[16] = 253; words.chinese[16] = _T("adj. 有責任的、可信賴的");	 words.ps[16] = _T("\r\nps. responsibility (n) 責任");
+	words.word[17] = _T("invoice"); words.number[17] = 255; words.chinese[17] = _T("n. 出貨明細、發貨單");	 words.ps[17] = _T("");
+	words.word[18] = _T("standard"); words.number[18] = 257; words.chinese[18] = _T("n. 標準、基準、規格；adj. 標準的、規範的");	 words.ps[18] = _T("\r\nps. standardize (v) 使規格化、使標準化；standardization (n) 標準化");
+	words.word[19] = _T("legal"); words.number[19] = 261; words.chinese[19] = _T("adj. 法律的、合法的");	 words.ps[19] = _T("\r\nps. 相反詞：illegal (adj) 不合法");
+	words.word[20] = _T("confirm"); words.number[20] = 264; words.chinese[20] = _T("v. 確認；承認、確定");	 words.ps[20] = _T("\r\nps. confirmation (n) 確認；recomfirm (v) 再確認");
+	words.word[21] = _T("extend"); words.number[21] = 266; words.chinese[21] = _T("v. 延長、擴大、伸展");	 words.ps[21] = _T("\r\nps. extensive (adj) 廣闊的、廣泛的、大量的");
+	words.word[22] = _T("reduce"); words.number[22] = 269; words.chinese[22] = _T("v. 減少、降低、縮短");	 words.ps[22] = _T("\r\nps. reduction (n) 減少");
+	words.word[23] = _T("individual"); words.number[23] = 273; words.chinese[23] = _T("adj. 個人的、個別的；n. 個人");	 words.ps[23] = _T("\r\nps. individually (adv) 個別地");
+	words.word[24] = _T("limit"); words.number[24] = 276; words.chinese[24] = _T("v. 限制、限定；n. 界線、限制、境界");	 words.ps[24] = _T("\r\nps. limitation (n) 限制、極限");
+	words.word[25] = _T("appreciate"); words.number[25] = 279; words.chinese[25] = _T("v. 感謝、欣賞、正確地評價");	 words.ps[25] = _T("\r\nps. appreciation (n) 感激、賞識、感謝");
+	words.word[26] = _T("deposit"); words.number[26] = 282; words.chinese[26] = _T("n. 存款、訂金、保證金；v. 存入銀行、付(訂金)");	 words.ps[26] = _T("");
+	words.word[27] = _T("revise"); words.number[27] = 285; words.chinese[27] = _T("v. 修正、修訂");	 words.ps[27] = _T("\r\nps. revision (n) 修正、修訂本");
+	words.word[28] = _T("notify"); words.number[28] = 291; words.chinese[28] = _T("v. 通知、通報");	 words.ps[28] = _T("\r\nps. notification (n) 通知、通報");
+	words.word[29] = _T("regard"); words.number[29] = 293; words.chinese[29] = _T("v. 認為是~、評價、考慮；n. 考慮、尊重、問候");	 words.ps[29] = _T("\r\nps. 相反詞：disregard (v) 漠視、忽視、不尊重；(n) 不關心、漠視");
+	words.word[30] = _T("select"); words.number[30] = 297; words.chinese[30] = _T("v. 選擇、挑選、選拔；adj. 精選的；n. 精選");	 words.ps[30] = _T("\r\nps. selection (n) 選擇、精選");
+	words.word[31] = _T("identification"); words.number[31] = 299; words.chinese[31] = _T("n. 身分證明、驗明");	 words.ps[31] = _T("\r\nps. identical (2508)(adj) 同樣的、一模一樣的；\r\n    identify (v) 確認、鑑別出、發現");
+
 }
 void getWords_Day3(Words &words)
 {
+	words.word[0] = _T("property"); words.number[0] = 203; words.chinese[0] = _T("n.財產、所有物、不動產");	 words.ps[0] = _T("");
+	words.word[1] = _T("consumer"); words.number[1] = 206; words.chinese[1] = _T("n. 消費者");	 words.ps[1] = _T("\r\nps. consume (v) 消費；consumption (n) 消費");
+	words.word[2] = _T("raise"); words.number[2] = 208; words.chinese[2] = _T("n. 提高；v. 升起、使向上");	 words.ps[2] = _T("");
+	words.word[3] = _T("indicate"); words.number[3] = 211; words.chinese[3] = _T("v. 表示、指出、代表、象徵");	 words.ps[3] = _T("\r\nps. indication (n) 指示、徵兆；indicator (n) 指示器、指針；\r\n    indicative (adj) 表示的、暗示的");
+	words.word[4] = _T("permit"); words.number[4] = 214; words.chinese[4] = _T("v. 許可、允許；n. 許可(證)");	 words.ps[4] = _T("\r\nps. permission (n) 許可、允許");
+	words.word[5] = _T("rent"); words.number[5] = 216; words.chinese[5] = _T("v. (房屋、土地等)租借；n. 租借、租金、房租");	 words.ps[5] = _T("\r\nps. rental (n) 租借、出租(物)；(adj) 供出租的");
+	words.word[6] = _T("shipment"); words.number[6] = 218; words.chinese[6] = _T("n. 運送、裝運");	 words.ps[6] = _T("\r\nps. shipping (n) 運輸(業)；ship (n) 船、艦");
+	words.word[7] = _T("distribute"); words.number[7] = 222; words.chinese[7] = _T("v. 分發、分配");	 words.ps[7] = _T("\r\nps. distribution (n) 分發、分配；distributor (n) 批發商");
+	words.word[8] = _T("stock"); words.number[8] = 226; words.chinese[8] = _T("n. 股票 (=share)、庫存、儲藏；v. 存貨");	 words.ps[8] = _T("\r\nps. stockholder (n) 股東");
+	words.word[9] = _T("regulation"); words.number[9] = 229; words.chinese[9] = _T("n. 規定、規範、法規");	 words.ps[9] = _T("\r\nps. regulate (v) 規範、管理、調整");
+	words.word[10] = _T("exhibit"); words.number[10] = 233; words.chinese[10] = _T("v. 展示、顯露；n. 展示");	 words.ps[10] = _T("\r\nps. exhibition (n) 展示會");
+	words.word[11] = _T("estimate"); words.number[11] = 236; words.chinese[11] = _T("n. 估價、報價、估計、評價；v. 估價");	 words.ps[11] = _T("");
+	words.word[12] = _T("quarter"); words.number[12] = 241; words.chinese[12] = _T("n. 季節、三個月、四分之一；adj. 四分之一的；v. 把~四等份");	 words.ps[12] = _T("\r\nps. quarterly (adj) 季的；(adv) 一季地");
+	words.word[13] = _T("necessary"); words.number[13] = 244; words.chinese[13] = _T("adj. 必要的、不能沒有的；n. 必需品");	 words.ps[13] = _T("\r\nps. necessity (n) 必要、必需品；necessitate (v) 使成為必需");
+	words.word[14] = _T("encourage"); words.number[14] = 245; words.chinese[14] = _T("v. 鼓勵、促進");	 words.ps[14] = _T("\r\nps. encouragement (n) 獎勵、促進");
+	words.word[15] = _T("resume"); words.number[15] = 248; words.chinese[15] = _T("n. 履歷表；v. 重新開始、恢復、繼續");	 words.ps[15] = _T("");
+	words.word[16] = _T("responsible"); words.number[16] = 253; words.chinese[16] = _T("adj. 有責任的、可信賴的");	 words.ps[16] = _T("\r\nps. responsibility (n) 責任");
+	words.word[17] = _T("invoice"); words.number[17] = 255; words.chinese[17] = _T("n. 出貨明細、發貨單");	 words.ps[17] = _T("");
+	words.word[18] = _T("standard"); words.number[18] = 257; words.chinese[18] = _T("n. 標準、基準、規格；adj. 標準的、規範的");	 words.ps[18] = _T("\r\nps. standardize (v) 使規格化、使標準化；standardization (n) 標準化");
+	words.word[19] = _T("legal"); words.number[19] = 261; words.chinese[19] = _T("adj. 法律的、合法的");	 words.ps[19] = _T("\r\nps. 相反詞：illegal (adj) 不合法");
+	words.word[20] = _T("confirm"); words.number[20] = 264; words.chinese[20] = _T("v. 確認；承認、確定");	 words.ps[20] = _T("\r\nps. confirmation (n) 確認；recomfirm (v) 再確認");
+	words.word[21] = _T("extend"); words.number[21] = 266; words.chinese[21] = _T("v. 延長、擴大、伸展");	 words.ps[21] = _T("\r\nps. extensive (adj) 廣闊的、廣泛的、大量的");
+	words.word[22] = _T("reduce"); words.number[22] = 269; words.chinese[22] = _T("v. 減少、降低、縮短");	 words.ps[22] = _T("\r\nps. reduction (n) 減少");
+	words.word[23] = _T("individual"); words.number[23] = 273; words.chinese[23] = _T("adj. 個人的、個別的；n. 個人");	 words.ps[23] = _T("\r\nps. individually (adv) 個別地");
+	words.word[24] = _T("limit"); words.number[24] = 276; words.chinese[24] = _T("v. 限制、限定；n. 界線、限制、境界");	 words.ps[24] = _T("\r\nps. limitation (n) 限制、極限");
+	words.word[25] = _T("appreciate"); words.number[25] = 279; words.chinese[25] = _T("v. 感謝、欣賞、正確地評價");	 words.ps[25] = _T("\r\nps. appreciation (n) 感激、賞識、感謝");
+	words.word[26] = _T("deposit"); words.number[26] = 282; words.chinese[26] = _T("n. 存款、訂金、保證金；v. 存入銀行、付(訂金)");	 words.ps[26] = _T("");
+	words.word[27] = _T("revise"); words.number[27] = 285; words.chinese[27] = _T("v. 修正、修訂");	 words.ps[27] = _T("\r\nps. revision (n) 修正、修訂本");
+	words.word[28] = _T("notify"); words.number[28] = 291; words.chinese[28] = _T("v. 通知、通報");	 words.ps[28] = _T("\r\nps. notification (n) 通知、通報");
+	words.word[29] = _T("regard"); words.number[29] = 293; words.chinese[29] = _T("v. 認為是~、評價、考慮；n. 考慮、尊重、問候");	 words.ps[29] = _T("\r\nps. 相反詞：disregard (v) 漠視、忽視、不尊重；(n) 不關心、漠視");
+	words.word[30] = _T("select"); words.number[30] = 297; words.chinese[30] = _T("v. 選擇、挑選、選拔；adj. 精選的；n. 精選");	 words.ps[30] = _T("\r\nps. selection (n) 選擇、精選");
+	words.word[31] = _T("identification"); words.number[31] = 299; words.chinese[31] = _T("n. 身分證明、驗明");	 words.ps[31] = _T("\r\nps. identical (2508)(adj) 同樣的、一模一樣的；\r\n    identify (v) 確認、鑑別出、發現");
+
 }
 void getWords_Day4(Words &words)
 {
+	words.word[0] = _T("local"); words.number[0] = 303; words.chinese[0] = _T("adj. 當地的、地方的");	 words.ps[0] = _T("\r\nps. localize (v) 當地化；localization (n) 當地化、本土化");
+	words.word[1] = _T("contract"); words.number[1] = 305; words.chinese[1] = _T("n. 合約(書)、簽訂合約、將工作承包給");	 words.ps[1] = _T("");
+	words.word[2] = _T("board"); words.number[2] = 309; words.chinese[2] = _T("n. 董事會、理事會、委員、部、會、局；v. 登上");	 words.ps[2] = _T("");
+	words.word[3] = _T("potential"); words.number[3] = 311; words.chinese[3] = _T("n. 潛力、可能性；adj. 可能的、潛在的");	 words.ps[3] = _T("");
+	words.word[4] = _T("delay"); words.number[4] = 314; words.chinese[4] = _T("v. 延遲、耽擱；n. 延遲、滯延");	 words.ps[4] = _T("");
+	words.word[5] = _T("procedure"); words.number[5] = 318; words.chinese[5] = _T("n. 程序、手續");	 words.ps[5] = _T("");
+	words.word[6] = _T("approve"); words.number[6] = 322; words.chinese[6] = _T("v. 批准、認可、贊成");	 words.ps[6] = _T("\r\nps. approval (n) 贊成、同意、批准");
+	words.word[7] = _T("institute"); words.number[7] = 323; words.chinese[7] = _T("n. 機構、協會；v. 設立、制定");	 words.ps[7] = _T("\r\nps. institution (n) 機構、設立、制度、習俗");
+	words.word[8] = _T("issue"); words.number[8] = 327; words.chinese[8] = _T("v. 發出、頒布；n. 爭議、發行、期號");	 words.ps[8] = _T("");
+	words.word[9] = _T("branch"); words.number[9] = 328; words.chinese[9] = _T("n. 分公司、分行、樹枝；v. 分支、分岔");	 words.ps[9] = _T("");
+	words.word[10] = _T("predict"); words.number[10] = 331; words.chinese[10] = _T("v. 預測、預言");	 words.ps[10] = _T("\r\nps. prediction (n) 預見、預言；predictable (adj) 可預料的");
+	words.word[11] = _T("maintenance"); words.number[11] = 335; words.chinese[11] = _T("n. 保養管理、持續、維持");	 words.ps[11] = _T("\r\nps. maintain (v) 維修、保養、維持、堅持");
+	words.word[12] = _T("entire"); words.number[12] = 339; words.chinese[12] = _T("adj. 整個的、全體的、全部的");	 words.ps[12] = _T("\r\nps. 全部的 = entirety of；entirely (adv) 完全地、徹底地");
+	words.word[13] = _T("lower"); words.number[13] = 342; words.chinese[13] = _T("v. 降低、減少、貶低、出現愁容；adj. 下方的、次級的");	 words.ps[13] = _T("");
+	words.word[14] = _T("shift"); words.number[14] = 346; words.chinese[14] = _T("n. 輪值班、變化、轉換；v. 改變位置或方向、轉移");	 words.ps[14] = _T("");
+	words.word[15] = _T("attach"); words.number[15] = 349; words.chinese[15] = _T("v. 貼上、附上、使附屬");	 words.ps[15] = _T("\r\nps. 相反詞：detach (v)(2587) 摘下。attached (adj) 附加的、附屬的；\r\n    attachment (n) 附帶、附件");
+	words.word[16] = _T("claim"); words.number[16] = 352; words.chinese[16] = _T("v. 聲稱、要求、主張；n. 主張、要求");	 words.ps[16] = _T("");
+	words.word[17] = _T("promotion"); words.number[17] = 355; words.chinese[17] = _T("n. 晉級、晉升、促銷");	 words.ps[17] = _T("");
+	words.word[18] = _T("publication"); words.number[18] = 358; words.chinese[18] = _T("n. 出版(品)、發行");	 words.ps[18] = _T("\r\nps. publish (v) 出版、發行；publishing (n) 出版業");
+	words.word[19] = _T("suppose"); words.number[19] = 360; words.chinese[19] = _T("v. 認為必須、假定、想像、推測");	 words.ps[19] = _T("");
+	words.word[20] = _T("reference"); words.number[20] = 364; words.chinese[20] = _T("n. 參考、提及、推薦書");	 words.ps[20] = _T("\r\nps. refer to (v) 參考、提及");
+	words.word[21] = _T("establish"); words.number[21] = 367; words.chinese[21] = _T("v. 建立、設立");	 words.ps[21] = _T("\r\nps. establishment (n) 設立、創立；established (adj) 制定的、設立的");
+	words.word[22] = _T("merchandise"); words.number[22] = 370; words.chinese[22] = _T("n. 商品、產品");	 words.ps[22] = _T("\r\nps. merchant (n) 商人");
+	words.word[23] = _T("associate"); words.number[23] = 374; words.chinese[23] = _T("n. 夥伴、同事；v. 使有關聯；adj. 同事的、職級較小的");	 words.ps[23] = _T("\r\nps. association (n) 團體、協會");
+	words.word[24] = _T("banquet"); words.number[24] = 378; words.chinese[24] = _T("n. (正式的)宴會、盛宴");	 words.ps[24] = _T("");
+	words.word[25] = _T("lean"); words.number[25] = 381; words.chinese[25] = _T("v. 靠在、使斜靠、傾向、依靠");	 words.ps[25] = _T("");
+	words.word[26] = _T("examine"); words.number[26] = 384; words.chinese[26] = _T("v. 檢視、檢查、診察、測驗");	 words.ps[26] = _T("\r\nps. examination (n) 調查、審查、測驗；examiner (n) 審查員、主考官");
+	words.word[27] = _T("finance"); words.number[27] = 386; words.chinese[27] = _T("v. 提供資金、籌款；財政、財務");	 words.ps[27] = _T("\r\nps. finacial (adj) 財政上的；finacing (n) 調度資金");
+	words.word[28] = _T("appropriate"); words.number[28] = 391; words.chinese[28] = _T("adj. 適當的、合適的");	 words.ps[28] = _T("\r\nps. 相反詞：inappropriate (adj) 不適合的。\r\n    appropriately (adv) 適當地、合適地");
+	words.word[29] = _T("warranty"); words.number[29] = 393; words.chinese[29] = _T("n. (品質)保證、保證書");	 words.ps[29] = _T("");
+	words.word[30] = _T("investment"); words.number[30] = 396; words.chinese[30] = _T("n. 抔資、出資");	 words.ps[30] = _T("\r\nps. invest (v) 投資、出資；investor (n) 投資者");
+	words.word[31] = _T("certificate"); words.number[31] = 400; words.chinese[31] = _T("n. 證明書、發證書給");	 words.ps[31] = _T("\r\nps. certification (n) 認證書");
+
 }
 void getWords_Day5(Words &words)
 {
+	words.word[0] = _T("release"); words.number[0] = 403; words.chinese[0] = _T("v. 上市、發表、公開、釋放；n. 發表");	 words.ps[0] = _T("");
+	words.word[1] = _T("concerning"); words.number[1] = 405; words.chinese[1] = _T("prep. 關於、與~有關");	 words.ps[1] = _T("\r\nps. 相似詞：regarding");
+	words.word[2] = _T("departure"); words.number[2] = 407; words.chinese[2] = _T("n. 出發、離職");	 words.ps[2] = _T("\r\nps. depart (v) 出發、離開");
+	words.word[3] = _T("postpone"); words.number[3] = 410; words.chinese[3] = _T("v. 延期、延後");	 words.ps[3] = _T("");
+	words.word[4] = _T("resident"); words.number[4] = 413; words.chinese[4] = _T("n. 居民；居住者；adj. 居住的");	 words.ps[4] = _T("\r\nps. residential (adj) 居民的、有關住宅的；residence (n) 居住、居留權");
+	words.word[5] = _T("apologize"); words.number[5] = 416; words.chinese[5] = _T("v. 道歉");	 words.ps[5] = _T("\r\nps. apology (n) 道歉");
+	words.word[6] = _T("complaint"); words.number[6] = 420; words.chinese[6] = _T("n. 抱怨、怨言");	 words.ps[6] = _T("\r\nps. complain (v) 提出不滿、抱怨");
+	words.word[7] = _T("suggestion"); words.number[7] = 424; words.chinese[7] = _T("n. 提議、建議、暗示");	 words.ps[7] = _T("\r\nps. suggest (v) 提議、建議");
+	words.word[8] = _T("involve"); words.number[8] = 428; words.chinese[8] = _T("v. 牽涉、連累、包含、需要");	 words.ps[8] = _T("\r\nps. involvement (n) 連累、牽連");
+	words.word[9] = _T("celebrate"); words.number[9] = 431; words.chinese[9] = _T("v. 慶祝");	 words.ps[9] = _T("\r\nps. celebration (n) 慶祝活動、慶典");
+	words.word[10] = _T("share"); words.number[10] = 435; words.chinese[10] = _T("n. 股票、市場占有率");	 words.ps[10] = _T("\r\nps. 相似詞：stock (266) 股票。shareholder (n) 股東");
+	words.word[11] = _T("promptly"); words.number[11] = 438; words.chinese[11] = _T("adv. 迅速地、敏捷地、立即地");	 words.ps[11] = _T("\r\nps. prompt (adj) 迅速的、敏捷的、即時的；promptness (n) 迅速姓");
+	words.word[12] = _T("efficiency"); words.number[12] = 440; words.chinese[12] = _T("n. 效率");	 words.ps[12] = _T("\r\nps. 相反詞：inefficiency (n) 無效率；\r\n    efficient (adj) 有效率的、efficiently (adv) 有效率地");
+	words.word[13] = _T("attention"); words.number[13] = 443; words.chinese[13] = _T("n. 注意力、關心");	 words.ps[13] = _T("");
+	words.word[14] = _T("convenient"); words.number[14] = 447; words.chinese[14] = _T("adj. 便利的、方便的");	 words.ps[14] = _T("\r\nps. 相反詞：inconvenient (adj) 不便的。\r\n    conveniently (adj) 不便地");
+	words.word[15] = _T("approach"); words.number[15] = 449; words.chinese[15] = _T("v. 接近、靠近、著手處理；n. 接近、方法、接洽");	 words.ps[15] = _T("");
+	words.word[16] = _T("revenue"); words.number[16] = 451; words.chinese[16] = _T("n. 收益、收入、稅收");	 words.ps[16] = _T("");
+	words.word[17] = _T("secure"); words.number[17] = 454; words.chinese[17] = _T("v. 保護、保衛安全、獲得；adj. 安全的");	 words.ps[17] = _T("\r\nps. 相反詞：insecure (adj) 不安全的。securely (adv) 安全地");
+	words.word[18] = _T("analysis"); words.number[18] = 458; words.chinese[18] = _T("n. 分析、解析");	 words.ps[18] = _T("\r\nps. analyze (v) 分析、解析；analyst (n) 分析師、分析者");
+	words.word[19] = _T("compliance"); words.number[19] = 462; words.chinese[19] = _T("n. 遵守");	 words.ps[19] = _T("\r\nps. comply (v) 遵從、服從");
+	words.word[20] = _T("instrument"); words.number[20] = 465; words.chinese[20] = _T("n. 儀器、工具、樂器");	 words.ps[20] = _T("");
+	words.word[21] = _T("volunteer"); words.number[21] = 468; words.chinese[21] = _T("v. 自願服務、做義工、自願做；n. 自願服務者、義工");	 words.ps[21] = _T("\r\nps. voluntary (adj) 自發的、自願的");
+	words.word[22] = _T("accord"); words.number[22] = 471; words.chinese[22] = _T("v. 與~符合；使~一致；n. 一致、協定");	 words.ps[22] = _T("\r\nps. accordance (n) 一致、和諧；according to (prep) 根據~");
+	words.word[23] = _T("collection"); words.number[23] = 474; words.chinese[23] = _T("n. 收藏、收集、募金、徵收");	 words.ps[23] = _T("\r\nps. collect (v) 收集；collector (n) 收集者、收稅員");
+	words.word[24] = _T("launch"); words.number[24] = 477; words.chinese[24] = _T("v. 使上市、使開始、使登場；n. 上市");	 words.ps[24] = _T("");
+	words.word[25] = _T("competitive"); words.number[25] = 480; words.chinese[25] = _T("adj. 有競爭力的");	 words.ps[25] = _T("\r\nps. competitively (adv) 具有競爭力地；competition (n) 競爭");
+	words.word[26] = _T("respond"); words.number[26] = 484; words.chinese[26] = _T("v. 回應、回答");	 words.ps[26] = _T("\r\nps. response (v) 回答、答覆、反應；responsive (adj) 有回答的、有反應的");
+	words.word[27] = _T("guarantee"); words.number[27] = 488; words.chinese[27] = _T("n. 保證(書)、擔保(品)");	 words.ps[27] = _T("\r\nps. 相似詞：warranty (393)");
+	words.word[28] = _T("progress"); words.number[28] = 490; words.chinese[28] = _T("n. 進步、前進；v. 進步、進展");	 words.ps[28] = _T("\r\nps. progressive (adj) 漸進的、進步的；progressively (adv) 日益增加地、前進地");
+	words.word[29] = _T("prevent"); words.number[29] = 493; words.chinese[29] = _T("v. 防止、預防");	 words.ps[29] = _T("\r\nps. prevention (n) 預防；preventive = preventative (adj) 預防的");
+	words.word[30] = _T("lease"); words.number[30] = 496; words.chinese[30] = _T("v. 租借；n. 租借契約");	 words.ps[30] = _T("");
+	words.word[31] = _T("headquarters"); words.number[31] = 498; words.chinese[31] = _T("n. 總公司、總部");	 words.ps[31] = _T("\r\nps. headquartered (adj) 設立總公司/總部於~的");
+
 }
 void getWords_Day6(Words &words)
 {
+	words.word[0] = _T("proceed"); words.number[0] = 501; words.chinese[0] = _T("v. 前行、繼續進行");	 words.ps[0] = _T("\r\nps. proceeds (n) 收入、收益；proceedings (n) 事件、過程");
+	words.word[1] = _T("related"); words.number[1] = 505; words.chinese[1] = _T("adj. 相關的、關聯的");	 words.ps[1] = _T("\r\nps. relate (v) 認同、使有關聯；relation (n) 關係");
+	words.word[2] = _T("fold"); words.number[2] = 507; words.chinese[2] = _T("v. 摺疊、合攏");	 words.ps[2] = _T("\r\nps. 相反詞：unfold (v) 翻開。folder (n) 資料夾");
+	words.word[3] = _T("qualify"); words.number[3] = 510; words.chinese[3] = _T("v. 使有資格、證明合格");	 words.ps[3] = _T("\r\nps. 相反詞：disqualify (v) 取消資格、使不合格。\r\n    qualified (adj) 有資格的；qualification (n) 資格、能力");
+	words.word[4] = _T("reputation"); words.number[4] = 513; words.chinese[4] = _T("n. 名譽、信譽");	 words.ps[4] = _T("\r\nps.  = repute");
+	words.word[5] = _T("donate"); words.number[5] = 515; words.chinese[5] = _T("v. 捐贈、捐助");	 words.ps[5] = _T("\r\nps. donation (n) 捐助、捐贈；donor (n) 捐贈者");
+	words.word[6] = _T("strategy"); words.number[6] = 519; words.chinese[6] = _T("n. 策略、戰略");	 words.ps[6] = _T("\r\nps. strategic (adj) 策略的；strategically (adv) 策略上地");
+	words.word[7] = _T("acquire"); words.number[7] = 522; words.chinese[7] = _T("v. 取得(財產、權利等)、獲得");	 words.ps[7] = _T("\r\nps. acquisition (n) 收購、獲得、取得、獲得物");
+	words.word[8] = _T("vary"); words.number[8] = 526; words.chinese[8] = _T("v. 使不同、呈多樣化");	 words.ps[8] = _T("\r\nps. various (adj) 多元的、不同的；variety (n) 多樣性");
+	words.word[9] = _T("accompany"); words.number[9] = 529; words.chinese[9] = _T("v. 陪同、伴隨、與~同時發生");	 words.ps[9] = _T("");
+	words.word[10] = _T("contribute"); words.number[10] = 533; words.chinese[10] = _T("v. 捐贈、贈與");	 words.ps[10] = _T("\r\nps. contribution (n) 貢獻、捐贈");
+	words.word[11] = _T("mechanic"); words.number[11] = 536; words.chinese[11] = _T("n. 機械工、技師");	 words.ps[11] = _T("\r\nps. mechanical (adj) 機械上的");
+	words.word[12] = _T("inventory"); words.number[12] = 540; words.chinese[12] = _T("n. 存貨、庫存、存貨清單；v. 盤存、登入存貨目錄");	 words.ps[12] = _T("");
+	words.word[13] = _T("assembly"); words.number[13] = 543; words.chinese[13] = _T("n. 裝配、集會、與會者");	 words.ps[13] = _T("\r\nps. 相反詞：disassembly (n) 拆解、分解。\r\n    assemble (v) 聚集(人)、組裝(機械等)");
+	words.word[14] = _T("upcoming"); words.number[14] = 547; words.chinese[14] = _T("adj. 即將到來的");	 words.ps[14] = _T("");
+	words.word[15] = _T("anticipate"); words.number[15] = 550; words.chinese[15] = _T("v. 期望、預料、預見到");	 words.ps[15] = _T("\r\nps. anticipation (n) 預料、預期、期盼；anticipated (adj) 預期的");
+	words.word[16] = _T("similar"); words.number[16] = 553; words.chinese[16] = _T("adj. 類似的、相似的");	 words.ps[16] = _T("\r\nps. similarity (n) 類似、相似點");
+	words.word[17] = _T("forecast"); words.number[17] = 555; words.chinese[17] = _T("n. 預測、預料；v. 預報、預測");	 words.ps[17] = _T("");
+	words.word[18] = _T("term"); words.number[18] = 559; words.chinese[18] = _T("n. 條款、條件；n. 期間、用語");	 words.ps[18] = _T("");
+	words.word[19] = _T("significant"); words.number[19] = 561; words.chinese[19] = _T("adj. 顯著的、重要的");	 words.ps[19] = _T("\r\nps. significantly (adv) 相當地、顯著地；significance (n) 重要性");
+	words.word[20] = _T("lecture"); words.number[20] = 564; words.chinese[20] = _T("n. 演講、授課、告誡、責備；v. 授課、演講");	 words.ps[20] = _T("\r\nps. lecturer (n) 演講者、講師");
+	words.word[21] = _T("reliable"); words.number[21] = 567; words.chinese[21] = _T("adj. 可靠的、可信賴的");	 words.ps[21] = _T("\r\nps. reliably (adv) 可靠地；reliability (n) 信賴度、可信度\r\n    相反詞：unreliable (adj) 不可信賴的");
+	words.word[22] = _T("general"); words.number[22] = 571; words.chinese[22] = _T("adj. 大體的、一般的");	 words.ps[22] = _T("\r\nps. generally (adv) 一般地；generalize (v) 一般化");
+	words.word[23] = _T("prior"); words.number[23] = 574; words.chinese[23] = _T("adj. 在前的、之前的、優先的");	 words.ps[23] = _T("\r\nps. priority (n) 優先順位、優先權");
+	words.word[24] = _T("initial"); words.number[24] = 576; words.chinese[24] = _T("adj. 最初的、開始的；v. 簽姓名的起首字母");	 words.ps[24] = _T("\r\nps. initiate (v)(2019) 開始、著手；initially (adv) 起初地、開頭地");
+	words.word[25] = _T("pour"); words.number[25] = 579; words.chinese[25] = _T("v. 倒");	 words.ps[25] = _T("");
+	words.word[26] = _T("disappoint"); words.number[26] = 584; words.chinese[26] = _T("v. 使失望、使落空");	 words.ps[26] = _T("\r\nps. disappointed (adj) 感到失望的；disappointing (adj) 令人失望的");
+	words.word[27] = _T("attendant"); words.number[27] = 587; words.chinese[27] = _T("n. 服務員、隨行員");	 words.ps[27] = _T("\r\nps. attendance (n) 參加、出席；attendee (n) 出席者");
+	words.word[28] = _T("audit"); words.number[28] = 591; words.chinese[28] = _T("n. 稽核、查帳；v. 稽核、旁聽");	 words.ps[28] = _T("\r\nps. auditor (n) 稽核者、旁聽生");
+	words.word[29] = _T("source"); words.number[29] = 594; words.chinese[29] = _T("n. 來源、出處、消息來源");	 words.ps[29] = _T("");
+	words.word[30] = _T("inspection"); words.number[30] = 596; words.chinese[30] = _T("n. 檢查、檢驗、視察");	 words.ps[30] = _T("\r\nps. inspect (v) 審查、檢查；inspector (n) 稽查員、督學");
+	words.word[31] = _T("attract"); words.number[31] = 600; words.chinese[31] = _T("v. 吸引、引起");	 words.ps[31] = _T("\r\nps. attractive (adj) 有魅力的、有吸引力的；attraction (n) 景點、魅力");
+
 }
 void getWords_Day7(Words &words)
 {
+	words.word[0] = _T("income"); words.number[0] = 603; words.chinese[0] = _T("n. 收入、所得");	 words.ps[0] = _T("");
+	words.word[1] = _T("recognize"); words.number[1] = 606; words.chinese[1] = _T("v. 肯定、認得、承認");	 words.ps[1] = _T("\r\nps. recognizable (adj) 可辨認的；recognition (n) 認可、表彰、認識");
+	words.word[2] = _T("baggage"); words.number[2] = 609; words.chinese[2] = _T("n. 行李");	 words.ps[2] = _T("\r\nps. 相似詞：luggage");
+	words.word[3] = _T("accommodate"); words.number[3] = 612; words.chinese[3] = _T("v. 容納、能提供~膳宿、通融");	 words.ps[3] = _T("\r\nps. accommodation (n) 收容、膳宿");
+	words.word[4] = _T("force"); words.number[4] = 615; words.chinese[4] = _T("v. 迫使、強迫；n. 力、影響力");	 words.ps[4] = _T("");
+	words.word[5] = _T("recruit"); words.number[5] = 619; words.chinese[5] = _T("v. 招募、聘用；n. 新成員、新手");	 words.ps[5] = _T("\r\nps. recruitment (n) 招募");
+	words.word[6] = _T("tend"); words.number[6] = 622; words.chinese[6] = _T("v. 傾向於、照顧");	 words.ps[6] = _T("\r\nps. tendency (n) 傾向、風潮、趨勢");
+	words.word[7] = _T("district"); words.number[7] = 625; words.chinese[7] = _T("n. (行政區等的)區域、地區");	 words.ps[7] = _T("");
+	words.word[8] = _T("reflect"); words.number[8] = 629; words.chinese[8] = _T("v. 反映、反射");	 words.ps[8] = _T("\r\nps. reflection (n) 反映、反射；reflective (adj) 反射的、反映的");
+	words.word[9] = _T("frequent"); words.number[9] = 631; words.chinese[9] = _T("adj. 經常的、頻繁的");	 words.ps[9] = _T("\r\nps. frequently (adv) 屢次地。相反詞：infrequenct (adj) 不頻繁的");
+	words.word[10] = _T("depend"); words.number[10] = 635; words.chinese[10] = _T("v. 依靠、信賴");	 words.ps[10] = _T("\r\nps. dependable (adj) 可靠的；independent (adj) 獨立的、自主的");
+	words.word[11] = _T("accurate"); words.number[11] = 638; words.chinese[11] = _T("adj. 準確的、精確的");	 words.ps[11] = _T("\r\nps. 相反詞：inaccurate (adj) 不正確的。accurately (adv) 正確地\r\n    accuracy (n) 正確性");
+	words.word[12] = _T("valid"); words.number[12] = 641; words.chinese[12] = _T("adj. 有效的、合法的");	 words.ps[12] = _T("\r\nps. validity (n) 正當性、效力、合法性");
+	words.word[13] = _T("capacity"); words.number[13] = 644; words.chinese[13] = _T("n. 生產力、容量、能力、才能、資格、地位");	 words.ps[13] = _T("\r\nps. capable (adj) 能夠做的、有能力的");
+	words.word[14] = _T("transport"); words.number[14] = 646; words.chinese[14] = _T("v. 運送、輸送；n. 運送、交通工具");	 words.ps[14] = _T("\r\nps. transportation (n) 運送、交通、運輸工具\r\n    transporter (n) 運送員、運送車輛或大型貨物的車輛");
+	words.word[15] = _T("retail"); words.number[15] = 649; words.chinese[15] = _T("n. 零售；adj. 零售的；v. 零售");	 words.ps[15] = _T("\r\nps. retailer (n) 零售商");
+	words.word[16] = _T("overhead"); words.number[16] = 652; words.chinese[16] = _T("n. 經常開支(租金、電費、薪資等)；adv. 在頭頂上、高高地；adj. 在頭頂上的");	 words.ps[16] = _T("");
+	words.word[17] = _T("fiscal"); words.number[17] = 656; words.chinese[17] = _T("adj. 會計的、財政上的");	 words.ps[17] = _T("");
+	words.word[18] = _T("immediate"); words.number[18] = 658; words.chinese[18] = _T("adj. 即時的、當前的、直接的");	 words.ps[18] = _T("\r\nps. immediately (adv) 立即地");
+	words.word[19] = _T("translation"); words.number[19] = 662; words.chinese[19] = _T("n. 翻譯、譯文、轉化");	 words.ps[19] = _T("\r\nps. translate (v) 翻譯、解釋；translator (n) 譯者");
+	words.word[20] = _T("admit"); words.number[20] = 666; words.chinese[20] = _T("v. 許可、承認");	 words.ps[20] = _T("\r\nps. admission (n) 許可、承認");
+	words.word[21] = _T("export"); words.number[21] = 669; words.chinese[21] = _T("n. 輸出(品)；v. 輸出");	 words.ps[21] = _T("\r\nps. 相反詞：import (n) 進口、(v) 進口");
+	words.word[22] = _T("temporary"); words.number[22] = 671; words.chinese[22] = _T("adj. 臨時的；n. 臨時工、臨時事物");	 words.ps[22] = _T("\r\nps. temporarily (adj) 一時地、臨時地");
+	words.word[23] = _T("enroll"); words.number[23] = 675; words.chinese[23] = _T("v. 註冊、記載在名單上");	 words.ps[23] = _T("\r\nps. enrollment (n) 註冊、登記");
+	words.word[24] = _T("screen"); words.number[24] = 679; words.chinese[24] = _T("v. 篩選、檢視、審查、放映；n. 銀幕、畫面、紗窗");	 words.ps[24] = _T("");
+	words.word[25] = _T("enclose"); words.number[25] = 682; words.chinese[25] = _T("v. 一同封入(信封、公文夾)、圈住、圍住");	 words.ps[25] = _T("\r\nps. enclosure (n) 封入、圍欄/牆、附件");
+	words.word[26] = _T("generate"); words.number[26] = 685; words.chinese[26] = _T("v. 產生、引起");	 words.ps[26] = _T("\r\nps. generation (n) 發生、世代、同時代的人；generator (n) 發電機");
+	words.word[27] = _T("settle"); words.number[27] = 688; words.chinese[27] = _T("v. 解決(問題)、安頓、安排、償還支付、決定");	 words.ps[27] = _T("\r\nps. settlement (n) 解決、償還、清算、結帳");
+	words.word[28] = _T("assist"); words.number[28] = 691; words.chinese[28] = _T("v. 協助、幫助");	 words.ps[28] = _T("\r\nps. assistant (n) 助手、輔佐人");
+	words.word[29] = _T("verify"); words.number[29] = 694; words.chinese[29] = _T("v. 證實、證明、確認");	 words.ps[29] = _T("\r\nps. verification (n) 確認、證明");
+	words.word[30] = _T("shortly"); words.number[30] = 698; words.chinese[30] = _T("adj. 即將、不久");	 words.ps[30] = _T("");
+	words.word[31] = _T("agenda"); words.number[31] = 700; words.chinese[31] = _T("n. (會議的)議程、待議事項");	 words.ps[31] = _T("");
+
 }
 void getWords_Day8(Words &words)
 {
+	words.word[0] = _T("figure"); words.number[0] = 701; words.chinese[0] = _T("n. 數字、金額、人物、人名");	 words.ps[0] = _T("");
+	words.word[1] = _T("entitle"); words.number[1] = 704; words.chinese[1] = _T("v. 給予資格/權利、命名");	 words.ps[1] = _T("");
+	words.word[2] = _T("specialize"); words.number[2] = 707; words.chinese[2] = _T("v. 專門從事、專攻");	 words.ps[2] = _T("\r\nps. specialization (n) 特殊化；specialized (adj) 專門的");
+	words.word[3] = _T("decline"); words.number[3] = 710; words.chinese[3] = _T("v. 下降；減少、婉拒；n. 下跌、衰退");	 words.ps[3] = _T("");
+	words.word[4] = _T("impress"); words.number[4] = 713; words.chinese[4] = _T("v. 給予深刻印象");	 words.ps[4] = _T("\r\nps. impressive (adj) 印象深刻的");
+	words.word[5] = _T("resign"); words.number[5] = 715; words.chinese[5] = _T("v. 辭去、辭職");	 words.ps[5] = _T("\r\nps. resignation (n) 辭職、辭呈");
+	words.word[6] = _T("eligible"); words.number[6] = 719; words.chinese[6] = _T("adj. 有資格的、適合的；n. 合格者、合適的人");	 words.ps[6] = _T("\r\nps. 相反詞：ineligible 無資格的");
+	words.word[7] = _T("specific"); words.number[7] = 723; words.chinese[7] = _T("adj. 特定的、明確的、具體的");	 words.ps[7] = _T("\r\nps. specify (v) 具體指定、詳細說明");
+	words.word[8] = _T("treatment"); words.number[8] = 725; words.chinese[8] = _T("n. 治療、對待、處理、待遇");	 words.ps[8] = _T("\r\nps. treat (v) 看待、對待、治療、請客；retreat (v) 撤退、使~後退");
+	words.word[9] = _T("sufficient"); words.number[9] = 729; words.chinese[9] = _T("adj. 充分的、足夠的");	 words.ps[9] = _T("\r\nps. sufficiently (adv) 充分地；相反詞：insufficient 不足的");
+	words.word[10] = _T("demonstrate"); words.number[10] = 731; words.chinese[10] = _T("v. 展示、示範、說明、證明、示威");	 words.ps[10] = _T("\r\nps. 相似詞：protest (1764) 示威");
+	words.word[11] = _T("strike"); words.number[11] = 734; words.chinese[11] = _T("n. 罷工、罷課、打擊、攻擊；v. 打、揍、罷工");	 words.ps[11] = _T("");
+	words.word[12] = _T("prescription"); words.number[12] = 739; words.chinese[12] = _T("n. 處方箋、處方藥品");	 words.ps[12] = _T("\r\nps. prescribe (v) 開立處方、指示");
+	words.word[13] = _T("outstanding"); words.number[13] = 742; words.chinese[13] = _T("adj. 未付清的、未解決的、傑出的、突破的");	 words.ps[13] = _T("");
+	words.word[14] = _T("sweep"); words.number[14] = 745; words.chinese[14] = _T("v. 打掃、掃過；n. 清掃、打掃");	 words.ps[14] = _T("");
+	words.word[15] = _T("narrow"); words.number[15] = 747; words.chinese[15] = _T("v. 縮小、使變狹窄");	 words.ps[15] = _T("\r\nps. narrowly (adv) 侷限地、仔細地");
+	words.word[16] = _T("instruct"); words.number[16] = 751; words.chinese[16] = _T("v. 指示、指導、通知");	 words.ps[16] = _T("\r\nps. instruction (n) 指示、教導、通知；instructor (n) 教師、指導者");
+	words.word[17] = _T("capital"); words.number[17] = 754; words.chinese[17] = _T("n. 資本、資金、首都；adj. 主要的、資本的");	 words.ps[17] = _T("\r\nps. capitalize (v)(2747) 提供資本、以大寫書寫");
+	words.word[18] = _T("detailed"); words.number[18] = 757; words.chinese[18] = _T("adj. 詳細的");	 words.ps[18] = _T("\r\nps. detail (n) 詳情、細節；(v) 詳述");
+	words.word[19] = _T("achieve"); words.number[19] = 763; words.chinese[19] = _T("v. 達成、成就、完成");	 words.ps[19] = _T("\r\nps. achievement (n) 成就、達成");
+	words.word[20] = _T("tenant"); words.number[20] = 765; words.chinese[20] = _T("n. 房客、承租者");	 words.ps[20] = _T("\r\nps. 相反詞：landlord (n) 房東、地主");
+	words.word[21] = _T("manuscript"); words.number[21] = 768; words.chinese[21] = _T("n. 手稿、原稿；adj. 原稿的、手抄本的");	 words.ps[21] = _T("");
+	words.word[22] = _T("renovation"); words.number[22] = 772; words.chinese[22] = _T("n. 更新、翻修");	 words.ps[22] = _T("\r\nps. 相似詞：remodeling 翻修。renovate (v) 更新、改善");
+	words.word[23] = _T("adjust"); words.number[23] = 775; words.chinese[23] = _T("v. 調整、校正、調適");	 words.ps[23] = _T("\r\nps. adjustment (n) 調整、調節；adjustable (adj) 可調整的");
+	words.word[24] = _T("grant"); words.number[24] = 778; words.chinese[24] = _T("n. 補助金、獎勵金、同意；v. 給予、同意");	 words.ps[24] = _T("");
+	words.word[25] = _T("defect"); words.number[25] = 781; words.chinese[25] = _T("n. 缺點、缺陷");	 words.ps[25] = _T("\r\nps. defective (adj) 有缺陷的");
+	words.word[26] = _T("foundation"); words.number[26] = 784; words.chinese[26] = _T("n. 創設、創立、基礎、基金會");	 words.ps[26] = _T("\r\nps. found (v) 創立、建立；founder (n) 創立者");
+	words.word[27] = _T("destination"); words.number[27] = 788; words.chinese[27] = _T("n. 目的地、終點");	 words.ps[27] = _T("");
+	words.word[28] = _T("bid"); words.number[28] = 792; words.chinese[28] = _T("v. 投標、出價、喊價、吩咐；n. 出價、投標");	 words.ps[28] = _T("\r\nps. bidder (n) 出價者、投標者");
+	words.word[29] = _T("cooperate"); words.number[29] = 794; words.chinese[29] = _T("v. 合作、互助");	 words.ps[29] = _T("\r\nps. cooperation (n) 合作；cooperative (adj) 合作的");
+	words.word[30] = _T("celebrity"); words.number[30] = 797; words.chinese[30] = _T("n. 名人、名流");	 words.ps[30] = _T("\r\nps. 相似詞：personality (1051) 名流");
+	words.word[31] = _T("occupied"); words.number[31] = 800; words.chinese[31] = _T("adj. 使用中的");	 words.ps[31] = _T("\r\nps. occupation (n)(919) 職業");
+
 }
 void getWords_Day9(Words &words)
 {
+	words.word[0] = _T("affordable"); words.number[0] = 802; words.chinese[0] = _T("adj. 負擔的起的、可負擔的");	 words.ps[0] = _T("\r\nps. afford (v) 買得起、有足夠的時間");
+	words.word[1] = _T("patron"); words.number[1] = 805; words.chinese[1] = _T("n. 主顧客、贊助者、保護者");	 words.ps[1] = _T("\r\nps. patronage (n) 贊助、支持；patronize (v) 贊助、庇護、光顧");
+	words.word[2] = _T("function"); words.number[2] = 808; words.chinese[2] = _T("v. 用做、運作、起作用；n. 機能、功能、宴會、集會");	 words.ps[2] = _T("\r\nps. 相反詞：malfunction (1539) n. 故障 v. 發生故障");
+	words.word[3] = _T("concentrate"); words.number[3] = 811; words.chinese[3] = _T("v. 專心、集中、使濃縮");	 words.ps[3] = _T("\r\nps. concentration (n) 集中、專心、濃縮");
+	words.word[4] = _T("medication"); words.number[4] = 814; words.chinese[4] = _T("n. 藥物、藥物治療");	 words.ps[4] = _T("\r\nps. medicine (n) 醫術、醫學、藥；medical (adj) 醫學的、醫療的");
+	words.word[5] = _T("currency"); words.number[5] = 817; words.chinese[5] = _T("n. 貨幣、通貨、通用、流通");	 words.ps[5] = _T("");
+	words.word[6] = _T("separate"); words.number[6] = 821; words.chinese[6] = _T("v. 隔開、區分、使分離、分手、分開");	 words.ps[6] = _T("\r\nps. separation (n) 分開、分離");
+	words.word[7] = _T("cancellation"); words.number[7] = 825; words.chinese[7] = _T("n. 取消、解除");	 words.ps[7] = _T("\r\nps. cancel (v) 取消");
+	words.word[8] = _T("charity"); words.number[8] = 828; words.chinese[8] = _T("n. 慈善團體、慈善");	 words.ps[8] = _T("\r\nps. charitable (adj) 慈悲的、寬厚的");
+	words.word[9] = _T("judge"); words.number[9] = 831; words.chinese[9] = _T("v. 評判、判斷、審判；n. 法官");	 words.ps[9] = _T("\r\nps. judgment (n) 判斷、判決");
+	words.word[10] = _T("alternative"); words.number[10] = 835; words.chinese[10] = _T("adj. 替代的、挑選其一的；n. 供選擇的事物");	 words.ps[10] = _T("\r\nps. alternatively (adv) 擇一地");
+	words.word[11] = _T("union"); words.number[11] = 838; words.chinese[11] = _T("n. 工會、結合、聯盟、結婚");	 words.ps[11] = _T("\r\nps. reunion (n) 再結合、重逢、重聚；\r\n    unite (v) 聯合、使團結；unify (v)使聯合");
+	words.word[12] = _T("overall"); words.number[12] = 840; words.chinese[12] = _T("adj. 整體的、全面的；adv. 總的來說、大體上的");	 words.ps[12] = _T("");
+	words.word[13] = _T("imply"); words.number[13] = 842; words.chinese[13] = _T("v. 暗示、意味");	 words.ps[13] = _T("\r\nps. implication (n) 牽連、言外之意");
+	words.word[14] = _T("approximately"); words.number[14] = 845; words.chinese[14] = _T("adv. 大約、大體上");	 words.ps[14] = _T("\r\nps. 相似詞：roughly；相反詞：exactly (adv) 精確地。\r\n    approximate (v) 大致估計、接近；(adj) 近似的");
+	words.word[15] = _T("divide"); words.number[15] = 849; words.chinese[15] = _T("v. 劃分、分配、使分開；n. 分歧、不合");	 words.ps[15] = _T("\r\nps. dividend (n)(2181) 紅利、股息、被除數");
+	words.word[16] = _T("authorize"); words.number[16] = 853; words.chinese[16] = _T("v. 賦予權限、批准");	 words.ps[16] = _T("\r\nps. authorization (n) 授權、認可、批准；\r\n    authority (n) 權威、當權者；官方；當局");
+	words.word[17] = _T("enhance"); words.number[17] = 856; words.chinese[17] = _T("v. 增進、提升、強化");	 words.ps[17] = _T("\r\nps. enhancement (n) 強化、增加");
+	words.word[18] = _T("reimburse"); words.number[18] = 858; words.chinese[18] = _T("v. 退款、償還");	 words.ps[18] = _T("\r\nps. reimbursement (n) 退款、償還");
+	words.word[19] = _T("confidential"); words.number[19] = 862; words.chinese[19] = _T("adj. 機密的、祕密的");	 words.ps[19] = _T("\r\nps. confidentially (adv) 機密地、隱密地；confidentiality (n) 機密性");
+	words.word[20] = _T("storage"); words.number[20] = 865; words.chinese[20] = _T("n. 儲存、保管、倉庫");	 words.ps[20] = _T("\r\nps. store (n) 商店；(v) 儲存、容納");
+	words.word[21] = _T("relocate"); words.number[21] = 868; words.chinese[21] = _T("v. 遷移、重新安置");	 words.ps[21] = _T("\r\nps. relocation (n) 遷移");
+	words.word[22] = _T("compensation"); words.number[22] = 872; words.chinese[22] = _T("n. 補償、賠償、薪水、津貼");	 words.ps[22] = _T("\r\nps. compensate (v) 補償、賠償");
+	words.word[23] = _T("basis"); words.number[23] = 875; words.chinese[23] = _T("n. 基礎、基本、根據");	 words.ps[23] = _T("\r\nps. basic (adj) 基礎的");
+	words.word[24] = _T("reveal"); words.number[24] = 878; words.chinese[24] = _T("v. 接露、洩漏、揭發");	 words.ps[24] = _T("\r\nps. revelation (n) 揭露、顯示");
+	words.word[25] = _T("commercial"); words.number[25] = 881; words.chinese[25] = _T("adj. 商業的、營利的；n. 商業廣告");	 words.ps[25] = _T("\r\nps. commerce (n) 商業往來、貿易");
+	words.word[26] = _T("evaluate"); words.number[26] = 885; words.chinese[26] = _T("v. 評定、評價");	 words.ps[26] = _T("\r\nps. evaluation (n) 評價；evaluator (n) 評價者、鑑定器；\r\n    evaluative (adj) 評價的、估價的");
+	words.word[27] = _T("creativity"); words.number[27] = 887; words.chinese[27] = _T("n. 創意、創造力");	 words.ps[27] = _T("\r\nps. creative (adj) 有價值的、創造的");
+	words.word[28] = _T("flyer"); words.number[28] = 891; words.chinese[28] = _T("n. 廣告傳單");	 words.ps[28] = _T("");
+	words.word[29] = _T("landscape"); words.number[29] = 894; words.chinese[29] = _T("n. 風景、景致");	 words.ps[29] = _T("\r\nps. landscaper (n) 造景業者、庭園設計師");
+	words.word[30] = _T("considerable"); words.number[30] = 896; words.chinese[30] = _T("adj. 相當大的、重要的");	 words.ps[30] = _T("\r\nps. consider (v)(87) 考慮、顧慮；considerably (adv) 相當地、頗；\r\n    considerate (adj) 體貼的、考慮周到的");
+	words.word[31] = _T("extremely"); words.number[31] = 898; words.chinese[31] = _T("adj. 極度地、非常地");	 words.ps[31] = _T("\r\nps. extreme (adj) 極度的、偏激的；extremity (n) 極端");
+
 }
 void getWords_Day10(Words &words)
 {
+	words.word[0] = _T("reasonably"); words.number[0] = 901; words.chinese[0] = _T("adv. 合理地、適當地");	 words.ps[0] = _T("\r\nps. reasonable (adj) 合理的、公道的(價格)");
+	words.word[1] = _T("delegate"); words.number[1] = 904; words.chinese[1] = _T("n. 代表、會議代表；v. 派~做代表、委任、授權");	 words.ps[1] = _T("\r\nps. delegation (v) 委派、代表團");
+	words.word[2] = _T("atmosphere"); words.number[2] = 905; words.chinese[2] = _T("n. 氣氛、大氣");	 words.ps[2] = _T("");
+	words.word[3] = _T("nearby"); words.number[3] = 909; words.chinese[3] = _T("adj. 附近的；adv. 在附近地");	 words.ps[3] = _T("");
+	words.word[4] = _T("former"); words.number[4] = 912; words.chinese[4] = _T("adj. 以前的、前任的");	 words.ps[4] = _T("\r\nps. formerly (adv) 事先地、之前地");
+	words.word[5] = _T("appliance"); words.number[5] = 917; words.chinese[5] = _T("n. 電器設備、家電用品");	 words.ps[5] = _T("");
+	words.word[6] = _T("occupation"); words.number[6] = 919; words.chinese[6] = _T("n. 職業、工作、占用");	 words.ps[6] = _T("\r\nps. occupy (v) 占用、佔據、使忙於");
+	words.word[7] = _T("administration"); words.number[7] = 920; words.chinese[7] = _T("n. 行政、管理");	 words.ps[7] = _T("\r\nps. administrative (adj) 行政的、管理的；\r\n    administrator (n) 管理者、行政官員");
+	words.word[8] = _T("federal"); words.number[8] = 926; words.chinese[8] = _T("adj. 聯邦的、聯邦政府的");	 words.ps[8] = _T("");
+	words.word[9] = _T("eliminate"); words.number[9] = 928; words.chinese[9] = _T("v. 除去、淘汰、消滅");	 words.ps[9] = _T("\r\nps. elimination (n) 除去、根除、淘汰");
+	words.word[10] = _T("complement"); words.number[10] = 930; words.chinese[10] = _T("v. 補充、補足；n. 補充物、補充");	 words.ps[10] = _T("\r\nps. complementary (adj) 補充的、互補的");
+	words.word[11] = _T("tow"); words.number[11] = 934; words.chinese[11] = _T("v. (車、船的)拖曳、牽引、拉著；n. 拖、拉、拖車");	 words.ps[11] = _T("");
+	words.word[12] = _T("undergo"); words.number[12] = 939; words.chinese[12] = _T("v. 經歷、遭受");	 words.ps[12] = _T("");
+	words.word[13] = _T("workspace"); words.number[13] = 941; words.chinese[13] = _T("n. 工作場所");	 words.ps[13] = _T("");
+	words.word[14] = _T("regardless of"); words.number[14] = 945; words.chinese[14] = _T("prep. 不論、不管");	 words.ps[14] = _T("\r\nps. regard (v)(293) 把~看作；regarding (prep) 關於~");
+	words.word[15] = _T("aisle"); words.number[15] = 946; words.chinese[15] = _T("n. 走道、通道");	 words.ps[15] = _T("");
+	words.word[16] = _T("transit"); words.number[16] = 951; words.chinese[16] = _T("n. 輸送、運送、通過；v. 通過、運送至");	 words.ps[16] = _T("");
+	words.word[17] = _T("commission"); words.number[17] = 953; words.chinese[17] = _T("n. 佣金、任務、委員會；v. 委任、委託、任命");	 words.ps[17] = _T("\r\nps. commissioner (n) 委員、長官");
+	words.word[18] = _T("hesitate"); words.number[18] = 956; words.chinese[18] = _T("v. 猶豫、躊躇、有疑慮");	 words.ps[18] = _T("\r\nps. hesitation (n) 躊躇、猶豫；hesitant (adj) 猶豫的、遲疑的");
+	words.word[19] = _T("packet"); words.number[19] = 958; words.chinese[19] = _T("n. 小包、小捆、小包裹；v. 把~打成小包");	 words.ps[19] = _T("");
+	words.word[20] = _T("transaction"); words.number[20] = 964; words.chinese[20] = _T("n. 交易、(業務等的)處理");	 words.ps[20] = _T("\r\nps. transactional (adj) (業務)交易的、業務上的");
+	words.word[21] = _T("payroll"); words.number[21] = 966; words.chinese[21] = _T("n. 薪資名單、支付薪資總額");	 words.ps[21] = _T("");
+	words.word[22] = _T("strict"); words.number[22] = 972; words.chinese[22] = _T("adj. 嚴格的、嚴厲的、精確的");	 words.ps[22] = _T("\r\nps. strictly (adv) 嚴格地、嚴謹地");
+	words.word[23] = _T("ingredient"); words.number[23] = 973; words.chinese[23] = _T("n. 材料、成分、要素");	 words.ps[23] = _T("");
+	words.word[24] = _T("familiar"); words.number[24] = 980; words.chinese[24] = _T("adj. 熟悉的、熟識的、親近的");	 words.ps[24] = _T("\r\nps. familiarize (v) 使熟悉、使親近。相反詞：unfamiliar (adj) 不熟悉的。");
+	words.word[25] = _T("influence"); words.number[25] = 982; words.chinese[25] = _T("n. 影響、作用；v. 影響、左右");	 words.ps[25] = _T("");
+	words.word[26] = _T("estate"); words.number[26] = 985; words.chinese[26] = _T("n. 地產、財產、莊園、身分、地位");	 words.ps[26] = _T("");
+	words.word[27] = _T("adequate"); words.number[27] = 988; words.chinese[27] = _T("adj. 足夠的、充分的、適當的");	 words.ps[27] = _T("\r\nps. adequately (adv) 充分地、適當地。\r\n    相反詞：inadequate 不充分的、不夠格的");
+	words.word[28] = _T("implement"); words.number[28] = 993; words.chinese[28] = _T("v. 執行、實施；n. 工具、器具、手段");	 words.ps[28] = _T("\r\nps. implementation (n) 實行、執行");
+	words.word[29] = _T("accomplish"); words.number[29] = 994; words.chinese[29] = _T("v. 完成、實現、達到");	 words.ps[29] = _T("\r\nps. accomplishment (n) 成就、完成；accomplished (adj) 成功的、已實現的");
+	words.word[30] = _T("portion"); words.number[30] = 997; words.chinese[30] = _T("n. 一部分；v. 分配、分成多份");	 words.ps[30] = _T("");
+	words.word[31] = _T("blueprint"); words.number[31] = 1000; words.chinese[31] = _T("n. 藍圖、設計圖、計畫");	 words.ps[31] = _T("");
+
 }
 void getWords_Day11(Words &words)
 {
+	words.word[0] = _T("refuse"); words.number[0] = 1001; words.chinese[0] = _T("n. 拒絕、回絕");	 words.ps[0] = _T("\r\nps. refusal (n) 拒絕");
+	words.word[1] = _T("memorandum"); words.number[1] = 1005; words.chinese[1] = _T("n. 備忘錄、紀錄 = memo");	 words.ps[1] = _T("");
+	words.word[2] = _T("outline"); words.number[2] = 1009; words.chinese[2] = _T("n. 提綱、概要、重點、輪廓；v. 概述、略述、畫輪廓");	 words.ps[2] = _T("");
+	words.word[3] = _T("duplicate"); words.number[3] = 1010; words.chinese[3] = _T("n. 副本、複製；v. 複製；adj. 複製的、完全一樣的");	 words.ps[3] = _T("\r\nps. duplication (n) 複製、重複");
+	words.word[4] = _T("insulation"); words.number[4] = 1014; words.chinese[4] = _T("n. 隔離、隔熱、絕緣");	 words.ps[4] = _T("\r\nps. insulate (v) 隔離、使絕緣、使隔熱");
+	words.word[5] = _T("assign"); words.number[5] = 1016; words.chinese[5] = _T("v. 指派、分配、任命");	 words.ps[5] = _T("\r\nps. assignment (n) 任務、家庭作業");
+	words.word[6] = _T("critical"); words.number[6] = 1019; words.chinese[6] = _T("adj. 關鍵性的、重要的、危急的、批判的、吹毛求疵的");	 words.ps[6] = _T("\r\nps. criticize (v) 批評、非難、苛求；critic (n) 批評家、評論員");
+	words.word[7] = _T("expire"); words.number[7] = 1022; words.chinese[7] = _T("v. 到期、結束、死亡");	 words.ps[7] = _T("\r\nps. expiration (n) 到期、滿期、終止");
+	words.word[8] = _T("oversee"); words.number[8] = 1026; words.chinese[8] = _T("v. 監督、管理");	 words.ps[8] = _T("\r\nps. 相似詞：supervise 管理。overseer (n) 工頭、監工");
+	words.word[9] = _T("conclusion"); words.number[9] = 1027; words.chinese[9] = _T("n. 結論、決定、結局");	 words.ps[9] = _T("\r\nps. conclude (v) 下結論、做出(最後)決定、結束；\r\n    conclusive (adj) 結論的、決定性的");
+	words.word[10] = _T("respect"); words.number[10] = 1031; words.chinese[10] = _T("v. 尊敬、敬重、遵守");	 words.ps[10] = _T("\r\nps. respectful (adj) 恭敬的、尊敬的；respective (adj) 各自的、個別的");
+	words.word[11] = _T("admission"); words.number[11] = 1035; words.chinese[11] = _T("n. 入場許可、入學許可、入場券、承認");	 words.ps[11] = _T("\r\nps. admit (v)(666) 承認、許可");
+	words.word[12] = _T("satisfactory"); words.number[12] = 1040; words.chinese[12] = _T("adj. 令人滿意的、符合要求的");	 words.ps[12] = _T("\r\nps. 相反詞：unsatisfactory (adj) 令人不滿足的。 satisfaction (n) 滿足、滿意");
+	words.word[13] = _T("paycheck"); words.number[13] = 1041; words.chinese[13] = _T("n. 薪水(支票)、工資");	 words.ps[13] = _T("");
+	words.word[14] = _T("suburban"); words.number[14] = 1045; words.chinese[14] = _T("adj. 郊區、近郊的、士氣的");	 words.ps[14] = _T("\r\nps. 相反詞：urban (adj) 都市的。suburb (n) 郊區、城郊");
+	words.word[15] = _T("tariff"); words.number[15] = 1048; words.chinese[15] = _T("n. 關稅、稅率、關稅表");	 words.ps[15] = _T("");
+	words.word[16] = _T("personality"); words.number[16] = 1051; words.chinese[16] = _T("n. 個性、性格、名人");	 words.ps[16] = _T("\r\nps. 相似詞：celebrity (797) 名人。personal (adj) 個人、私人的；\r\n    interpersonal (adj)(2378) 人際關係的、人與人之間的");
+	words.word[17] = _T("domestic"); words.number[17] = 1053; words.chinese[17] = _T("adj. 國內的、家庭的");	 words.ps[17] = _T("\r\nps. domestically (adv) 國內地。相反詞：abroad 國外地；\r\n    國外的：foreign、oversea");
+	words.word[18] = _T("suspend"); words.number[18] = 1058; words.chinese[18] = _T("v. 暫時停職/學、暫停、暫緩執行");	 words.ps[18] = _T("\r\nps. suspension (n) 暫停、中止、停職、停學");
+	words.word[19] = _T("coverage"); words.number[19] = 1061; words.chinese[19] = _T("n. 保險範圍、涵蓋範圍");	 words.ps[19] = _T("");
+	words.word[20] = _T("interfere"); words.number[20] = 1066; words.chinese[20] = _T("v. 干擾、妨礙、牴觸");	 words.ps[20] = _T("");
+	words.word[21] = _T("keynote"); words.number[21] = 1070; words.chinese[21] = _T("n. 基調、主旨、基本方針；v. 做主旨發言");	 words.ps[21] = _T("");
+	words.word[22] = _T("qualification"); words.number[22] = 1071; words.chinese[22] = _T("n. 資格、條件");	 words.ps[22] = _T("\r\nps. qualify (v)(510) 有具有資格、使合格");
+	words.word[23] = _T("substantial"); words.number[23] = 1075; words.chinese[23] = _T("adj. 大量的、相當多的、實在的");	 words.ps[23] = _T("\r\nps. substantially (adv) 相當多地、重大地");
+	words.word[24] = _T("prospective"); words.number[24] = 1077; words.chinese[24] = _T("adj. 有希望的、預期的、可能發生的");	 words.ps[24] = _T("\r\nps. prospect (v) 探勘；(n) 展望、前景、景色");
+	words.word[25] = _T("content"); words.number[25] = 1081; words.chinese[25] = _T("n. 內容、容量；adj. 滿足的、滿意的；v. 使滿足");	 words.ps[25] = _T("\r\nps. contentment (n) 滿足、知足");
+	words.word[26] = _T("proof"); words.number[26] = 1083; words.chinese[26] = _T("n. 證明、證據；adj. 能抵擋的");	 words.ps[26] = _T("");
+	words.word[27] = _T("commitment"); words.number[27] = 1087; words.chinese[27] = _T("n. 奉獻、投入、致力、承諾");	 words.ps[27] = _T("\r\nps. commit (v) 忠於、投入、保證、做(錯事)、犯(罪)");
+	words.word[28] = _T("extensive"); words.number[28] = 1091; words.chinese[28] = _T("adj. 大量的、廣泛的、大規模的");	 words.ps[28] = _T("\r\nps. extension (n) 延長、延期");
+	words.word[29] = _T("pollution"); words.number[29] = 1094; words.chinese[29] = _T("n. 汙染");	 words.ps[29] = _T("\r\nps. pollutant (n) 汙染物");
+	words.word[30] = _T("commute"); words.number[30] = 1096; words.chinese[30] = _T("v. 通勤、通學；n. 通勤、通學");	 words.ps[30] = _T("\r\nps. commuter (n) 通勤者");
+	words.word[31] = _T("merge"); words.number[31] = 1099; words.chinese[31] = _T("v. 使合併、使融合");	 words.ps[31] = _T("\r\nps. merger (n) (公司等的)合併");
+
 }
 void getWords_Day12(Words &words)
 {
+	words.word[0] = _T("suitable"); words.number[0] = 1102; words.chinese[0] = _T("adj. 適合的、適宜的");	 words.ps[0] = _T("\r\nps. suitably (adv) 適當地；suitability (n) 適合、相配");
+	words.word[1] = _T("exceed"); words.number[1] = 1105; words.chinese[1] = _T("v. 超過、超過、優於");	 words.ps[1] = _T("\r\nps. exceedingly (adv) 極度地、非常地");
+	words.word[2] = _T("crew"); words.number[2] = 1109; words.chinese[2] = _T("n. (船、飛機等的) 全體組員");	 words.ps[2] = _T("\r\nps. 相似詞：flight attendants；");
+	words.word[3] = _T("dedicated"); words.number[3] = 1112; words.chinese[3] = _T("adj. 獻身的、致力的、專注的");	 words.ps[3] = _T("\r\nps. dedicate (v) 獻身、致力；dedication (n) 獻身、專心致力");
+	words.word[4] = _T("stack"); words.number[4] = 1115; words.chinese[4] = _T("v. 堆疊、疊成堆；n. 一堆、堆疊物");	 words.ps[4] = _T("");
+	words.word[5] = _T("otherwise"); words.number[5] = 1117; words.chinese[5] = _T("adv. 不然、否則、除此之外");	 words.ps[5] = _T("");
+	words.word[6] = _T("courier"); words.number[6] = 1118; words.chinese[6] = _T("n. 快遞、快遞業者");	 words.ps[6] = _T("");
+	words.word[7] = _T("expedite"); words.number[7] = 1122; words.chinese[7] = _T("v. 加速的處理、加速進行");	 words.ps[7] = _T("\r\nps. 相似詞：speed up。expedition (n) 探險、遠征、遠征隊");
+	words.word[8] = _T("steering"); words.number[8] = 1125; words.chinese[8] = _T("n. 操舵裝置、方向盤、指導");	 words.ps[8] = _T("\r\nps. steer (v) 掌舵、帶領、指導、操縱");
+	words.word[9] = _T("experiment"); words.number[9] = 1127; words.chinese[9] = _T("v. 進行實驗；n. 實驗");	 words.ps[9] = _T("\r\nps. experimental (adj) 實驗的；experimentally (adv) 實驗地");
+	words.word[10] = _T("booklet"); words.number[10] = 1131; words.chinese[10] = _T("n. 小冊子、資料本");	 words.ps[10] = _T("");
+	words.word[11] = _T("comprehensive"); words.number[11] = 1136; words.chinese[11] = _T("adj. 全面的、廣泛的");	 words.ps[11] = _T("\r\nps. comprehend (v) 領會、理解");
+	words.word[12] = _T("polish"); words.number[12] = 1141; words.chinese[12] = _T("v. 擦亮、磨光；n. 光澤、擦亮");	 words.ps[12] = _T("");
+	words.word[13] = _T("grocery"); words.number[13] = 1145; words.chinese[13] = _T("n. 食品雜貨、食品雜貨品");	 words.ps[13] = _T("");
+	words.word[14] = _T("retain"); words.number[14] = 1147; words.chinese[14] = _T("v. 保留、保持、記住");	 words.ps[14] = _T("\r\nps. retainer (n) (給律師的)聘請預付金");
+	words.word[15] = _T("assure"); words.number[15] = 1148; words.chinese[15] = _T("v. 向~保證、使安心、使確定");	 words.ps[15] = _T("\r\nps. assurance (n) 確信、保證");
+	words.word[16] = _T("status"); words.number[16] = 1152; words.chinese[16] = _T("n. 情況、狀態、地位、身分");	 words.ps[16] = _T("");
+	words.word[17] = _T("utility"); words.number[17] = 1155; words.chinese[17] = _T("n. 公用事業、實用性");	 words.ps[17] = _T("\r\nps. utilize (v)(1352) 利用");
+	words.word[18] = _T("publicity"); words.number[18] = 1156; words.chinese[18] = _T("n. 宣傳、廣告、(公眾的)注意");	 words.ps[18] = _T("");
+	words.word[19] = _T("draft"); words.number[19] = 1160; words.chinese[19] = _T("v. 草擬；n. 草稿、草案、匯款單");	 words.ps[19] = _T("");
+	words.word[20] = _T("paperwork"); words.number[20] = 1166; words.chinese[20] = _T("n. 文書工作、書面作業");	 words.ps[20] = _T("");
+	words.word[21] = _T("complete"); words.number[21] = 1169; words.chinese[21] = _T("v. 完成、使完全；adj. 完整的、完全的");	 words.ps[21] = _T("\r\nps. 相反詞：imcomplete (adj) 不完全的、不完整的。\r\n    completion (n) 實現、完成");
+	words.word[22] = _T("occur"); words.number[22] = 1173; words.chinese[22] = _T("v. 發生、出現、被想起");	 words.ps[22] = _T("\r\nps. occurance (n) (事件等)發生");
+	words.word[23] = _T("auditorium"); words.number[23] = 1175; words.chinese[23] = _T("n. 演藝廳、禮堂、會堂、觀眾席");	 words.ps[23] = _T("");
+	words.word[24] = _T("relevant"); words.number[24] = 1179; words.chinese[24] = _T("adj. 有關的、切題的");	 words.ps[24] = _T("\r\nps. 相反詞：irrelevant (adj) 無關的、不切題的。relevance (n) 關聯");
+	words.word[25] = _T("protective"); words.number[25] = 1180; words.chinese[25] = _T("adj. 保護的、防護的");	 words.ps[25] = _T("\r\nps. protection (n) 保護、防護");
+	words.word[26] = _T("transmission"); words.number[26] = 1185; words.chinese[26] = _T("n. (信號、廣播的)傳輸、傳遞、變速器");	 words.ps[26] = _T("\r\nps. transmit (v) 傳送、傳播");
+	words.word[27] = _T("equip"); words.number[27] = 1188; words.chinese[27] = _T("v. 配備、裝備、使有能力的");	 words.ps[27] = _T("\r\nps. equipment (n) 配備、裝備");
+	words.word[28] = _T("portable"); words.number[28] = 1192; words.chinese[28] = _T("adj. 攜帶式的、便於攜帶的；n. 手提式製品");	 words.ps[28] = _T("");
+	words.word[29] = _T("vacancy"); words.number[29] = 1193; words.chinese[29] = _T("n. 職缺、空缺、空房；");	 words.ps[29] = _T("\r\nps. vacate (v)(1466) 空出、搬出、離開、離職；\r\n    vacant (adj) 空著的、未被占用的");
+	words.word[30] = _T("emphasize"); words.number[30] = 1196; words.chinese[30] = _T("v. 強調");	 words.ps[30] = _T("\r\nps. emphasis (n) 強調、重點；emphatic (adj) 強調的、加強語氣的");
+	words.word[31] = _T("prohibit"); words.number[31] = 1200; words.chinese[31] = _T("v. 禁止、阻止");	 words.ps[31] = _T("\r\nps. prohibition (n) 禁止、阻止");
+
 }
 void getWords_Day13(Words &words)
 {
+	words.word[0] = _T("correspondence"); words.number[0] = 1204; words.chinese[0] = _T("n. 通信、一致、符合");	 words.ps[0] = _T("\r\nps. correspond (v) 通信、和~符合、相當；\r\n    corresponding (adj) 對應的、一致的");
+	words.word[1] = _T("absolute"); words.number[1] = 1206; words.chinese[1] = _T("adj. 絕對的、確實的");	 words.ps[1] = _T("\r\nps. absolutely (adv) 絕對地、完全地");
+	words.word[2] = _T("streamline"); words.number[2] = 1207; words.chinese[2] = _T("v. 簡化、合理化；n. 流線型");	 words.ps[2] = _T("");
+	words.word[3] = _T("lack"); words.number[3] = 1211; words.chinese[3] = _T("v. 缺乏、短缺；n. 匱乏、不足");	 words.ps[3] = _T("");
+	words.word[4] = _T("itinerary"); words.number[4] = 1215; words.chinese[4] = _T("n. 行程表、旅行計畫");	 words.ps[4] = _T("");
+	words.word[5] = _T("compose"); words.number[5] = 1218; words.chinese[5] = _T("v. 組成、構成、作曲、構圖");	 words.ps[5] = _T("\r\nps. composition (n) 樂曲、作文、構成；composer (n) 作曲家");
+	words.word[6] = _T("confidence"); words.number[6] = 1220; words.chinese[6] = _T("n. 信心、把握、自信、秘密");	 words.ps[6] = _T("\r\nps. comfident (adj) 有信心的、有把握的");
+	words.word[7] = _T("affair"); words.number[7] = 1225; words.chinese[7] = _T("n. 信件、事務、案子、外遇");	 words.ps[7] = _T("");
+	words.word[8] = _T("raw"); words.number[8] = 1227; words.chinese[8] = _T("adj. 生的、無加工的、新鮮的");	 words.ps[8] = _T("");
+	words.word[9] = _T("thorough"); words.number[9] = 1232; words.chinese[9] = _T("adj. 徹底的、完全的");	 words.ps[9] = _T("\r\nps. thoroughly (adv) 徹底地；thoroughness (n) 徹底、完全");
+	words.word[10] = _T("superior"); words.number[10] = 1236; words.chinese[10] = _T("adj. 較好的、上等的、有優越感的");	 words.ps[10] = _T("\r\nps. superiority (n) 優越、優勢");
+	words.word[11] = _T("assume"); words.number[11] = 1237; words.chinese[11] = _T("v. 承擔、以為、假定");	 words.ps[11] = _T("\r\nps. assumption (n) 推測、假定、承擔");
+	words.word[12] = _T("routine"); words.number[12] = 1241; words.chinese[12] = _T("adj. 例行的、日常的；n. 例行公事、慣例");	 words.ps[12] = _T("\r\nps. routinely (adv) 慣常地、例行地");
+	words.word[13] = _T("clarify"); words.number[13] = 1244; words.chinese[13] = _T("v. 釐清、弄清楚、淨化");	 words.ps[13] = _T("\r\nps. clarification (n) 淨化、釐清");
+	words.word[14] = _T("appraisal"); words.number[14] = 1246; words.chinese[14] = _T("n. 評估、評量、考核");	 words.ps[14] = _T("\r\nps. appraise (v) 估價、評估、評價");
+	words.word[15] = _T("restructuring"); words.number[15] = 1249; words.chinese[15] = _T("n. 改組、重整");	 words.ps[15] = _T("\r\nps. restructure (v) 重建、改組");
+	words.word[16] = _T("complimentary"); words.number[16] = 1254; words.chinese[16] = _T("adj. 免費贈送的、稱讚的、表敬意的");	 words.ps[16] = _T("\r\nps. compliment (n)(1381) 讚美的話、敬意、致意；(v) 讚美、稱讚");
+	words.word[17] = _T("compile"); words.number[17] = 1257; words.chinese[17] = _T("v. 彙整、蒐集");	 words.ps[17] = _T("");
+	words.word[18] = _T("inflation"); words.number[18] = 1261; words.chinese[18] = _T("n. 通貨膨脹、上升");	 words.ps[18] = _T("\r\nps. 相反詞：deflation (n) 通貨緊縮。inflate (v) 使膨脹、抬高、充氣");
+	words.word[19] = _T("urgent"); words.number[19] = 1262; words.chinese[19] = _T("adj. 緊急的、急迫的");	 words.ps[19] = _T("\r\nps. urgently (adv) 緊急地；urgency (n) 緊急、急迫");
+	words.word[20] = _T("designate"); words.number[20] = 1265; words.chinese[20] = _T("v. 指定、指派、標明；adj. 指定的、被任命的");	 words.ps[20] = _T("");
+	words.word[21] = _T("surround"); words.number[21] = 1269; words.chinese[21] = _T("v. 圍繞、包圍");	 words.ps[21] = _T("\r\nps. surrounding (adj) 周圍的、附近的；surroundings (n) 環境、周圍的事物");
+	words.word[22] = _T("durable"); words.number[22] = 1272; words.chinese[22] = _T("adj. 耐用的、經久的");	 words.ps[22] = _T("\r\nps. durablility (n) 耐久性");
+	words.word[23] = _T("customize"); words.number[23] = 1275; words.chinese[23] = _T("v. 訂做、訂製");	 words.ps[23] = _T("\r\nps. customer (n) 消費者");
+	words.word[24] = _T("finding"); words.number[24] = 1279; words.chinese[24] = _T("n. 調查/研究結果、發現");	 words.ps[24] = _T("");
+	words.word[25] = _T("pharmaceutical"); words.number[25] = 1283; words.chinese[25] = _T("adj. 製藥的、配藥的；n. 藥物");	 words.ps[25] = _T("");
+	words.word[26] = _T("steady"); words.number[26] = 1285; words.chinese[26] = _T("adj. 穩定的、安定的；v. 使穩固；adv. 穩固地");	 words.ps[26] = _T("\r\nps. steadily (adv) 穩定地");
+	words.word[27] = _T("reject"); words.number[27] = 1288; words.chinese[27] = _T("v. 否決、拒絕");	 words.ps[27] = _T("\r\nps. rejection (n) 拒絕、排斥");
+	words.word[28] = _T("motivation"); words.number[28] = 1291; words.chinese[28] = _T("n. 動機、動力、誘因");	 words.ps[28] = _T("\r\nps. motivate (v) 賦予動機、激發；motivated (adj) 有動機的");
+	words.word[29] = _T("acknowledge"); words.number[29] = 1295; words.chinese[29] = _T("v. 告知收到、承認、致謝");	 words.ps[29] = _T("");
+	words.word[30] = _T("spokesperson"); words.number[30] = 1297; words.chinese[30] = _T("n. 發言人");	 words.ps[30] = _T("");
+	words.word[31] = _T("recipient"); words.number[31] = 1298; words.chinese[31] = _T("n. 受領者、接受者");	 words.ps[31] = _T("\r\nps. receipt (n)(180) 收據、收到");
+
 }
 void getWords_Day14(Words &words)
 {
+	words.word[0] = _T("remark"); words.number[0] = 1303; words.chinese[0] = _T("n. 致辭、演說、意見、評論");	 words.ps[0] = _T("");
+	words.word[1] = _T("cautious"); words.number[1] = 1305; words.chinese[1] = _T("adj. 謹慎的、小心的");	 words.ps[1] = _T("\r\nps. cautiously (adv) 小心翼翼地、謹慎地");
+	words.word[2] = _T("persuade"); words.number[2] = 1309; words.chinese[2] = _T("v. 說服、勸服");	 words.ps[2] = _T("\r\nps. persuasive (adj) 有說服力的；persuasion (n) 說服");
+	words.word[3] = _T("overlook"); words.number[3] = 1310; words.chinese[3] = _T("v. 俯瞰、眺望、忽略、寬容");	 words.ps[3] = _T("");
+	words.word[4] = _T("specification"); words.number[4] = 1314; words.chinese[4] = _T("n. 規格、詳細設計說明");	 words.ps[4] = _T("");
+	words.word[5] = _T("incorporate"); words.number[5] = 1317; words.chinese[5] = _T("v. 納入、包含(組織、系統、計畫等)、把~合併");	 words.ps[5] = _T("\r\nps. corporate (adj) 法人的、社團的；coporation (n) 公司；\r\n    incorporation (n) 合併、法人組織、公司；cooperation 合作");
+	words.word[6] = _T("detour"); words.number[6] = 1318; words.chinese[6] = _T("n. 繞行的路、迂迴路；v. 迂迴、繞行、使繞行");	 words.ps[6] = _T("");
+	words.word[7] = _T("statistic"); words.number[7] = 1320; words.chinese[7] = _T("n. 統計、統計數據");	 words.ps[7] = _T("\r\nps. statistical (adj) 統計學的、統計的；statistician (n) 統計專家");
+	words.word[8] = _T("sculpture"); words.number[8] = 1327; words.chinese[8] = _T("n. 雕刻品、雕像、雕刻術；v. 雕刻、從事雕刻");	 words.ps[8] = _T("");
+	words.word[9] = _T("carton"); words.number[9] = 1330; words.chinese[9] = _T("n. 硬紙盒、塑膠盒");	 words.ps[9] = _T("");
+	words.word[10] = _T("broaden"); words.number[10] = 1334; words.chinese[10] = _T("v. 擴展、使變寬");	 words.ps[10] = _T("\r\nps. 相似詞：expand (168)。 \r\n    broad (adj) 寬的；broadly (adv) 寬廣地、大體上地");
+	words.word[11] = _T("abstract"); words.number[11] = 1338; words.chinese[11] = _T("n. 摘要、萃取物；v. 萃取；adj. 抽象的");	 words.ps[11] = _T("");
+	words.word[12] = _T("outdated"); words.number[12] = 1340; words.chinese[12] = _T("adj. 舊式的、過時的");	 words.ps[12] = _T("");
+	words.word[13] = _T("consistent"); words.number[13] = 1344; words.chinese[13] = _T("adj. 一貫的、前後一致的、始終如一的");	 words.ps[13] = _T("\r\nps. 相反詞：inconsistent (adj) 不一致的、前後矛盾的。\r\n    consistently (adv) 一貫地；consistency (n) 一貫性、協調");
+	words.word[14] = _T("premier"); words.number[14] = 1348; words.chinese[14] = _T("adj. 最佳的、首要的；最著名的；n. 首相、總理");	 words.ps[14] = _T("");
+	words.word[15] = _T("shortage"); words.number[15] = 1349; words.chinese[15] = _T("n. 短缺、匱乏");	 words.ps[15] = _T("");
+	words.word[16] = _T("utilize"); words.number[16] = 1352; words.chinese[16] = _T("v. 利用");	 words.ps[16] = _T("\r\nps. utility (n) (水、電、瓦斯等)公共事業");
+	words.word[17] = _T("improper"); words.number[17] = 1356; words.chinese[17] = _T("adj. 不適當的、錯誤的");	 words.ps[17] = _T("\r\nps. 相反詞：proper (adj) 適當的。improperly (adv) 不適當地");
+	words.word[18] = _T("pledge"); words.number[18] = 1358; words.chinese[18] = _T("v. 承諾、發誓；n. 誓言、保證");	 words.ps[18] = _T("");
+	words.word[19] = _T("favorable"); words.number[19] = 1362; words.chinese[19] = _T("adj. 有利的、適合的、贊同的、讚許的");	 words.ps[19] = _T("");
+	words.word[20] = _T("overdue"); words.number[20] = 1365; words.chinese[20] = _T("adj. 逾時的、過期的");	 words.ps[20] = _T("\r\nps. favorably (adv) 讚許地、有利地");
+	words.word[21] = _T("signature"); words.number[21] = 1368; words.chinese[21] = _T("n. 屬名、簽名");	 words.ps[21] = _T("");
+	words.word[22] = _T("comform"); words.number[22] = 1371; words.chinese[22] = _T("v. 符合、順從、遵照、遵守");	 words.ps[22] = _T("\r\nps. sign (n) 記號、符號、標誌、前兆；(v) 簽名");
+	words.word[23] = _T("allowance"); words.number[23] = 1375; words.chinese[23] = _T("n. 限額、零用錢、津貼、認可、容忍");	 words.ps[23] = _T("\r\nps. allowable (adj) 可允許的");
+	words.word[24] = _T("resolve"); words.number[24] = 1380; words.chinese[24] = _T("v. 解決、決心；n. 決心、決意");	 words.ps[24] = _T("\r\nps. resolution (n) 決心、解決、決議");
+	words.word[25] = _T("compliment"); words.number[25] = 1381; words.chinese[25] = _T("v. 稱讚、祝賀、表示敬意；n. 讚美、敬意、致意");	 words.ps[25] = _T("\r\nps. complimentary (adj)(1254) 稱讚的、免費贈送的");
+	words.word[26] = _T("relative"); words.number[26] = 1382; words.chinese[26] = _T("adj. 相對的、比較上的、相關的；n. 親戚");	 words.ps[26] = _T("\r\nps. relatively (adv) 相對地、比較上地");
+	words.word[27] = _T("informative"); words.number[27] = 1387; words.chinese[27] = _T("adj. 提供有用資訊的、給予知識的");	 words.ps[27] = _T("\r\nps. informatively (adv) 增進知識地");
+	words.word[28] = _T("coordinate"); words.number[28] = 1389; words.chinese[28] = _T("v. 協調、使相配合");	 words.ps[28] = _T("\r\nps. coordination (n) 協調");
+	words.word[29] = _T("faculty"); words.number[29] = 1393; words.chinese[29] = _T("n. (大學)全體教員、(大學)系、科、院");	 words.ps[29] = _T("");
+	words.word[30] = _T("encounter"); words.number[30] = 1397; words.chinese[30] = _T("v. 遇到、遭遇、意外遇見；n. 偶然碰見");	 words.ps[30] = _T("");
+	words.word[31] = _T("occasionally"); words.number[31] = 1400; words.chinese[31] = _T("adv. 偶爾地");	 words.ps[31] = _T("\r\nps. occasional (adj) 偶爾的、非經常的；occasion (n) 場合、機會；(v) 引起");
+
 }
 void getWords_Day15(Words &words)
 {
+	words.word[0] = _T("interpret"); words.number[0] = 1403; words.chinese[0] = _T("v. 口譯、說明、理解為");	 words.ps[0] = _T("\r\nps. 相反詞：misinterpret (v) 誤解。 \r\n    interpreter (n) 口譯員；interpretation (n) 口譯、解釋");
+	words.word[1] = _T("remote"); words.number[1] = 1407; words.chinese[1] = _T("adj. 偏遠的、遙遠的、遠距的");	 words.ps[1] = _T("\r\nps. remotely (adv) (時/空間上)遙遠地、(可能性)極小地");
+	words.word[2] = _T("hospitality"); words.number[2] = 1410; words.chinese[2] = _T("n. 提供食宿等服務、慇情款待、好客");	 words.ps[2] = _T("\r\nps. hospitable (adj) 慇情招待的、好客的、適宜的");
+	words.word[3] = _T("restrict"); words.number[3] = 1411; words.chinese[3] = _T("v. 限制(數量、大小)、限定");	 words.ps[3] = _T("\r\nps. restricted (adj) 受限的、被限定的；restriction (n) 限制、限定、約束");
+	words.word[4] = _T("seasonal"); words.number[4] = 1414; words.chinese[4] = _T("adj. 季節性的、當令的");	 words.ps[4] = _T("");
+	words.word[5] = _T("precaution"); words.number[5] = 1417; words.chinese[5] = _T("n. 預防措施、預防、預備");	 words.ps[5] = _T("");
+	words.word[6] = _T("freight"); words.number[6] = 1419; words.chinese[6] = _T("n. (船運、空運等)貨物；v. 運輸");	 words.ps[6] = _T("\r\nps. freighter (n) 貨輪、運輸機");
+	words.word[7] = _T("spacious"); words.number[7] = 1424; words.chinese[7] = _T("adj. 寬敞的");	 words.ps[7] = _T("");
+	words.word[8] = _T("stimulate"); words.number[8] = 1428; words.chinese[8] = _T("v. 刺激、使有活力的、促使");	 words.ps[8] = _T("\r\nps. stimulation (n) 刺激、激勵；stimulating (adj) 激勵人的");
+	words.word[9] = _T("advisory"); words.number[9] = 1431; words.chinese[9] = _T("adj. 諮詢的、顧問的、勸告的");	 words.ps[9] = _T("\r\nps. advise (v) 忠告、勸告；advice (n) 忠告、勸告；\r\n    advisable (adj) 可用的、明智的");
+	words.word[10] = _T("expertise"); words.number[10] = 1435; words.chinese[10] = _T("n. 專業技術、專門知識");	 words.ps[10] = _T("\r\nps. expert (n) 專家");
+	words.word[11] = _T("consensus"); words.number[11] = 1438; words.chinese[11] = _T("n. 共識、(意見)一致");	 words.ps[11] = _T("");
+	words.word[12] = _T("appoint"); words.number[12] = 1442; words.chinese[12] = _T("v. 任命、指派、約定");	 words.ps[12] = _T("\r\nps. appointment (n)  (正式的)約會、約定、任命");
+	words.word[13] = _T("pursue"); words.number[13] = 1446; words.chinese[13] = _T("v. 從事、追求、追趕、追蹤");	 words.ps[13] = _T("\r\nps. pursuit (n) 從事、追求、追蹤、愛好");
+	words.word[14] = _T("fluctuation"); words.number[14] = 1448; words.chinese[14] = _T("n. 波動、變動");	 words.ps[14] = _T("\r\nps. fluctuate (v) 變動、波動、搖動");
+	words.word[15] = _T("transcribe"); words.number[15] = 1449; words.chinese[15] = _T("v. 謄寫、抄錄");	 words.ps[15] = _T("\r\nps. transcript (n)(2391) 謄本、抄本、文字稿");
+	words.word[16] = _T("partial"); words.number[16] = 1453; words.chinese[16] = _T("adj. 部分的、局部的、偏袒的、鍾愛的");	 words.ps[16] = _T("\r\nps. 相反詞：impartial (adj) 公正的、不偏不倚的。 partially (adv) 部分地");
+	words.word[17] = _T("abandon"); words.number[17] = 1456; words.chinese[17] = _T("v. 放棄、拋棄、遺棄");	 words.ps[17] = _T("");
+	words.word[18] = _T("innovation"); words.number[18] = 1459; words.chinese[18] = _T("創新、革新");	 words.ps[18] = _T("\r\nps. innovate (v) 革新、改革；innovative (adj) 創新的");
+	words.word[19] = _T("numerous"); words.number[19] = 1462; words.chinese[19] = _T("adj. 眾多的、很多的");	 words.ps[19] = _T("\r\nps. numerously (adv) 多數地、無數地；\r\n    numerical (adj)(1927) 以數字表示的、數值的");
+	words.word[20] = _T("vacate"); words.number[20] = 1466; words.chinese[20] = _T("v. 搬出(家、房子)、空出、辭(職)");	 words.ps[20] = _T("\r\nps. vacancy (n)(1193) 空位、空缺、職缺；vacant (adj) 空著的、未被占用的");
+	words.word[21] = _T("combine"); words.number[21] = 1468; words.chinese[21] = _T("v. 使結合、使聯結");	 words.ps[21] = _T("\r\nps. combination (n) 聯合、結合體");
+	words.word[22] = _T("enforce"); words.number[22] = 1472; words.chinese[22] = _T("v. 執行、實施、強迫、強制");	 words.ps[22] = _T("\r\nps. enforcement (n) 執行、強迫、強制");
+	words.word[23] = _T("distinguish"); words.number[23] = 1475; words.chinese[23] = _T("v. 區別、識別、使傑出、使顯出特色");	 words.ps[23] = _T("");
+	words.word[24] = _T("investigate"); words.number[24] = 1478; words.chinese[24] = _T("v. 調查、研究");	 words.ps[24] = _T("\r\nps. investigation (n) 調查、研究；investigative (adj) 調查的");
+	words.word[25] = _T("circumstance"); words.number[25] = 1479; words.chinese[25] = _T("n. 情況、環境、情勢");	 words.ps[25] = _T("");
+	words.word[26] = _T("negotiate"); words.number[26] = 1483; words.chinese[26] = _T("v. 協商、談判");	 words.ps[26] = _T("\r\nps. negotiation (n) 協商、談判；negotiable (adj) 可協商的、可商量的");
+	words.word[27] = _T("confer"); words.number[27] = 1485; words.chinese[27] = _T("v. 商討、協商、授與(學位等)");	 words.ps[27] = _T("\r\nps. conferecnce (n) 研討會、(正式)會議");
+	words.word[28] = _T("capability"); words.number[28] = 1490; words.chinese[28] = _T("n. 性能、能力、才能");	 words.ps[28] = _T("\r\nps. capable (adj) 有能力的、能幹的");
+	words.word[29] = _T("recline"); words.number[29] = 1493; words.chinese[29] = _T("v. 向後傾、斜倚、斜躺");	 words.ps[29] = _T("");
+	words.word[30] = _T("integrity"); words.number[30] = 1496; words.chinese[30] = _T("n. 正直的、誠實、完整、健全度");	 words.ps[30] = _T("");
+	words.word[31] = _T("substitute"); words.number[31] = 1499; words.chinese[31] = _T("v. 用~代替；n. 代替者、代用品；adj. 替代的");	 words.ps[31] = _T("\r\nps. substitution (n) 代用、替換");
+
 }
 void getWords_Day16(Words &words)
 {
+	words.word[0] = _T("interruption"); words.number[0] = 1503; words.chinese[0] = _T("n. (行動、狀況的)中斷、中止、打擾");	 words.ps[0] = _T("\r\nps. interrupt (v) 中斷、打擾、打斷");
+	words.word[1] = _T("aspect"); words.number[1] = 1505; words.chinese[1] = _T("n. 觀點、方面、樣貌、樣子");	 words.ps[1] = _T("");
+	words.word[2] = _T("gratitude"); words.number[2] = 1509; words.chinese[2] = _T("n. 感激");	 words.ps[2] = _T("\r\nps. grateful (adj)(1872) 感激的、表示感謝的");
+	words.word[3] = _T("earnings"); words.number[3] = 1512; words.chinese[3] = _T("n. 收益、所得、薪資");	 words.ps[3] = _T("\r\nps. earn (v) 賺(錢)");
+	words.word[4] = _T("diagnosis"); words.number[4] = 1515; words.chinese[4] = _T("n. (對疾病、問題)診斷、判斷、診斷書");	 words.ps[4] = _T("\r\nps. diagnose (v) 診斷、判斷；diagnostic (adj) 診斷的");
+	words.word[5] = _T("output"); words.number[5] = 1518; words.chinese[5] = _T("n. 產量、生產、信息輸出");	 words.ps[5] = _T("\r\nps. 相反詞：input (v)(n) 輸入、投入");
+	words.word[6] = _T("intensive"); words.number[6] = 1521; words.chinese[6] = _T("adj. 密集的、加強的、徹底的");	 words.ps[6] = _T("\r\nps. 相反詞：extensive (adj) 廣泛的、大規模的");
+	words.word[7] = _T("asset"); words.number[7] = 1524; words.chinese[7] = _T("n. 有價值的人/事物、財產、資產");	 words.ps[7] = _T("");
+	words.word[8] = _T("awareness"); words.number[8] = 1526; words.chinese[8] = _T("n. 意識、認識、體認");	 words.ps[8] = _T("\r\nps. aware (adj) 知道的、察覺的");
+	words.word[9] = _T("calculate"); words.number[9] = 1528; words.chinese[9] = _T("v. 計算、推測");	 words.ps[9] = _T("\r\nps. calculation (n) 計算、估計、算計；calculator (n) 計算機、計算者");
+	words.word[10] = _T("overcome"); words.number[10] = 1533; words.chinese[10] = _T("v. 克服、戰勝");	 words.ps[10] = _T("");
+	words.word[11] = _T("component"); words.number[11] = 1536; words.chinese[11] = _T("n. (機器、設備的)零件、元件、構成要素");	 words.ps[11] = _T("");
+	words.word[12] = _T("malfunction"); words.number[12] = 1539; words.chinese[12] = _T("n. (機器、程式)故障、失靈");	 words.ps[12] = _T("");
+	words.word[13] = _T("subsidiary"); words.number[13] = 1543; words.chinese[13] = _T("n. 子公司；adj. 從屬的、輔助的、次要的");	 words.ps[13] = _T("");
+	words.word[14] = _T("costly"); words.number[14] = 1546; words.chinese[14] = _T("adj. 花費高的、昂貴的");	 words.ps[14] = _T("\r\nps. cost (n) 費用、成本、代價；(v) 花費");
+	words.word[15] = _T("disturb"); words.number[15] = 1550; words.chinese[15] = _T("v. 干擾、妨礙、擾亂");	 words.ps[15] = _T("\r\nps. disturbing (adj) 煩擾的；disturbance (n) 擾亂、打擾");
+	words.word[16] = _T("internal"); words.number[16] = 1553; words.chinese[16] = _T("adj. 內部的、國內的");	 words.ps[16] = _T("\r\nps. 相反詞：external (adj) 外部的、外來的");
+	words.word[17] = _T("modify"); words.number[17] = 1555; words.chinese[17] = _T("v. 修訂、修改、調整");	 words.ps[17] = _T("\r\nps. modification (n) 修改、改變");
+	words.word[18] = _T("oppose"); words.number[18] = 1556; words.chinese[18] = _T("v. 反對(計畫、提案)、反抗");	 words.ps[18] = _T("\r\nps. opposition (n) 反對、對立、對手；\r\n    opposing (adj) 對立的、反對的；opposed (adj) 反對的、不同意的");
+	words.word[19] = _T("bankrupt"); words.number[19] = 1560; words.chinese[19] = _T("adj. 破產的 = insolvent");	 words.ps[19] = _T("\r\nps. bankruptcy (n) 破產、倒閉 = insolvency");
+	words.word[20] = _T("payable"); words.number[20] = 1565; words.chinese[20] = _T("adj. 可支付的、應支付的");	 words.ps[20] = _T("\r\nps. pay (v) 支付；payment (n) 支付(金額)、付款");
+	words.word[21] = _T("reinforce"); words.number[21] = 1567; words.chinese[21] = _T("v. 強化、加強");	 words.ps[21] = _T("\r\nps. reinforcement  (n) 加強、鞏固、增援");
+	words.word[22] = _T("restore"); words.number[22] = 1571; words.chinese[22] = _T("v. 回復、恢復、使復原");	 words.ps[22] = _T("\r\nps. restoration (n) 恢復、復原");
+	words.word[23] = _T("adopt"); words.number[23] = 1574; words.chinese[23] = _T("v. 採用、採納");	 words.ps[23] = _T("\r\nps. adoption (n) 採用、收養");
+	words.word[24] = _T("promising"); words.number[24] = 1576; words.chinese[24] = _T("adj. 有前途的、大有可為的");	 words.ps[24] = _T("\r\nps. promise (v) 承諾；(n) 承諾、諾言");
+	words.word[25] = _T("provided"); words.number[25] = 1578; words.chinese[25] = _T("conj. 假如、以~為條件");	 words.ps[25] = _T("\r\nps. provide (v)(5) 提供、供給");
+	words.word[26] = _T("leak"); words.number[26] = 1580; words.chinese[26] = _T("v. 滲漏、洩漏");	 words.ps[26] = _T("");
+	words.word[27] = _T("congestion"); words.number[27] = 1584; words.chinese[27] = _T("n. 塞車、擁塞");	 words.ps[27] = _T("\r\nps. congested (adj) 壅塞的、充血的");
+	words.word[28] = _T("alternate"); words.number[28] = 1589; words.chinese[28] = _T("adj. 替代的、輪流的；v. 交替；n. 替代者、候補者");	 words.ps[28] = _T("\r\nps. 相似詞：alternative (835) 替代的");
+	words.word[29] = _T("contend"); words.number[29] = 1591; words.chinese[29] = _T("v. 競爭、爭奪、主張、聲明");	 words.ps[29] = _T("\r\nps. contender (n) 競爭者、爭奪者");
+	words.word[30] = _T("terminate"); words.number[30] = 1595; words.chinese[30] = _T("v. 終止、結束");	 words.ps[30] = _T("\r\nps. termination (n) 終了、結束");
+	words.word[31] = _T("duration"); words.number[31] = 1598; words.chinese[31] = _T("n. (活動、事件的)期間");	 words.ps[31] = _T("");
+
 }
 void getWords_Day17(Words &words)
 {
@@ -594,10 +1122,10 @@ void getWords_Day29(Words &words)
 	words.word[4] = _T("compel");		words.number[4] = 2814; 	words.chinese[4] = _T("v. 強迫、使不得不；\r\nps. compelling 令人信服的、引人入勝的");
 	words.word[5] = _T("facilitate");	words.number[5] = 2817; 	words.chinese[5] = _T("v. 促進、使容易；\r\nps. facility 設備、設施；facilitation 簡易化、促進");
 	words.word[6] = _T("undertake");	words.number[6] = 2820; 	words.chinese[6] = _T("v. 著手進行、負責、承擔(事情、責任)、允許、答應；\r\nps. undergo 經歷、undergraduate 大學生");
-	words.word[7] = _T("bilingual");	words.number[7] = 2823; 	words.chinese[7] = _T("v. 堅稱、斷言；\r\nps. assertive (adj.) 斷言的、武斷的");
-	words.word[8] = _T("assert"); 		words.number[8] = 2827; 	words.chinese[8] = _T("adj. 精疲力竭的、耗盡的、用完的；\r\nps. exhausting 使人精疲力竭的");
-	words.word[9] = _T("exhausted"); 	words.number[9] = 2829; 	words.chinese[9] = _T("v. 領會、理解、抓牢；n. 理解、緊抓");
-	words.word[10] = _T("grasp"); 		words.number[10] = 2831; 	words.chinese[10] = _T("v. 興旺、繁榮、(植物)茂密");
+	words.word[7] = _T("bilingual");	words.number[7] = 2823; 	words.chinese[7] = _T("adj. 雙語的；n. 使用雙語者");
+	words.word[8] = _T("assert"); 		words.number[8] = 2827; 	words.chinese[8] = _T("v. 堅稱、斷言；\r\nps. assertive (adj.) 斷言的、武斷的"); 
+	words.word[9] = _T("exhausted"); 	words.number[9] = 2829; 	words.chinese[9] = _T("adj. 精疲力竭的、耗盡的、用完的；\r\nps. exhausting 使人精疲力竭的"); 
+	words.word[10] = _T("grasp"); 		words.number[10] = 2831; 	words.chinese[10] = _T("v. 領會、理解、抓牢；n. 理解、緊抓");
 	words.word[11] = _T("aptitude"); 	words.number[11] = 2837; 	words.chinese[11] = _T("n. 天資、才能、適宜、自然傾向");
 	words.word[12] = _T("escalate");	words.number[12] = 2840; 	words.chinese[12] = _T("v. (程度)加劇、惡化、(薪資、物價等)逐漸上升");
 	words.word[13] = _T("laundry"); 	words.number[13] = 2843; 	words.chinese[13] = _T("n. 送洗衣物、洗衣店");
