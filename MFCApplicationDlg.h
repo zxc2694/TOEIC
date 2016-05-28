@@ -43,7 +43,6 @@ public:
 	void nameID_DAY();
 	void nameID_AtoZ();
 	void ControlDisplay_DAY(int show);
-	void ch_alphabet(int alphabet);
 	void leftButtonControl(int ID);
 	afx_msg void OnBnClickedButton1();
 	afx_msg void OnBnClickedButton2();

@@ -250,7 +250,6 @@ void getWords_Day4(Words &words)
 	words.word[29] = _T("warranty"); words.number[29] = 393; words.chinese[29] = _T("n. (品質)保證、保證書");	 words.ps[29] = _T("");
 	words.word[30] = _T("investment"); words.number[30] = 396; words.chinese[30] = _T("n. 抔資、出資");	 words.ps[30] = _T("\r\nps. invest (v) 投資、出資；investor (n) 投資者");
 	words.word[31] = _T("certificate"); words.number[31] = 400; words.chinese[31] = _T("n. 證明書、發證書給");	 words.ps[31] = _T("\r\nps. certification (n) 認證書");
-
 }
 void getWords_Day5(Words &words)
 {

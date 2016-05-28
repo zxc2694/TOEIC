@@ -18,6 +18,8 @@ typedef struct
 	int number[3000];
 	CString word[3000];
 	CString chinese[3000];
+	CString sentence[32];
+	CString ps[32];
 	CString connect[3000];
 	int number_arrange[3000];
 	char wordChar[3000][50];
