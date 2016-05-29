@@ -19,6 +19,7 @@ public:
 	Words_All allWords;
 	HWND m_Video;
 	BOOL Pause;
+	voiceDlg *voice_Dlg;
 
 	int mode; // mode 1: show 30 days; mode 2: show frome a to z
 
@@ -49,6 +50,7 @@ public:
 	void nameID_AtoZ();
 	void ControlDisplay_DAY(int show);
 	void leftButtonControl(int ID);
+	afx_msg void OnDestroy();
 	afx_msg void OnBnClickedButton1();
 	afx_msg void OnBnClickedButton2();
 	afx_msg void OnBnClickedButton3();
@@ -121,6 +123,7 @@ public:
 	afx_msg void OnMenuExplain();
 	afx_msg void OnMenuSetting();
 	afx_msg void OnBnClickedPron();
+	afx_msg void OnBnClickedSave();
 };
 
 void strchrn(char *dest, char *src, char b, char e);

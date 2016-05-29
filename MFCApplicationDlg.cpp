@@ -144,6 +144,7 @@ BEGIN_MESSAGE_MAP(CMFCApplicationDlg, CDialogEx)
 	ON_COMMAND(ID_MENU_EXPLAIN, &CMFCApplicationDlg::OnMenuExplain)
 	ON_COMMAND(ID_MENU_SETTING, &CMFCApplicationDlg::OnMenuSetting)
 	ON_BN_CLICKED(IDC_PRON, &CMFCApplicationDlg::OnBnClickedPron)
+	ON_BN_CLICKED(IDC_SAVE, &CMFCApplicationDlg::OnBnClickedSave)
 END_MESSAGE_MAP()
 
 
@@ -155,6 +156,8 @@ BOOL CMFCApplicationDlg::OnInitDialog()
 	m_Video = NULL;
 	this->menu.LoadMenu(IDR_MENU1);
 	SetMenu(&this->menu);
+	
+	this->voice_Dlg = NULL;
 
 	//Hide all items at first
 	ControlDisplay_DAY(SW_HIDE);
@@ -348,8 +351,11 @@ void CMFCApplicationDlg::OnBnClickedWordshow() // 顯示全部單字按鈕
 		myWords.word[i] = _T("");
 
 	int readNum = button_Read(day);
-	if (readNum == 1)
+
+	if (readNum == 1) // 選好一個DAY
 	{
+		GetDlgItem(IDC_PRON)->ShowWindow(SW_SHOW);
+		GetDlgItem(IDC_SAVE)->ShowWindow(SW_SHOW);
 		GetDlgItem(IDC_SOL)->SetWindowText(_T(""));
 
 		// Re-draw the color of word
@@ -1566,6 +1572,7 @@ void CMFCApplicationDlg::ControlDisplay_DAY(int show)
 	GetDlgItem(IDC_SOL)->ShowWindow(show);
 	GetDlgItem(IDC_NUM)->ShowWindow(show);
 	GetDlgItem(IDC_PRON)->ShowWindow(show);
+	GetDlgItem(IDC_SAVE)->ShowWindow(show);
 }
 
 void CMFCApplicationDlg::nameID_DAY()
@@ -1640,6 +1647,8 @@ void CMFCApplicationDlg::OnMenuDay()
 {
 	mode = 1;
 	ControlDisplay_DAY(SW_SHOW);
+	GetDlgItem(IDC_PRON)->ShowWindow(SW_HIDE);
+	GetDlgItem(IDC_SAVE)->ShowWindow(SW_HIDE);
 	nameID_DAY();
 
 	// clean 
@@ -1656,6 +1665,7 @@ void CMFCApplicationDlg::OnMenuAll()
 	mode = 2;
 	ControlDisplay_DAY(SW_SHOW);
 	GetDlgItem(IDC_PRON)->ShowWindow(SW_HIDE);
+	GetDlgItem(IDC_SAVE)->ShowWindow(SW_HIDE);
 	nameID_AtoZ();
 
 	// clean 
@@ -1674,14 +1684,22 @@ void CMFCApplicationDlg::OnMenuAll()
 void CMFCApplicationDlg::OnBnClickedPron()
 {
 	// Create test dialog
-	voiceDlg *voice_Dlg = new voiceDlg(this);
+	voice_Dlg = new voiceDlg(this);
+	voice_Dlg->mDay = getDay[0];
 	BOOL kk = voice_Dlg->Create(IDD_VOICE, NULL);
 	voice_Dlg->ShowWindow(SW_SHOWNORMAL);  // 注意: 一定要 showWindow 否則秀不出來
-
+	//voice_Dlg->GetDlgItem(IDC_VOICE_SHOWDAY)->SetWindowText(imgPath);
+	
 	CRect m_rect;
 	this->GetWindowRect(m_rect);
 	CRect m_rect2;
 	voice_Dlg->GetWindowRect(m_rect2);
 	voice_Dlg->SetWindowPos(&wndTop, m_rect.left + m_rect.Width() - m_rect2.Width(), m_rect.bottom, 0, 0, SWP_SHOWWINDOW | SWP_NOSIZE);
 
+}
+
+
+void CMFCApplicationDlg::OnBnClickedSave()
+{
+	// TODO: Add your control notification handler code here
 }
