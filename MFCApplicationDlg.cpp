@@ -154,6 +154,7 @@ BOOL CMFCApplicationDlg::OnInitDialog()
 {
 	CDialogEx::OnInitDialog();
 	m_Video = NULL;
+	
 	this->menu.LoadMenu(IDR_MENU1);
 	SetMenu(&this->menu);
 	
@@ -187,6 +188,7 @@ BOOL CMFCApplicationDlg::OnInitDialog()
 			pSysMenu->AppendMenu(MF_STRING, IDM_ABOUTBOX, strAboutMenu);
 		}
 	}
+
 
 	// 設定此對話方塊的圖示。當應用程式的主視窗不是對話方塊時，
 	// 框架會自動從事此作業
@@ -355,7 +357,7 @@ void CMFCApplicationDlg::OnBnClickedWordshow() // 顯示全部單字按鈕
 	if (readNum == 1) // 選好一個DAY
 	{
 		GetDlgItem(IDC_PRON)->ShowWindow(SW_SHOW);
-		GetDlgItem(IDC_SAVE)->ShowWindow(SW_SHOW);
+		GetDlgItem(IDC_SAVE)->ShowWindow(SW_HIDE);
 		GetDlgItem(IDC_SOL)->SetWindowText(_T(""));
 
 		// Re-draw the color of word
@@ -1312,6 +1314,9 @@ void CMFCApplicationDlg::OnBnClickedAns32()
 
 void CMFCApplicationDlg::buttonFunction(int ID)
 {
+	GetDlgItem(IDC_SAVE)->ShowWindow(SW_SHOW);
+
+	CString temp;
 	if (mode == 1)
 	{
 		GetDlgItem(IDC_SOL)->SetWindowText(myWords.chinese[ID - 1] + myWords.ps[ID - 1]);
@@ -1327,6 +1332,9 @@ void CMFCApplicationDlg::buttonFunction(int ID)
 			GetDlgItem(i)->RedrawWindow();
 			GetDlgItem(i)->InvalidateRect(NULL);
 		}
+
+		temp = myWords.word[ID - 1];
+		saveRank = myWords.number[ID - 1];
 	}
 	if (mode == 2)
 	{
@@ -1343,7 +1351,18 @@ void CMFCApplicationDlg::buttonFunction(int ID)
 			GetDlgItem(i)->RedrawWindow();
 			GetDlgItem(i)->InvalidateRect(NULL);
 		}
+
+		temp = allWords.word[ID - 1];
+		saveRank = allWords.number_arrange[ID - 1];
 	}
+
+	//Convert CString to char*, and get the word we select
+	const TCHAR* unicode_string;	
+	unicode_string = (LPCTSTR)temp;
+	int size = wcslen(unicode_string);
+	wcstombs(saveWord, unicode_string, size + 1);
+	int a = 1;
+
 }
 HBRUSH CMFCApplicationDlg::OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor)
 {
@@ -1701,5 +1720,31 @@ void CMFCApplicationDlg::OnBnClickedPron()
 
 void CMFCApplicationDlg::OnBnClickedSave()
 {
-	// TODO: Add your control notification handler code here
+	char line[20000],temp[20000];
+	char filename[20] = "EnglishWords.txt"; //========== My English Words List ==========
+	fstream fr;
+	int j = 0;
+	fr.open(filename, ios::in);
+	while (fr.getline(line, sizeof(line), '\n')){	
+		cout << line << endl;
+
+		for (int i = 0; line[i]!='\0';i++,j++)
+			temp[j] = line[i];
+
+		temp[j] = '\n';
+		j++;
+	}
+	fr.close();
+
+	fstream fp;
+	fp.open(filename, ios::out);
+
+	// Copy previous text content
+	for (int i = 0; i <j; i++)
+		fp << temp[i];
+
+	// Storage the word we select, and the rank of the word
+	fp << saveRank << "\t" << saveWord << endl;
+
+	fp.close();
 }

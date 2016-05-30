@@ -20,6 +20,8 @@ public:
 	HWND m_Video;
 	BOOL Pause;
 	voiceDlg *voice_Dlg;
+	char saveWord[30];
+	int saveRank;
 
 	int mode; // mode 1: show 30 days; mode 2: show frome a to z
 
