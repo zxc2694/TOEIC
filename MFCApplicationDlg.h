@@ -22,6 +22,7 @@ public:
 	voiceDlg *voice_Dlg;
 	char saveWord[30];
 	int saveRank;
+	bool menuEND;
 
 	int mode; // mode 1: show 30 days; mode 2: show frome a to z
 
@@ -40,6 +41,8 @@ protected:
 
 	// 產生的訊息對應函式
 	virtual BOOL OnInitDialog();
+	virtual void OnCancel();
+	virtual void PostNcDestroy();
 	afx_msg void OnSysCommand(UINT nID, LPARAM lParam);
 	afx_msg void OnPaint();
 	afx_msg HCURSOR OnQueryDragIcon();
@@ -127,5 +130,3 @@ public:
 	afx_msg void OnBnClickedPron();
 	afx_msg void OnBnClickedSave();
 };
-
-void strchrn(char *dest, char *src, char b, char e);

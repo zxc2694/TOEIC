@@ -154,7 +154,7 @@ BOOL CMFCApplicationDlg::OnInitDialog()
 {
 	CDialogEx::OnInitDialog();
 	m_Video = NULL;
-	
+	menuEND = false;
 	this->menu.LoadMenu(IDR_MENU1);
 	SetMenu(&this->menu);
 	
@@ -356,7 +356,6 @@ void CMFCApplicationDlg::OnBnClickedWordshow() // 顯示全部單字按鈕
 
 	if (readNum == 1) // 選好一個DAY
 	{
-		GetDlgItem(IDC_PRON)->ShowWindow(SW_SHOW);
 		GetDlgItem(IDC_SAVE)->ShowWindow(SW_HIDE);
 		GetDlgItem(IDC_SOL)->SetWindowText(_T(""));
 
@@ -370,6 +369,7 @@ void CMFCApplicationDlg::OnBnClickedWordshow() // 顯示全部單字按鈕
 
 		if (mode == 1)
 		{
+			GetDlgItem(IDC_PRON)->ShowWindow(SW_SHOW);
 			for (int i = 0, x = 0; i < 31; i++)
 			{
 				if (day[i] == 1)
@@ -386,6 +386,7 @@ void CMFCApplicationDlg::OnBnClickedWordshow() // 顯示全部單字按鈕
 		}
 		if (mode == 2)
 		{
+			GetDlgItem(IDC_PRON)->ShowWindow(SW_HIDE);
 			for (int i = 0, x = 0; i < 31; i++)
 			{
 				if (day[i] == 1)
@@ -1385,16 +1386,6 @@ HBRUSH CMFCApplicationDlg::OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor)
 	//return hbr;
 }
 
-void strchrn(char *dest, char *src, char b, char e) 
-{
-	char *m = strchr(src, b) + 1;
-	char *n = strchr(src, e);
-	int len = strlen(m) - strlen(n);
-
-	strncpy(dest, m, len);
-	dest[len] = '\0';
-}
-
 void CMFCApplicationDlg::getAllWords()
 {
 	Words tempWords;
@@ -1472,19 +1463,23 @@ void CMFCApplicationDlg::getAllWords()
 
 void CMFCApplicationDlg::OnMenuEnd()
 {
-	// TODO: Add your command handler code here
+	menuEND = true;
+	DestroyWindow();
 }
 
 
 void CMFCApplicationDlg::OnMenuExplain()
 {
-	// TODO: Add your command handler code here
+	ControlDisplay_DAY(SW_HIDE);
+	GetDlgItem(IDC_EDITBIG)->ShowWindow(SW_SHOW);
+	GetDlgItem(IDC_EDITBIG)->SetWindowText(_T("1. 此軟體參考多益3000字書本，依照多益考試出現的單字頻率分為DAY1到DAY30\r\n2. 軟體功能：\r\n  a. 單字顯示: 左上角可以選擇以DAY顯示或以A~Z顯示\r\n  b. 隨機測驗: 選多個DAY按下隨機測驗按鈕，可以進行英翻中或中翻英的練習\r\n  c. 儲存單字: 可將不熟單字儲存下來，會出現在EnglishWords.txt裡面\r\n  d. 播放功能: 根據選擇不同的DAY會播放單字的mp3英聽"));
 }
 
 
 void CMFCApplicationDlg::OnMenuSetting()
 {
-	// TODO: Add your command handler code here
+	ControlDisplay_DAY(SW_HIDE);
+	GetDlgItem(IDC_EDITBIG)->ShowWindow(SW_SHOW);
 }
 
 void CMFCApplicationDlg::ControlDisplay_DAY(int show)
@@ -1592,6 +1587,7 @@ void CMFCApplicationDlg::ControlDisplay_DAY(int show)
 	GetDlgItem(IDC_NUM)->ShowWindow(show);
 	GetDlgItem(IDC_PRON)->ShowWindow(show);
 	GetDlgItem(IDC_SAVE)->ShowWindow(show);
+	GetDlgItem(IDC_EDITBIG)->ShowWindow(show);
 }
 
 void CMFCApplicationDlg::nameID_DAY()
@@ -1668,6 +1664,7 @@ void CMFCApplicationDlg::OnMenuDay()
 	ControlDisplay_DAY(SW_SHOW);
 	GetDlgItem(IDC_PRON)->ShowWindow(SW_HIDE);
 	GetDlgItem(IDC_SAVE)->ShowWindow(SW_HIDE);
+	GetDlgItem(IDC_EDITBIG)->ShowWindow(SW_HIDE);
 	nameID_DAY();
 
 	// clean 
@@ -1685,6 +1682,7 @@ void CMFCApplicationDlg::OnMenuAll()
 	ControlDisplay_DAY(SW_SHOW);
 	GetDlgItem(IDC_PRON)->ShowWindow(SW_HIDE);
 	GetDlgItem(IDC_SAVE)->ShowWindow(SW_HIDE);
+	GetDlgItem(IDC_EDITBIG)->ShowWindow(SW_HIDE);
 	nameID_AtoZ();
 
 	// clean 
@@ -1747,4 +1745,20 @@ void CMFCApplicationDlg::OnBnClickedSave()
 	fp << saveRank << "\t" << saveWord << endl;
 
 	fp.close();
+}
+
+void CMFCApplicationDlg::OnCancel()
+{
+	// TODO: 在此加入特定的程式碼和 (或) 呼叫基底類別
+	DestroyWindow();
+}
+
+void CMFCApplicationDlg::PostNcDestroy()
+{
+	// TODO: 在此加入特定的程式碼和 (或) 呼叫基底類別
+
+	CDialog::PostNcDestroy();
+
+	//if (menuEND == false)
+		//delete this;
 }
