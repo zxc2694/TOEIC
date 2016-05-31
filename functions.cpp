@@ -143,6 +143,39 @@ void getWords_Day1(Words &words)
 	words.word[30] = _T("policy"); words.number[30] = 96; words.chinese[30] = _T("n. 政策、方針、策略");	 words.ps[30] = _T("\r\nps. n. 政策、方針、測略");
 	words.word[31] = _T("committee"); words.number[31] = 100; words.chinese[31] = _T("n. 委員會、委員");	 words.ps[31] = _T("\r\nps. n. 委員會、委員");
 
+	words.ex[0] = _T("Shoes-R-Us Co. recently hired 100 new employees.");
+	words.ex[1] = _T("That Italian restaurant provides excellent service for guests.");
+	words.ex[2] = _T("Mackey Inc. will hold its annual technology conference in November.");
+	words.ex[3] = _T("The next payment is due on February 21.");
+	words.ex[4] = _T("Only five people attended the meeting.");
+	words.ex[5] = _T("Mr. Scofield opened an account with Foxriver Bank.");
+	words.ex[6] = _T("There is a discount on a quantity purchase.");
+	words.ex[7] = _T("The marketing  team conducted extensive market research.");
+	words.ex[8] = _T("We supply fish to local shops and restaurants.");
+	words.ex[9] = _T("Please submit your proposal by tomorrow.");
+	words.ex[10] = _T("Phantom Planet hotel has its own leisure facilities.");
+	words.ex[11] = _T("Ms. Clementine will post the notice about the conference.");
+	words.ex[12] = _T("The government is trying to make more jobs available.");
+	words.ex[13] = _T("Our sales representative in the branch office will welcome you.");
+	words.ex[14] = _T("Mr. Tylor works for a large multinational corporation.");
+	words.ex[15] = _T("You need to pay $20 for the service charge to wash your car.");
+	words.ex[16] = _T("Our company has adopted a new work-flow process.");
+	words.ex[17] = _T("The financial situation of the shop will not improve.");
+	words.ex[18] = _T("Commuters usually prefer public transportation.");
+	words.ex[19] = _T("I am calling to inquire about an ad for a downtown apartment.");
+	words.ex[20] = _T("Ms. Mika applied for a job with the publishing company.");
+	words.ex[21] = _T("All employees should respect management's decision.");
+	words.ex[22] = _T("You should receive approval from your direct supervisor.");
+	words.ex[23] = _T("The product will be delivered within 48 hours.");
+	words.ex[24] = _T("Mr. Thompson arranged a meeting with the sales director.");
+	words.ex[25] = _T("The budget for advertising has been cut.");
+	words.ex[26] = _T("Any employee can be fired for poor performance.");
+	words.ex[27] = _T("The CEO is seriously considering hiring more employees.");
+	words.ex[28] = _T("I recommend that you take a rest for a while.");
+	words.ex[29] = _T("My annual income is about $45,000.");
+	words.ex[30] = _T("All employees should follow the company's policy.");
+	words.ex[31] = _T("We will elect the chairman of the committee tomorrow.");
+
 }
 void getWords_Day2(Words &words)
 {
@@ -179,6 +212,39 @@ void getWords_Day2(Words &words)
 	words.word[30] = _T("select"); words.number[30] = 297; words.chinese[30] = _T("v. 選擇、挑選、選拔；adj. 精選的；n. 精選");	 words.ps[30] = _T("\r\nps. selection (n) 選擇、精選");
 	words.word[31] = _T("identification"); words.number[31] = 299; words.chinese[31] = _T("n. 身分證明、驗明");	 words.ps[31] = _T("\r\nps. identical (2508)(adj) 同樣的、一模一樣的；\r\n    identify (v) 確認、鑑別出、發現");
 
+	words.ex[0] = _T("There will be a Q&A session after the presentation.");
+	words.ex[1] = _T("The car is manufactured in a plant near Toulouse.");
+	words.ex[2] = _T("The union members agreed to accept the employer's final offer.");
+	words.ex[3] = _T("He expressed his concern about the director's plan.");
+	words.ex[4] = _T("The marketing team conducted a survey of consumer attitudes.");
+	words.ex[5] = _T("Our firm has the resources to compete with overseas companies.");
+	words.ex[6] = _T("Access to the research laboratory is restricted to technicians.");
+	words.ex[7] = _T("Sue Graham is the leading candidate for the promotion.");
+	words.ex[8] = _T("Researchers have made many advances in cell phone technology.");
+	words.ex[9] = _T("Planton Inc. is expected to post record profits this year.");
+	words.ex[10] = _T("He mentioned the idea of establishing an advisory committee.");
+	words.ex[11] = _T("We're going to attend the retirement ceremony for Mr. Wang next week.");
+	words.ex[12] = _T("PowerBank provides monthly account statements.");
+	words.ex[13] = _T("He is a senior executive for a large company.");
+	words.ex[14] = _T("Sandy Motel is conveniently located near highway 81.");
+	words.ex[15] = _T("Participants in the workshop will receive an information packet.");
+	words.ex[16] = _T("Hotel guests should reserve rooms at least one month in advance.");
+	words.ex[17] = _T("All expense reports should be sent directly to accounting.");
+	words.ex[18] = _T("Inkel Co. offers plenty of oppoortunities for career development.");
+	words.ex[19] = _T("I would like to apply for a transfer to the Boston office.");
+	words.ex[20] = _T("Preston Retail offers full refunds on all defective products.");
+	words.ex[21] = _T("The manufacturing firm is planning to expand its operations.");
+	words.ex[22] = _T("Mr. Wilson needs time to prepare for his presentation.");
+	words.ex[23] = _T("Mr. Sucre is registering for the course on software programming.");
+	words.ex[24] = _T("The export sector is likely to benefit from the new regulations.");
+	words.ex[25] = _T("Refunds will only be given to customers who keep their receipts.");
+	words.ex[26] = _T("The charity is the region's largest nonprofit organization.");
+	words.ex[27] = _T("Ms. Hunt is respected by all her colleagues here at Ace Ltd.");
+	words.ex[28] = _T("The current filing system will be replaced with an automated process.");
+	words.ex[29] = _T("Despite the bad weather conditions, the plane was able to take off.");
+	words.ex[30] = _T("The traveler cleared airport customs with little trouble.");
+	words.ex[31] = _T("I will forward your complaint to my supervisor.");
+
 }
 void getWords_Day3(Words &words)
 {
@@ -214,6 +280,39 @@ void getWords_Day3(Words &words)
 	words.word[29] = _T("regard"); words.number[29] = 293; words.chinese[29] = _T("v. 認為是~、評價、考慮；n. 考慮、尊重、問候");	 words.ps[29] = _T("\r\nps. 相反詞：disregard (v) 漠視、忽視、不尊重；(n) 不關心、漠視");
 	words.word[30] = _T("select"); words.number[30] = 297; words.chinese[30] = _T("v. 選擇、挑選、選拔；adj. 精選的；n. 精選");	 words.ps[30] = _T("\r\nps. selection (n) 選擇、精選");
 	words.word[31] = _T("identification"); words.number[31] = 299; words.chinese[31] = _T("n. 身分證明、驗明");	 words.ps[31] = _T("\r\nps. identical (2508)(adj) 同樣的、一模一樣的；\r\n    identify (v) 確認、鑑別出、發現");
+
+	words.ex[0] = _T("The company needs to protect its intellectual property.");
+	words.ex[1] = _T("The advertisement for jeans is aimed at young consumers.");
+	words.ex[2] = _T("The workers are demanding a 5% raise.");
+	words.ex[3] = _T("The red light indicates that the batteries are low.");
+	words.ex[4] = _T("Manley Hotel doesa not permit guests to bring pets.");
+	words.ex[5] = _T("We need to rent a bigger office space.");
+	words.ex[6] = _T("Your order will be ready for shipment tomorrow.");
+	words.ex[7] = _T("We will distribute pamphlets at the marketing conference.");
+	words.ex[8] = _T("The company's stock price increased for the fifth consecutive day.");
+	words.ex[9] = _T("Parking here is definitely a violation of the regulation.");
+	words.ex[10] = _T("A famous painting of Picasso is being exhibited at the gallery.");
+	words.ex[11] = _T("The contractor provided an estimate for the work.");
+	words.ex[12] = _T("The sales team is determined to make a profit this quarter.");
+	words.ex[13] = _T("The travel agent made the necessary arrangements for your trip.");
+	words.ex[14] = _T("Tax incentives will encourage small businesses to invest in new technology.");
+	words.ex[15] = _T("Please submit your resume to the personnel manager.");
+	words.ex[16] = _T("The manager is responsible for maintaining safety standards.");
+	words.ex[17] = _T("Your invoice and our order do not match.");
+	words.ex[18] = _T("Our new electric equipment meets current industry standards.");
+	words.ex[19] = _T("The company will contact their attorneys to take further legal action.");
+	words.ex[20] = _T("Please confirm that you have received our shipment.");
+	words.ex[21] = _T("Mr. Collins wants to extend his contract with the company.");
+	words.ex[22] = _T("The original budget for the building will be reduced due to financial problems.");
+	words.ex[23] = _T("Is that corporate or individual reservation?");
+	words.ex[24] = _T("The number of parking spaces is limited.");
+	words.ex[25] = _T("We really appreciate your donations.");
+	words.ex[26] = _T("The statement indicates that you have made several deposits recently.");
+	words.ex[27] = _T("Mr. Don revised his earlier estimate for regional economic growth.");
+	words.ex[28] = _T("We'll need to notify passengers of the flight delay.");
+	words.ex[29] = _T("The CEO is regarded as an excellent leader.");
+	words.ex[30] = _T("Before you print, select the size of the paper.");
+	words.ex[31] = _T("Staff should carry their identification cards at all times.");
 
 }
 void getWords_Day4(Words &words)

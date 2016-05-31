@@ -1339,9 +1339,9 @@ void CMFCApplicationDlg::buttonFunction(int ID)
 	}
 	if (mode == 2)
 	{
-		GetDlgItem(IDC_SOL)->SetWindowText(allWords.chinese[ID - 1] + allWords.ps[ID - 1]);
+		GetDlgItem(IDC_SOL)->SetWindowText(allWords.chinese[(getDay[0] - 1) * 32 + ID - 1] + allWords.ps[(getDay[0] - 1) * 32 + ID - 1]);
 		CString out_Num;
-		out_Num.Format(_T("Rank: %d"), allWords.number_arrange[ID - 1]);
+		out_Num.Format(_T("Rank: %d"), allWords.number_arrange[(getDay[0] - 1) * 32 + ID - 1]);
 		GetDlgItem(IDC_NUM)->SetWindowText(out_Num);
 
 		// Re-draw the color of word
@@ -1353,8 +1353,8 @@ void CMFCApplicationDlg::buttonFunction(int ID)
 			GetDlgItem(i)->InvalidateRect(NULL);
 		}
 
-		temp = allWords.word[ID - 1];
-		saveRank = allWords.number_arrange[ID - 1];
+		temp = allWords.word[(getDay[0] - 1) * 32 + ID - 1];
+		saveRank = allWords.number_arrange[(getDay[0] - 1) * 32 + ID - 1];
 	}
 
 	//Convert CString to char*, and get the word we select
