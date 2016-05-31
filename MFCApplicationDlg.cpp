@@ -259,6 +259,7 @@ void CMFCApplicationDlg::OnBnClickedTestbn() // 測試單字
 	{
 		// clean 
 		GetDlgItem(IDC_SOL)->SetWindowText(_T(""));
+		GetDlgItem(IDC_EX)->SetWindowText(_T(""));
 		GetDlgItem(IDC_NUM)->SetWindowText(_T(""));
 		for (int i = 0; i < 32; i++)
 			GetDlgItem(IDC_EDIT1 + i)->SetWindowText(_T(""));
@@ -358,6 +359,7 @@ void CMFCApplicationDlg::OnBnClickedWordshow() // 顯示全部單字按鈕
 	{
 		GetDlgItem(IDC_SAVE)->ShowWindow(SW_HIDE);
 		GetDlgItem(IDC_SOL)->SetWindowText(_T(""));
+		GetDlgItem(IDC_EX)->SetWindowText(_T(""));
 
 		// Re-draw the color of word
 		changeColor_ID = 0;
@@ -404,6 +406,7 @@ void CMFCApplicationDlg::OnBnClickedWordshow() // 顯示全部單字按鈕
 	{
 		// clean 
 		GetDlgItem(IDC_SOL)->SetWindowText(_T(""));
+		GetDlgItem(IDC_EX)->SetWindowText(_T(""));
 		GetDlgItem(IDC_NUM)->SetWindowText(_T(""));
 		for (int i = 0; i < 32; i++)
 			GetDlgItem(IDC_EDIT1 + i)->SetWindowText(_T(""));
@@ -1321,6 +1324,7 @@ void CMFCApplicationDlg::buttonFunction(int ID)
 	if (mode == 1)
 	{
 		GetDlgItem(IDC_SOL)->SetWindowText(myWords.chinese[ID - 1] + myWords.ps[ID - 1]);
+		GetDlgItem(IDC_EX)->SetWindowText(myWords.ex[ID - 1]);
 		CString out_Num;
 		out_Num.Format(_T("Rank: %d"), myWords.number[ID - 1]);
 		GetDlgItem(IDC_NUM)->SetWindowText(out_Num);
@@ -1584,6 +1588,7 @@ void CMFCApplicationDlg::ControlDisplay_DAY(int show)
 	GetDlgItem(IDC_WORDSHOW)->ShowWindow(show);
 	GetDlgItem(IDC_TESTBN)->ShowWindow(show);
 	GetDlgItem(IDC_SOL)->ShowWindow(show);
+	GetDlgItem(IDC_EX)->ShowWindow(show);
 	GetDlgItem(IDC_NUM)->ShowWindow(show);
 	GetDlgItem(IDC_PRON)->ShowWindow(show);
 	GetDlgItem(IDC_SAVE)->ShowWindow(show);
@@ -1670,6 +1675,7 @@ void CMFCApplicationDlg::OnMenuDay()
 	// clean 
 	memset(day, 0, 31 * sizeof(int));
 	GetDlgItem(IDC_SOL)->SetWindowText(_T(""));
+	GetDlgItem(IDC_EX)->SetWindowText(_T(""));
 	GetDlgItem(IDC_NUM)->SetWindowText(_T(""));
 	for (int i = 0; i < 32; i++)
 		GetDlgItem(IDC_EDIT1 + i)->SetWindowText(_T(""));
@@ -1688,6 +1694,7 @@ void CMFCApplicationDlg::OnMenuAll()
 	// clean 
 	memset(day, 0, 31 * sizeof(int));
 	GetDlgItem(IDC_SOL)->SetWindowText(_T(""));
+	GetDlgItem(IDC_EX)->SetWindowText(_T(""));
 	GetDlgItem(IDC_NUM)->SetWindowText(_T(""));
 	for (int i = 0; i < 32; i++)
 		GetDlgItem(IDC_EDIT1 + i)->SetWindowText(_T(""));
@@ -1705,7 +1712,10 @@ void CMFCApplicationDlg::OnBnClickedPron()
 	voice_Dlg->mDay = getDay[0];
 	BOOL kk = voice_Dlg->Create(IDD_VOICE, NULL);
 	voice_Dlg->ShowWindow(SW_SHOWNORMAL);  // 注意: 一定要 showWindow 否則秀不出來
-	//voice_Dlg->GetDlgItem(IDC_VOICE_SHOWDAY)->SetWindowText(imgPath);
+
+	CString out_Num;
+	out_Num.Format(_T("DAY-%d"), getDay[0]);
+	voice_Dlg->GetDlgItem(IDC_DAY)->SetWindowText(out_Num);
 	
 	CRect m_rect;
 	this->GetWindowRect(m_rect);
