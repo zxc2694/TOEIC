@@ -1660,7 +1660,7 @@ void getWords_Day29(Words &words)
 	words.word[15] = _T("censorship");	words.number[15] = 2850; 	words.chinese[15] = _T("n. 審查(制度)；\r\nps. censor (n.) (出版物、電影等的)審查員");
 	words.word[16] = _T("apprehensive");words.number[16] = 2852; 	words.chinese[16] = _T("adj. 擔憂的、憂慮的、領悟的");
 	words.word[17] = _T("heritage"); 	words.number[17] = 2855; 	words.chinese[17] = _T("n. (文化歷史的)遺產、傳承");
-	words.word[18] = _T("cusine");		words.number[18] = 2859; 	words.chinese[18] = _T("n. 烹飪、烹飪法、菜餚");
+	words.word[18] = _T("cuisine");		words.number[18] = 2859; 	words.chinese[18] = _T("n. 烹飪、烹飪法、菜餚");
 	words.word[19] = _T("contingent"); 	words.number[19] = 2863; 	words.chinese[19] = _T("adj. 因情況而定的；以~為條件的");
 	words.word[20] = _T("densely"); 	words.number[20] = 2865; 	words.chinese[20] = _T("adj. 密集地、稠密地；\r\nps. dense (adj.)稠密的、密集的、density (n)密度、濃度");
 	words.word[21] = _T("creditable");	words.number[21] = 2868; 	words.chinese[21] = _T("adj. 值得稱讚的、可信的；\r\nps. credit (n.)信用、名譽、存款金額、賒欠");
