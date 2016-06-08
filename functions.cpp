@@ -1246,6 +1246,39 @@ void getWords_Day17(Words &words)
 	words.word[30] = _T("comparision"); words.number[30] = 1696; words.chinese[30] = _T("n. 比較、對照");	 words.ps[30] = _T("\r\nps. compare (v) 比較、與~相較；comparable (adj) 可比較的、比得上的");
 	words.word[31] = _T("devote"); words.number[31] = 1697; words.chinese[31] = _T("v. 奉獻、致力於、專心於");	 words.ps[31] = _T("\r\nps. devoted (adj) 奉獻的、專心致力的；devotion (n) 奉獻、摯愛");
 
+	words.ex[0] = _T("They debated the merits of the proposed environmental law.");
+	words.ex[1] = _T("Please remit payment to us before January 11.");
+	words.ex[2] = _T("You can pick up gifts at the souvenir shop at the end of the tour.");
+	words.ex[3] = _T("Applicants must submit all necessary documentation by Friday.");
+	words.ex[4] = _T("Mastercom has a monopoly on local telecommunications services.");
+	words.ex[5] = _T("With the exception of him, the sales employees all exceeded their targets.");
+	words.ex[6] = _T("If you have an accident, your insurance premium will go up.");
+	words.ex[7] = _T("The main role of a manager is to inspire his or her employees.");
+	words.ex[8] = _T("The nation's economy depends on its abundant coal supplies.");
+	words.ex[9] = _T("We're going to collaborate with another firm on the design project.");
+	words.ex[10] = _T("Peter showed the investors the proposed layout of the building.");
+	words.ex[11] = _T("In the meantime, feel free to use the airport's business facilities.");
+	words.ex[12] = _T("A penalty fee will be charged on all subsequent bills.");
+	words.ex[13] = _T("Mr. Joubert will oversee the first phase of the project.");
+	words.ex[14] = _T("The recruits are eager to start in their new roles.");
+	words.ex[15] = _T("I'd like to explore other opportunities outside the company.");
+	words.ex[16] = _T("Ms. Rogers withdraw $100 from th company account yesterday.");
+	words.ex[17] = _T("Walker Banking offers flexible working hours.");
+	words.ex[18] = _T("The candidate fulfills all the requirements of the position.");
+	words.ex[19] = _T("Connercial banks are reluctant to lend money to small businesses.");
+	words.ex[20] = _T("Attendance at the annual company meeting is mandatory.");
+	words.ex[21] = _T("A man is moving crates into a warehouse.");
+	words.ex[22] = _T("The protesters are obstructing the road outside the convention hall.");
+	words.ex[23] = _T("India has been our most profitable market for many years.");
+	words.ex[24] = _T("I've prepared a preliminary agenda for tomorrow's meeting.");
+	words.ex[25] = _T("The recession has led to the bankruptcy of many businesses.");
+	words.ex[26] = _T("This product is made using a special chemical formula.");
+	words.ex[27] = _T("Taxes are deduted from employees' wages.");
+	words.ex[28] = _T("The association helps preserve the region's oldest buildings.");
+	words.ex[29] = _T("Setting realistic targets is very important at the first stage.");
+	words.ex[30] = _T("LanceSoft Inc. is performing well in comparision with its competitors.");
+	words.ex[31] = _T("The scientist devoted his life to research.");
+
 }
 void getWords_Day18(Words &words)
 {
