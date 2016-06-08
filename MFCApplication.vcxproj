@@ -107,6 +107,7 @@
     <ClInclude Include="MFCApplication.h" />
     <ClInclude Include="MFCApplicationDlg.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="saveDlg.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="test_Dlg.h" />
@@ -116,6 +117,7 @@
     <ClCompile Include="functions.cpp" />
     <ClCompile Include="MFCApplication.cpp" />
     <ClCompile Include="MFCApplicationDlg.cpp" />
+    <ClCompile Include="saveDlg.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>

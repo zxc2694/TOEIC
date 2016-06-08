@@ -5,6 +5,7 @@
 
 #include "voiceDlg.h"
 #include "test_Dlg.h"
+#include "saveDlg.h"
 #include "functions.h"
 
 
@@ -20,6 +21,7 @@ public:
 	HWND m_Video;
 	BOOL Pause;
 	voiceDlg *voice_Dlg;
+	saveDlg *save_Dlg;
 	char saveWord[30];
 	int saveRank;
 	bool menuEND;

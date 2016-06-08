@@ -1755,6 +1755,18 @@ void CMFCApplicationDlg::OnBnClickedSave()
 	fp << saveRank << "\t" << saveWord << endl;
 
 	fp.close();
+
+	// Create dialog
+	save_Dlg = new saveDlg(this);
+	BOOL kk = save_Dlg->Create(IDD_SAVEMSG, NULL);
+	save_Dlg->ShowWindow(SW_SHOWNORMAL);  // 注意: 一定要 showWindow 否則秀不出來
+
+	CRect m_rect;
+	this->GetWindowRect(m_rect);
+	CRect m_rect2;
+	save_Dlg->GetWindowRect(m_rect2);
+	save_Dlg->SetWindowPos(&wndTop, int(m_rect.left + m_rect.Width() / 2 + 10), int(m_rect.Height() / 2 + 80), 0, 0, SWP_SHOWWINDOW | SWP_NOSIZE);
+
 }
 
 void CMFCApplicationDlg::OnCancel()
