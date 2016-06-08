@@ -1484,6 +1484,7 @@ void CMFCApplicationDlg::OnMenuSetting()
 {
 	ControlDisplay_DAY(SW_HIDE);
 	GetDlgItem(IDC_EDITBIG)->ShowWindow(SW_SHOW);
+	GetDlgItem(IDC_EDITBIG)->SetWindowText(_T("µL"));
 }
 
 void CMFCApplicationDlg::ControlDisplay_DAY(int show)
