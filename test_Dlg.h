@@ -1,6 +1,6 @@
 #pragma once
 
-#include "functions.h"
+#include "vocabulary.h"
 
 class test_Dlg : public CDialogEx
 {

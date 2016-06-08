@@ -6,7 +6,7 @@
 #include "voiceDlg.h"
 #include "test_Dlg.h"
 #include "saveDlg.h"
-#include "functions.h"
+#include "vocabulary.h"
 
 
 // CMFCApplicationDlg ¹ï¸Ü¤è¶ô

@@ -6,7 +6,7 @@
 #include "MFCApplication.h"
 #include "MFCApplicationDlg.h"
 #include "afxdialogex.h"
-#include "functions.h"
+#include "vocabulary.h"
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>

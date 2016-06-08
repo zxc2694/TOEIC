@@ -2,7 +2,7 @@
 #include "MFCApplication.h"
 #include "MFCApplicationDlg.h"
 #include "afxdialogex.h"
-#include "functions.h"
+#include "vocabulary.h"
 
 int button_Read(int *d) // How many day are selected
 {

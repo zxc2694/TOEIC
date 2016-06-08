@@ -103,7 +103,6 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="functions.h" />
     <ClInclude Include="MFCApplication.h" />
     <ClInclude Include="MFCApplicationDlg.h" />
     <ClInclude Include="Resource.h" />
@@ -111,10 +110,10 @@
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="test_Dlg.h" />
+    <ClInclude Include="vocabulary.h" />
     <ClInclude Include="voiceDlg.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="functions.cpp" />
     <ClCompile Include="MFCApplication.cpp" />
     <ClCompile Include="MFCApplicationDlg.cpp" />
     <ClCompile Include="saveDlg.cpp" />
@@ -123,6 +122,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="test_Dlg.cpp" />
+    <ClCompile Include="vocabulary.cpp" />
     <ClCompile Include="voiceDlg.cpp" />
   </ItemGroup>
   <ItemGroup>
