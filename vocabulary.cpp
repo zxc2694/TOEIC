@@ -1315,6 +1315,39 @@ void getWords_Day18(Words &words)
 	words.word[30] = _T("conventional"); words.number[30] = 1797; words.chinese[30] = _T("adj. 傳統的、依慣例的");	 words.ps[30] = _T("\r\nps. convention (n) 會議、習俗、慣例、常規");
 	words.word[31] = _T("intermission"); words.number[31] = 1800; words.chinese[31] = _T("n. 中場休息、暫歇");	 words.ps[31] = _T("");
 
+	words.ex[0] = _T("Only buy products bearing the KS mark of approval.");
+	words.ex[1] = _T("Survey participants' comments won't be used without consent.");
+	words.ex[2] = _T("In case of a power outage, use this flashlight.");
+	words.ex[3] = _T("Long-term customers deserve a reward for their loyalty.");
+	words.ex[4] = _T("The foreman said the work is behind schedule.");
+	words.ex[5] = _T("Our success is due large to our outstanding employees.");
+	words.ex[6] = _T("She quickly rose to a managerial position.");
+	words.ex[7] = _T("The report had a number of important omission.");
+	words.ex[8] = _T("Denver is now the largest city in the province.");
+	words.ex[9] = _T("He is emerging as a strong contender for the promotion.");
+	words.ex[10] = _T("Baskin Robbins has over 31 flavors of ice cream.");
+	words.ex[11] = _T("We need to eliminate potential hazards from the workspace.");
+	words.ex[12] = _T("Simon Singh is a leading advocate of human rights.");
+	words.ex[13] = _T("They inquired about the property advertised in the classified section.");
+	words.ex[14] = _T("Please contract the embassy in case of emergency while traveling.");
+	words.ex[15] = _T("This is a clear violation of our existing contact.");
+	words.ex[16] = _T("Please proofread the document before making copies.");
+	words.ex[17] = _T("They hired a local subcontractor to do the plumbing work.");
+	words.ex[18] = _T("T-Auto Inc. is adapting its products for the Chinese market.");
+	words.ex[19] = _T("The exhibition and sale will be at the following venue.");
+	words.ex[20] = _T("Campaigners are protesting against the FTA.");
+	words.ex[21] = _T("Mr. Garnet's argument is certainly very persuasive.");
+	words.ex[22] = _T("We're developed a cordial relationship with the supplier.");
+	words.ex[23] = _T("Our organization has no legal liability in this matter.");
+	words.ex[24] = _T("The television network conducts regular opinion polls.");
+	words.ex[25] = _T("Skyline members enjoy special privileges whenever they fly.");
+	words.ex[26] = _T("The Marketing Department subscribes to several online newsletters.");
+	words.ex[27] = _T("The insurance company will send someone to assess the damage.");
+	words.ex[28] = _T("The supervisor oversee the safe disposal of all waste materials.");
+	words.ex[29] = _T("We were able to boost sales significantly last quarter.");
+	words.ex[30] = _T("Our products use less electricity than conventional light bulbs.");
+	words.ex[31] = _T("There will be a short intermission between performances.");
+
 }
 void getWords_Day19(Words &words)
 {
@@ -1350,6 +1383,39 @@ void getWords_Day19(Words &words)
 	words.word[29] = _T("compromise"); words.number[29] = 1891; words.chinese[29] = _T("v. 妥協、讓步、折衷");	 words.ps[29] = _T("");
 	words.word[30] = _T("civic"); words.number[30] = 1893; words.chinese[30] = _T("adj. 市民的、城市的");	 words.ps[30] = _T("");
 	words.word[31] = _T("recall"); words.number[31] = 1900; words.chinese[31] = _T("v. 招回、回收、使想起、罷免；n. 回收、勾起、記性、罷免");	 words.ps[31] = _T("");
+
+	words.ex[0] = _T("We will pay the remainder to the balance tomorrow.");
+	words.ex[1] = _T("The charity solicits donations from over 100 corporations.");
+	words.ex[2] = _T("China's economy has experienced continuous growth.");
+	words.ex[3] = _T("Please put your luggage safely in the overhead compartment.");
+	words.ex[4] = _T("The reliability of this product has been verified  through rigorous tests.");
+	words.ex[5] = _T("Those surveyed cited price as the most important purchasing factor.");
+	words.ex[6] = _T("The R&D department handles multiple projects at the same time.");
+	words.ex[7] = _T("We posted notice on the bulletin board.");
+	words.ex[8] = _T("Candidates from any discipline can apply for the position.");
+	words.ex[9] = _T("Martin has all the characteristics of a  successful businessman.");
+	words.ex[10] = _T("The architect requested more precise measurements.");
+	words.ex[11] = _T("Some people work an extra job to supplement their income.");
+	words.ex[12] = _T("Phosphate Inc. will soon acquire ownership of its largest competitor.");
+	words.ex[13] = _T("The trade conflict between the two countries is deepening.");
+	words.ex[14] = _T("Tylenol relieves headaches and back pain fast.");
+	words.ex[15] = _T("The hotel cleaning staff didn't vacuum the room.");
+	words.ex[16] = _T("In contrast to last year, our profits have increased dramatically.");
+	words.ex[17] = _T("HD Capital offers porfolio management services.");
+	words.ex[18] = _T("A vehicle is blocking the driveway.");
+	words.ex[19] = _T("The insurance company assessed the full extent of the damage.");
+	words.ex[20] = _T("Economists are inclined to be conservative in their predictions.");
+	words.ex[21] = _T("This is a typical example of the company's aggressive marketing strategy.");
+	words.ex[22] = _T("The appearance of the building has been greatly imrpoved.");
+	words.ex[23] = _T("We're always grateful to our outstanding employees.");
+	words.ex[24] = _T("He has become accustomed to flying in business class.");
+	words.ex[25] = _T("The IT manager convinced management to upgrade the server.");
+	words.ex[26] = _T("We will be closed on Friday in observance of Memorial Day.");
+	words.ex[27] = _T("The company is making changes to its pension plan.");
+	words.ex[28] = _T("The vendor will not sell the property for the proposed price.");
+	words.ex[29] = _T("The union agreed to compromise on its wage demand.");
+	words.ex[30] = _T("The Council is organizing a festival in the civic center.");
+	words.ex[31] = _T("All Tyberg models were recalled due to an engine fault.");
 
 }
 void getWords_Day20(Words &words)
@@ -1387,6 +1453,39 @@ void getWords_Day20(Words &words)
 	words.word[30] = _T("apparel"); words.number[30] = 1997; words.chinese[30] = _T("n. 服裝、衣著");	 words.ps[30] = _T("");
 	words.word[31] = _T("principal"); words.number[31] = 2000; words.chinese[31] = _T("n. 校長、主要演員；adj. 主要的、資本的");	 words.ps[31] = _T("\r\nps. 相似詞：main 主要的；principle (n) 原則、法規");
 
+	words.ex[0] = _T("I'd like ask for your enthusiastic participation in this charity event.");
+	words.ex[1] = _T("The foundation aims to improve adult literacy.");
+	words.ex[2] = _T("We discarded all the food that had passed its expiration date.");
+	words.ex[3] = _T("The telecommunications market is dominated by a few corporations.");
+	words.ex[4] = _T("The candidate was prosecuted for violating comapaign finance laws.");
+	words.ex[5] = _T("Our accountant will make a declaration of our earnings.");
+	words.ex[6] = _T("Staff have to meet monthly sales quotas.");
+	words.ex[7] = _T("Please insert your into the slot to enter the restricted area.");
+	words.ex[8] = _T("The password should be a numerical code.");
+	words.ex[9] = _T("The keynote speaker gave a brief overview of the legislation.");
+	words.ex[10] = _T("The department staff possess a wide variety of skills.");
+	words.ex[11] = _T("Our profit last year was higher than the prceding year.");
+	words.ex[12] = _T("The executive forfeited all of his shares.");
+	words.ex[13] = _T("Everyone is waiting to hear the outcome of the meeting.");
+	words.ex[14] = _T("Our trainers can design the perfect daily workout program for you.");
+	words.ex[15] = _T("We'll cover any costs you incur during your visit.");
+	words.ex[16] = _T("The staff party last week helped to improve employee morale.");
+	words.ex[17] = _T("These latest sales results are respectable, but not outstanding.");
+	words.ex[18] = _T("We concur with your opinion about the merger.");
+	words.ex[19] = _T("Henry Faulkner is a mature and responsible man.");
+	words.ex[20] = _T("Venture capitalists can make enormous profits quickly.");
+	words.ex[21] = _T("The building permit application procedure is very complicated.");
+	words.ex[22] = _T("There is widespread speculation that the CEO will resgin.");
+	words.ex[23] = _T("We're gaining momentum in several European markets.");
+	words.ex[24] = _T("We might be able to surpass last year's sales figures.");
+	words.ex[25] = _T("Passengers must adhere strictly to airline policies.");
+	words.ex[26] = _T("The train bound for Andro City is now approaching.");
+	words.ex[27] = _T("Please refrain from littering on the park grounds.");
+	words.ex[28] = _T("The discussion panel will present a wide range of perspectives.");
+	words.ex[29] = _T("Protesters tried to disrupt the international trade convention.");
+	words.ex[30] = _T("SportingGoods.com sells sports equipment and apparel.");
+	words.ex[31] = _T("Before joining the board, Ms Burns was a high school principal.");
+
 }
 void getWords_Day21(Words &words)
 {
@@ -1423,6 +1522,39 @@ void getWords_Day21(Words &words)
 	words.word[30] = _T("conversion"); words.number[30] = 2095; words.chinese[30] = _T("n. 改變、轉換");	 words.ps[30] = _T("\r\nps. convert (v) 轉換、轉變；(n) 改變信仰者");
 	words.word[31] = _T("alleviate"); words.number[31] = 2098; words.chinese[31] = _T("v. 減輕、緩和(問題、病痛等)");	 words.ps[31] = _T("\r\nps. 相似詞：relieve (1844)；alleviation (n) 緩和、鎮痛物");
 
+	words.ex[0] = _T("There is a lot of media speculation about the councilor's future.");
+	words.ex[1] = _T("I don't think the expansion plan is feasible.");
+	words.ex[2] = _T("A maintenance technician is checking the ventilation system.");
+	words.ex[3] = _T("Since it is fragile, handle it with care.");
+	words.ex[4] = _T("Our target market consists largely of retirees and the elderly.");
+	words.ex[5] = _T("The environment deteriorates as the number of cars increases.");
+	words.ex[6] = _T("We perceived changes in our competitor's marketing strategy.");
+	words.ex[7] = _T("Factory management initiated negotiations with the labor union.");
+	words.ex[8] = _T("The successful applicant will be fluent in English and French.");
+	words.ex[9] = _T("The government is building affordable housing in the outer suburbs.");
+	words.ex[10] = _T("The economist attributed the recession to the global economic slump.");
+	words.ex[11] = _T("The town hall has a chronicle of this region's history.");
+	words.ex[12] = _T("The municipal authorities are trying to attract foreign investment.");
+	words.ex[13] = _T("Mr. Stanton is an acquaintance from my previous job.");
+	words.ex[14] = _T("Vogue publishes several popular periodicals.");
+	words.ex[15] = _T("The desks in the office are separated by partitions.");
+	words.ex[16] = _T("Executives on both sides agree to the merger in principle.");
+	words.ex[17] = _T("We received a reminder of last month's unpaid electricity bill.");
+	words.ex[18] = _T("The roof is supported by large columns.");
+	words.ex[19] = _T("My assistant will hire a chef to cater for the event.");
+	words.ex[20] = _T("We're won the premier industry award for there consecutive years.");
+	words.ex[21] = _T("Contrary to speculation, the company reduced its workforce by 20%.");
+	words.ex[22] = _T("The apartment being advertised is fully furnished.");
+	words.ex[23] = _T("Guests are welcome to browse around our private library.");
+	words.ex[24] = _T("Moderate exercise is good for your health.");
+	words.ex[25] = _T("There will be ample time for questions after the presentation.");
+	words.ex[26] = _T("Tourism is the country's primary source of revenue.");
+	words.ex[27] = _T("Researchers are optimistic that project funding will increase.");
+	words.ex[28] = _T("We're looking for someone with a positive attitude and enthusiasm.");
+	words.ex[29] = _T("The company's stock price soared after the announcement of the merger.");
+	words.ex[30] = _T("The hotel's conversion into apartments will begin next week.");
+	words.ex[31] = _T("This medicine will alleviate your pain.");
+
 }
 void getWords_Day22(Words &words)
 {
@@ -1458,6 +1590,40 @@ void getWords_Day22(Words &words)
 	words.word[29] = _T("punctuality"); words.number[29] = 2194; words.chinese[29] = _T("n. 守時、準時");	 words.ps[29] = _T("\r\nps. punctual (adj) 守時的");
 	words.word[30] = _T("intention"); words.number[30] = 2199; words.chinese[30] = _T("n. 意圖、目的");	 words.ps[30] = _T("\r\nps. intend (v) 意圖、想要；intentional (adj) 有意的");
 	words.word[31] = _T("culminate"); words.number[31] = 2200; words.chinese[31] = _T("v. 結束、告終");	 words.ps[31] = _T("\r\nps. culmination (n) 頂點、高潮");
+
+	words.ex[0] = _T("She suggest practical solutions to our cash flow problems.");
+	words.ex[1] = _T("The potato crops are producing smaller yields each year.");
+	words.ex[2] = _T("Please handle all confidential comapany files with great sensitivity.");
+	words.ex[3] = _T("There are traffic lights at the intersection.");
+	words.ex[4] = _T("We should decorate this bare room.");
+	words.ex[5] = _T("Office workers often feel a lot of tension and anxiety.");
+	words.ex[6] = _T("The economic downturn is likely to be temporary.");
+	words.ex[7] = _T("I heard many interesting insights at the convention.");
+	words.ex[8] = _T("It is evident that the marketing strategy is not working.");
+	words.ex[9] = _T("The sidewalk is paved with bricks.");
+	words.ex[10] = _T("The government proposed legislation banning smoking in restaurants.");
+	words.ex[11] = _T("Our lawyer made amendments to the terms of the lease.");
+	words.ex[12] = _T("You can track the status of your parcel online.");
+	words.ex[13] = _T("Manufacturers should be conscious of their environmental impact.");
+	words.ex[14] = _T("Housing costs will continue rising for the foreseeable future.");
+	words.ex[15] = _T("The internal documents were shredded and thrown out.");
+	words.ex[16] = _T("Customer service employees must always convey a friendly impression.");
+	words.ex[17] = _T("The accounting manager is trying to restrain company spending.");
+	words.ex[18] = _T("He has won ''Employee of the Month'' three successive times.");
+	words.ex[19] = _T("The outer wall of the building runs parallel to the road.");
+	words.ex[20] = _T("The shareholders voted unanimously to approve the merger.");
+	words.ex[21] = _T("The competing model bears a strong resemblance to our own design.");
+	words.ex[22] = _T("Mr. Sahaar is respected by his peers and subordinates.");
+	words.ex[23] = _T("This program has been designed to cultivate specialists.");
+	words.ex[24] = _T("We always do our utmost to keep our customers satisfied.");
+	words.ex[25] = _T("Stockholders will receive a dividend for this fiscal year.");
+	words.ex[26] = _T("Each employee will be allocated a file to work on.");
+	words.ex[27] = _T("The TV program had an exclusive interview with Thierry Henry.");
+	words.ex[28] = _T("To avoid contamination, please be careful when handling waste.");
+	words.ex[29] = _T("Employee punctuality is very important for our productivity.");
+	words.ex[30] = _T("The store no intention of giving us a refund.");
+	words.ex[31] = _T("Today's conference will culminate in a group discussion.");
+
 }
 void getWords_Day23(Words &words)
 {
@@ -1494,6 +1660,39 @@ void getWords_Day23(Words &words)
 	words.word[30] = _T("surplus"); words.number[30] = 2298; words.chinese[30] = _T("n. 盈餘、順差、剩餘、過剩");	 words.ps[30] = _T("");
 	words.word[31] = _T("recovery"); words.number[31] = 2300; words.chinese[31] = _T("n. (經濟)回升、復甦、恢復");	 words.ps[31] = _T("\r\nps. recover (v) 恢復、康復、找回");
 
+	words.ex[0] = _T("Women constitute seventy percent of the company's workforce.");
+	words.ex[1] = _T("It took hours to repair the breakdown in the network.");
+	words.ex[2] = _T("The proposal originated from an informal discussion between executives.");
+	words.ex[3] = _T("Our accounts receivable currently total over $5000.");
+	words.ex[4] = _T("You can get a visa at the Korean Consulate in Cairo.");
+	words.ex[5] = _T("I circulated the minutes from last month's committee meeting.");
+	words.ex[6] = _T("The two sequals to Shrek were very successful.");
+	words.ex[7] = _T("Consumers now understand the adverse effects of food additives.");
+	words.ex[8] = _T("Shareholders are frustrated with the company's poor performance.");
+	words.ex[9] = _T("Our investment in emerging markets has proved prosperous.");
+	words.ex[10] = _T("The shippment firm is liable for breakages that occur in transit.");
+	words.ex[11] = _T("Residential property is constantly increasing in value.");
+	words.ex[12] = _T("We are focused solely on increasing the sales volume this quarter.");
+	words.ex[13] = _T("The accounting team audits all company expenditures.");
+	words.ex[14] = _T("The task force is working on a definitive solution to the problem.");
+	words.ex[15] = _T("Light fixtures have been installed in the ceiling.");
+	words.ex[16] = _T("There is an ongoing project to modernize the museum.");
+	words.ex[17] = _T("The new software is compatible with our IT system.");
+	words.ex[18] = _T("The restaurant chain needs a new bookkeeper.");
+	words.ex[19] = _T("Experts were brought in to demolish the old structure.");
+	words.ex[20] = _T("The Polimo is an extraordinary new vehicle from CosMotors.");
+	words.ex[21] = _T("Long-term employees should be rewarded for their loyalty.");
+	words.ex[22] = _T("Korea is consolidating its lead in the mobile phone market.");
+	words.ex[23] = _T("We store perishable items in the freezer.");
+	words.ex[24] = _T("Management will simplify the leave application procedure.");
+	words.ex[25] = _T("The publicity manager handles all delicate matters with the media.");
+	words.ex[26] = _T("Failure to meet your sales quota may result in dismissal.");
+	words.ex[27] = _T("Our research center was inaugurated in 2002.");
+	words.ex[28] = _T("Activate the machine by pressing the start button.");
+	words.ex[29] = _T("The new  president plans to reform the political system.");
+	words.ex[30] = _T("The finance manager announced a budget surplus of over $10,000.");
+	words.ex[31] = _T("This chart shows the recovery of the company's stock price.");
+
 }
 void getWords_Day24(Words &words)
 {
@@ -1529,6 +1728,40 @@ void getWords_Day24(Words &words)
 	words.word[29] = _T("sacrifice"); words.number[29] = 2395; words.chinese[29] = _T("v. 犧牲");	 words.ps[29] = _T("");
 	words.word[30] = _T("renewal"); words.number[30] = 2396; words.chinese[30] = _T("n. 續訂、(建築物、地區的)更新、再開發");	 words.ps[30] = _T("\r\nps. renew (v) 使更新、重新開始；renewable (n) 可更新的");
 	words.word[31] = _T("stipulate"); words.number[31] = 2400; words.chinese[31] = _T("v. 規定、明確要求");	 words.ps[31] = _T("\r\nps. stipulation (n) 規定、條款");
+
+	words.ex[0] = _T("A detailed investment plan can lessen your financial risk.");
+	words.ex[1] = _T("Good leaders help their employees to overcome obstacles.");
+	words.ex[2] = _T("The conflict between labor and management was settled by arbitration.");
+	words.ex[3] = _T("Would you like to pay in full, or in installments?");
+	words.ex[4] = _T("Pedestrians are walking down the street.");
+	words.ex[5] = _T("This fund is showing a remarkable rate of return this quarter.");
+	words.ex[6] = _T("Energy conservation is becoming an important political issue.");
+	words.ex[7] = _T("The novelist received harsh criticism on his latest work.");
+	words.ex[8] = _T("The exporter decided to waive the shipment charge for our order.");
+	words.ex[9] = _T("Purchases can be exchanged for products of equal value.");
+	words.ex[10] = _T("The interviewee was able to leave a lasting impression.");
+	words.ex[11] = _T("Proficiency in computer programming language is essential.");
+	words.ex[12] = _T("Councilor Margaret Lovell is a prominent public figure.");
+	words.ex[13] = _T("This model can function simultaneously as an MP3 player and as a PMP.");
+	words.ex[14] = _T("I don't want the repair work to distract my team.");
+	words.ex[15] = _T("He attested to the fact that the product was defective.");
+	words.ex[16] = _T("Both parties finally made a breakthrough in negotiations.");
+	words.ex[17] = _T("The municipal government issued a conditional building permit.");
+	words.ex[18] = _T("Our local airline cannot compete with the major carrirer.");
+	words.ex[19] = _T("There are some inconsistencies in Mr. Goff's expense report.");
+	words.ex[20] = _T("This techology can add a new dimension to online learning.");
+	words.ex[21] = _T("Employee awards will be conferred at the manager's discretion.");
+	words.ex[22] = _T("The promotion entails additional overtime hours.");
+	words.ex[23] = _T("Mr. Junji is a very promising entrepreur.");
+	words.ex[24] = _T("Officials will start to count the ballots from Jackson County.");
+	words.ex[25] = _T("We're looking for somebody with outstanding interpersonal skills.");
+	words.ex[26] = _T("We have made a determined effort to overcome the crisis.");
+	words.ex[27] = _T("Any miscellaneous documents should be filed in the cabinet.");
+	words.ex[28] = _T("Transcripts of Dr. Verner's lecture will be made available.");
+	words.ex[29] = _T("At Design-X, we never sacrifice our work's quality for price.");
+	words.ex[30] = _T("To extend your subscription, simply return this renewal form.");
+	words.ex[31] = _T("The job posting stipulates that resumes should be submitted by email.");
+
 }
 void getWords_Day25(Words &words)
 {
@@ -1565,6 +1798,39 @@ void getWords_Day25(Words &words)
 	words.word[30] = _T("scheme"); words.number[30] = 2497; words.chinese[30] = _T("n. 計畫(案])、方案、計謀；v. 計畫、擬定計畫");
 	words.word[31] = _T("obscure"); words.number[31] = 2500; words.chinese[31] = _T("adj. 鮮為人知的、模糊的、暗的；v. 使變暗、使難理解、混淆；\r\nps. obviously (adv) 費解地");
 
+	words.ex[0] = _T("We're reduced our profit margins to stay competitive.");
+	words.ex[1] = _T("The women are glancing at some products on the shelf.");
+	words.ex[2] = _T("The agency recommended a full-scale evacuation of the area.");
+	words.ex[3] = _T("Guests can catch the hotel's courtesy shuttle to the airport.");
+	words.ex[4] = _T("The old building has been neglected for years.");
+	words.ex[5] = _T("The international conglomerate is expanding into Eastern Europe.");
+	words.ex[6] = _T("Officials discovered thousands of dollars worth of counterfeit money.");
+	words.ex[7] = _T("The building crew will elevate the speaking platform.");
+	words.ex[8] = _T("The plane is built to withstand very high altitudes.");
+	words.ex[9] = _T("It is imperative that you inform me of any shipping delays.");
+	words.ex[10] = _T("In the future, most electronic devices will utilize artificial intelligence.");
+	words.ex[11] = _T("The long report was condensed into a single page.");
+	words.ex[12] = _T("The boardroom is at the end of the corridor.");
+	words.ex[13] = _T("Humor is a key element in any business presentation.");
+	words.ex[14] = _T("This design can be altered according to your specific needs.");
+	words.ex[15] = _T("Some people have allergic reactions to the injection.");
+	words.ex[16] = _T("Curtain Solutions stocks a wide array of items.");
+	words.ex[17] = _T("The AIDS virus attacks the body's immune system.");
+	words.ex[18] = _T("This organization fosters a competitive working environment.");
+	words.ex[19] = _T("Economists are blaming the recession on higher fuel prices.");
+	words.ex[20] = _T("The advisory committee convenes twice a month.");
+	words.ex[21] = _T("China's annual GPD is equivalent to that of all Africa.");
+	words.ex[22] = _T("All staff should wear masks to avoid inhaling dangerous materials.");
+	words.ex[23] = _T("The two parties came to a mutual understanding.");
+	words.ex[24] = _T("The company has unveiled an aggressive new marketing strategy.");
+	words.ex[25] = _T("Mr. Jones's official biography will be released next month.");
+	words.ex[26] = _T("Personal use of the Internet at work is strictly forbidden.");
+	words.ex[27] = _T("Please visit the immigration office to inquire about visa extensions.");
+	words.ex[28] = _T("The restaurant is renowned fot its outstanding seafood dishes.");
+	words.ex[29] = _T("The goods are stored in a warehouse adjacent to the factory.");
+	words.ex[30] = _T("The Ministry of Health is developing a new medical insurance scheme.");
+	words.ex[31] = _T("He started off working for an obscure company in Nebraska.");
+
 }
 void getWords_Day26(Words &words)
 {
@@ -1600,6 +1866,39 @@ void getWords_Day26(Words &words)
 	words.word[29] = _T("impending"); words.number[29] = 2592; words.chinese[29] = _T("adj. 即將到來的、逼近的");
 	words.word[30] = _T("testimonial"); words.number[30] = 2595; words.chinese[30] = _T("n. 推薦(書)、證明(信)、感謝(狀)");
 	words.word[31] = _T("debut"); words.number[31] = 2598; words.chinese[31] = _T("n. 初次登台、首次演出");
+
+	words.ex[0] = _T("A new amusement park is being built in Weymouth.");
+	words.ex[1] = _T("The estimates from the two companies are identical.");
+	words.ex[2] = _T("Besides chairing the ethics committee, he heads the research division.");
+	words.ex[3] = _T("The conference center has top-class amenities.");
+	words.ex[4] = _T("Ms. Jennings cannot keep up with her mortgage repayments.");
+	words.ex[5] = _T("The senator adamantly opposes the environment legislation.");
+	words.ex[6] = _T("These measures should help accelerate our expansion overseas.");
+	words.ex[7] = _T("Personal belongings left behind will be taken to reception.");
+	words.ex[8] = _T("The collections officer handles delinquent accounts.");
+	words.ex[9] = _T("We have arranged a consulation with a tax lawyer.");
+	words.ex[10] = _T(" Our products appeal to a diverse range of customers.");
+	words.ex[11] = _T("Stock trading firms are the main beneficiaries of the new law.");
+	words.ex[12] = _T("The organization is engaged in several charity projects.");
+	words.ex[13] = _T("The database manager is responsible for the accumulation of information.");
+	words.ex[14] = _T("Mr. Sumed is evaluating the merits of each proposal.");
+	words.ex[15] = _T("The reforms made little tangible difference to the business's performance.");
+	words.ex[16] = _T("The boss only gave a vague outline of the project.");
+	words.ex[17] = _T("The most notable feature of this model is tis wide LCD screen.");
+	words.ex[18] = _T("You are obviously most suitable candidate for the role.");
+	words.ex[19] = _T("The lawyers helped us secure a patent on the design.");
+	words.ex[20] = _T("Our headquarters are on the outskirts of Boston.");
+	words.ex[21] = _T("Charities rely on the altruism of volunteers and donators.");
+	words.ex[22] = _T("141 countries have agreed to follow the Kyoto Protocol.");
+	words.ex[23] = _T("In case of breakdown, please refer to the troubleshooting guide.");
+	words.ex[24] = _T("The local authority imposes strict safety standards on restaurants.");
+	words.ex[25] = _T("There was some resistance to the new labor law.");
+	words.ex[26] = _T("The software will help us with data retrieval.");
+	words.ex[27] = _T("Please detach this form and then fill it out.");
+	words.ex[28] = _T("The sales team divised a remedy for our poor results.");
+	words.ex[29] = _T("They discussed the impending release of the new clothing line.");
+	words.ex[30] = _T("The hotel's website includes testimonials from past guests.");
+	words.ex[31] = _T("The film start Jessica Walsh in her debut performance.");
 
 }
 void getWords_Day27(Words &words)

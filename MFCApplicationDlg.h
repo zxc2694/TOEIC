@@ -25,6 +25,7 @@ public:
 	char saveWord[30];
 	int saveRank;
 	bool menuEND;
+	bool chShow;
 
 	int mode; // mode 1: show 30 days; mode 2: show frome a to z
 
@@ -125,6 +126,7 @@ public:
 	afx_msg void OnBnClickedAns32();
 	afx_msg HBRUSH OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor);
 	afx_msg void OnMenuDay();
+	//void OnPaint();
 	afx_msg void OnMenuAll();
 	afx_msg void OnMenuEnd();
 	afx_msg void OnMenuExplain();

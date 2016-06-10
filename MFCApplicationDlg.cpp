@@ -1,5 +1,5 @@
-
-// MFCApplicationDlg.cpp : ¹ê§@ÀÉ
+ï»¿
+// MFCApplicationDlg.cpp : å¯¦ä½œæª”
 //
 
 #include "stdafx.h"
@@ -29,13 +29,13 @@ class CAboutDlg : public CDialogEx
 public:
 	CAboutDlg();
 
-// ¹ï¸Ü¤è¶ô¸ê®Æ
+// å°è©±æ–¹å¡Šè³‡æ–™
 	enum { IDD = IDD_ABOUTBOX };
 
 	protected:
-	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV ¤ä´©
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV æ”¯æ´
 
-// µ{¦¡½X¹ê§@
+// ç¨‹å¼ç¢¼å¯¦ä½œ
 protected:
 	DECLARE_MESSAGE_MAP()
 };
@@ -53,7 +53,7 @@ BEGIN_MESSAGE_MAP(CAboutDlg, CDialogEx)
 END_MESSAGE_MAP()
 
 
-// CMFCApplicationDlg ¹ï¸Ü¤è¶ô
+// CMFCApplicationDlg å°è©±æ–¹å¡Š
 
 
 
@@ -148,13 +148,14 @@ BEGIN_MESSAGE_MAP(CMFCApplicationDlg, CDialogEx)
 END_MESSAGE_MAP()
 
 
-// CMFCApplicationDlg °T®§³B²z±`¦¡
+// CMFCApplicationDlg è¨Šæ¯è™•ç†å¸¸å¼
 
 BOOL CMFCApplicationDlg::OnInitDialog()
 {
 	CDialogEx::OnInitDialog();
 	m_Video = NULL;
 	menuEND = false;
+	chShow = false;
 	this->menu.LoadMenu(IDR_MENU1);
 	SetMenu(&this->menu);
 	
@@ -171,7 +172,7 @@ BOOL CMFCApplicationDlg::OnInitDialog()
 	
 	srand((int)time(NULL));
 
-	// IDM_ABOUTBOX ¥²¶·¦b¨t²Î©R¥O½d³ò¤§¤¤¡C
+	// IDM_ABOUTBOX å¿…é ˆåœ¨ç³»çµ±å‘½ä»¤ç¯„åœä¹‹ä¸­ã€‚
 	ASSERT((IDM_ABOUTBOX & 0xFFF0) == IDM_ABOUTBOX);
 	ASSERT(IDM_ABOUTBOX < 0xF000);
 
@@ -190,14 +191,14 @@ BOOL CMFCApplicationDlg::OnInitDialog()
 	}
 
 
-	// ³]©w¦¹¹ï¸Ü¤è¶ôªº¹Ï¥Ü¡C·íÀ³¥Îµ{¦¡ªº¥Dµøµ¡¤£¬O¹ï¸Ü¤è¶ô®É¡A
-	// ®Ø¬[·|¦Û°Ê±q¨Æ¦¹§@·~
-	SetIcon(m_hIcon, TRUE);			// ³]©w¤j¹Ï¥Ü
-	SetIcon(m_hIcon, FALSE);		// ³]©w¤p¹Ï¥Ü
+	// è¨­å®šæ­¤å°è©±æ–¹å¡Šçš„åœ–ç¤ºã€‚ç•¶æ‡‰ç”¨ç¨‹å¼çš„ä¸»è¦–çª—ä¸æ˜¯å°è©±æ–¹å¡Šæ™‚ï¼Œ
+	// æ¡†æ¶æœƒè‡ªå‹•å¾äº‹æ­¤ä½œæ¥­
+	SetIcon(m_hIcon, TRUE);			// è¨­å®šå¤§åœ–ç¤º
+	SetIcon(m_hIcon, FALSE);		// è¨­å®šå°åœ–ç¤º
 
-	// TODO:  ¦b¦¹¥[¤JÃB¥~ªºªì©l³]©w
+	// TODO:  åœ¨æ­¤åŠ å…¥é¡å¤–çš„åˆå§‹è¨­å®š
 
-	return TRUE;  // ¶Ç¦^ TRUE¡A°£«D±z¹ï±±¨î¶µ³]©wµJÂI
+	return TRUE;  // å‚³å› TRUEï¼Œé™¤éæ‚¨å°æ§åˆ¶é …è¨­å®šç„¦é»
 }
 
 void CMFCApplicationDlg::OnSysCommand(UINT nID, LPARAM lParam)
@@ -213,47 +214,56 @@ void CMFCApplicationDlg::OnSysCommand(UINT nID, LPARAM lParam)
 	}
 }
 
-// ¦pªG±N³Ì¤p¤Æ«ö¶s¥[¤J±zªº¹ï¸Ü¤è¶ô¡A±z»İ­n¤U¦Cªºµ{¦¡½X¡A
-// ¥H«KÃ¸»s¹Ï¥Ü¡C¹ï©ó¨Ï¥Î¤å¥ó/ÀËµø¼Ò¦¡ªº MFC À³¥Îµ{¦¡¡A
-// ®Ø¬[·|¦Û°Ê§¹¦¨¦¹§@·~¡C
+// å¦‚æœå°‡æœ€å°åŒ–æŒ‰éˆ•åŠ å…¥æ‚¨çš„å°è©±æ–¹å¡Šï¼Œæ‚¨éœ€è¦ä¸‹åˆ—çš„ç¨‹å¼ç¢¼ï¼Œ
+// ä»¥ä¾¿ç¹ªè£½åœ–ç¤ºã€‚å°æ–¼ä½¿ç”¨æ–‡ä»¶/æª¢è¦–æ¨¡å¼çš„ MFC æ‡‰ç”¨ç¨‹å¼ï¼Œ
+// æ¡†æ¶æœƒè‡ªå‹•å®Œæˆæ­¤ä½œæ¥­ã€‚
 
 void CMFCApplicationDlg::OnPaint()
 {
 	if (IsIconic())
 	{
-		CPaintDC dc(this); // Ã¸»sªº¸Ë¸m¤º®e
+		CPaintDC dc(this); // ç¹ªè£½çš„è£ç½®å…§å®¹
 
 		SendMessage(WM_ICONERASEBKGND, reinterpret_cast<WPARAM>(dc.GetSafeHdc()), 0);
 
-		// ±N¹Ï¥Ü¸m¤¤©ó¥Î¤áºİ¯x§Î
+		// å°‡åœ–ç¤ºç½®ä¸­æ–¼ç”¨æˆ¶ç«¯çŸ©å½¢
 		int cxIcon = GetSystemMetrics(SM_CXICON);
 		int cyIcon = GetSystemMetrics(SM_CYICON);
 		CRect rect;
 		GetClientRect(&rect);
 		int x = (rect.Width() - cxIcon + 1) / 2;
 		int y = (rect.Height() - cyIcon + 1) / 2;
+		dc.FillSolidRect(rect, RGB(0, 10, 50));   //è®¾ç½®ä¸ºèƒŒæ™¯è‰²   
 
-		// ´yÃ¸¹Ï¥Ü
+		// æç¹ªåœ–ç¤º
 		dc.DrawIcon(x, y, m_hIcon);
 	}
 	else
 	{
+		CPaintDC dc(this);
+		CRect rect;
+		GetClientRect(rect);
+		dc.FillSolidRect(rect, RGB(200, 240, 255));   //è®¾ç½®ä¸ºèƒŒæ™¯è‰²  
+		//dc.FillSolidRect(rect, RGB(255, 255, 255));   //è®¾ç½®ä¸ºèƒŒæ™¯è‰²  
+
 		CDialogEx::OnPaint();
+
+		 
 	}
 }
 
-// ·í¨Ï¥ÎªÌ©ì¦²³Ì¤p¤Æµøµ¡®É¡A
-// ¨t²Î©I¥s³o­Ó¥\¯à¨ú±o´å¼ĞÅã¥Ü¡C
+// ç•¶ä½¿ç”¨è€…æ‹–æ›³æœ€å°åŒ–è¦–çª—æ™‚ï¼Œ
+// ç³»çµ±å‘¼å«é€™å€‹åŠŸèƒ½å–å¾—æ¸¸æ¨™é¡¯ç¤ºã€‚
 HCURSOR CMFCApplicationDlg::OnQueryDragIcon()
 {
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
-void CMFCApplicationDlg::OnBnClickedTestbn() // ´ú¸Õ³æ¦r
+void CMFCApplicationDlg::OnBnClickedTestbn() // æ¸¬è©¦å–®å­—
 {
 	if (button_Read(day) == 0)
 	{
-		GetDlgItem(IDC_SOL)->SetWindowText(_T("½Ğ¿ï¾Ü­n´úÅçªºDAY¡A³Ì¦h¥ô¿ï3­Ó"));
+		GetDlgItem(IDC_SOL)->SetWindowText(_T("è«‹é¸æ“‡è¦æ¸¬é©—çš„DAYï¼Œæœ€å¤šä»»é¸3å€‹"));
 	}
 	else
 	{
@@ -267,7 +277,7 @@ void CMFCApplicationDlg::OnBnClickedTestbn() // ´ú¸Õ³æ¦r
 		// Create test dialog
 		test_Dlg *testDlg = new test_Dlg(this);
 		BOOL kk = testDlg->Create(IDD_TEST_DIALOG, NULL);
-		testDlg->ShowWindow(SW_SHOWNORMAL);  // ª`·N: ¤@©w­n showWindow §_«h¨q¤£¥X¨Ó
+		testDlg->ShowWindow(SW_SHOWNORMAL);  // æ³¨æ„: ä¸€å®šè¦ showWindow å¦å‰‡ç§€ä¸å‡ºä¾†
 		
 		testDlg->testButtonFlagFunc();
 		
@@ -291,7 +301,7 @@ void CMFCApplicationDlg::OnBnClickedTestbn() // ´ú¸Õ³æ¦r
 
 		int getNumArr[10];
 
-		// ¤£¦Pªº¼Æ¦r§@¬°ªì©l­È
+		// ä¸åŒçš„æ•¸å­—ä½œç‚ºåˆå§‹å€¼
 		getNumArr[0] = 100;
 		getNumArr[1] = 101;
 		getNumArr[2] = 102;
@@ -316,7 +326,7 @@ void CMFCApplicationDlg::OnBnClickedTestbn() // ´ú¸Õ³æ¦r
 			getNumArr[count] = bingoWord;
 
 
-			// Á×§K¥X²{­«½Æªº³æ¦r
+			// é¿å…å‡ºç¾é‡è¤‡çš„å–®å­—
 			while (1)
 			{
 				int c = 0;
@@ -348,14 +358,16 @@ void CMFCApplicationDlg::OnBnClickedTestbn() // ´ú¸Õ³æ¦r
 	}
 }
 
-void CMFCApplicationDlg::OnBnClickedWordshow() // Åã¥Ü¥ş³¡³æ¦r«ö¶s
+void CMFCApplicationDlg::OnBnClickedWordshow() // é¡¯ç¤ºå…¨éƒ¨å–®å­—æŒ‰éˆ•
 {
+	chShow = true;
+
 	for (int i = 0; i < 32; i++)
 		myWords.word[i] = _T("");
 
 	int readNum = button_Read(day);
 
-	if (readNum == 1) // ¿ï¦n¤@­ÓDAY
+	if (readNum == 1) // é¸å¥½ä¸€å€‹DAY
 	{
 		GetDlgItem(IDC_SAVE)->ShowWindow(SW_HIDE);
 		GetDlgItem(IDC_SOL)->SetWindowText(_T(""));
@@ -413,11 +425,11 @@ void CMFCApplicationDlg::OnBnClickedWordshow() // Åã¥Ü¥ş³¡³æ¦r«ö¶s
 
 		if (mode == 1)
 		{
-			GetDlgItem(IDC_SOL)->SetWindowText(_T("Åã¥Ü³æ¦r: ¥u¯à¿ï¾Ü¤@­ÓDAY\r\nÀH¾÷´úÅç: ¥i¥H¿ï¾Ü¦h­ÓDAY¡A¨ÃÀH¾÷©â¦Ò10­Ó\r\n\r\n(½Ğ¦A®×¤@¦¸¤w¿ï¨úªºDAY¡A¥i¥H¨ú®ø......)"));
+			GetDlgItem(IDC_SOL)->SetWindowText(_T("é¡¯ç¤ºå–®å­—: åªèƒ½é¸æ“‡ä¸€å€‹DAY\r\néš¨æ©Ÿæ¸¬é©—: å¯ä»¥é¸æ“‡å¤šå€‹DAYï¼Œä¸¦éš¨æ©ŸæŠ½è€ƒ10å€‹\r\n\r\n(è«‹å†æ¡ˆä¸€æ¬¡å·²é¸å–çš„DAYï¼Œå¯ä»¥å–æ¶ˆ......)"));
 		}
 		if (mode == 2)
 		{
-			GetDlgItem(IDC_SOL)->SetWindowText(_T("Åã¥Ü³æ¦r: ¥u¯à¿ï¾Ü¤@­Ó¦r¥À\r\nÀH¾÷´úÅç: ¥i¥H¿ï¾Ü¦h­Ó¦r¥À¡A¨ÃÀH¾÷©â¦Ò10­Ó\r\n\r\n(½Ğ¦A®×¤@¦¸¤w¿ï¨úªº¦r¥À¡A¥i¥H¨ú®ø......)"));
+			GetDlgItem(IDC_SOL)->SetWindowText(_T("é¡¯ç¤ºå–®å­—: åªèƒ½é¸æ“‡ä¸€å€‹å­—æ¯\r\néš¨æ©Ÿæ¸¬é©—: å¯ä»¥é¸æ“‡å¤šå€‹å­—æ¯ï¼Œä¸¦éš¨æ©ŸæŠ½è€ƒ10å€‹\r\n\r\n(è«‹å†æ¡ˆä¸€æ¬¡å·²é¸å–çš„å­—æ¯ï¼Œå¯ä»¥å–æ¶ˆ......)"));
 		}
 	}
 }
@@ -444,7 +456,7 @@ void CMFCApplicationDlg::leftButtonControl(int ID)
 	
 	if (push[ID] % 2 == 0)
 	{
-		GetDlgItem(IDC_BUTTON5)->SetWindowText(_T("--¤w¿ï¨ú--"));
+		GetDlgItem(IDC_BUTTON5)->SetWindowText(_T("--å·²é¸å–--"));
 		day[ID] = 1;
 	}
 	else
@@ -472,7 +484,7 @@ void CMFCApplicationDlg::OnBnClickedButton1()
 	static int n = 2;
 	if (n % 2 == 0)
 	{
-		GetDlgItem(IDC_BUTTON1)->SetWindowText(_T("--¤w¿ï¨ú--"));
+		GetDlgItem(IDC_BUTTON1)->SetWindowText(_T("--å·²é¸å–--"));
 		day[1] = 1;
 	}
 	else
@@ -493,7 +505,7 @@ void CMFCApplicationDlg::OnBnClickedButton2()
 	static int n = 2;
 	if (n % 2 == 0)
 	{
-		GetDlgItem(IDC_BUTTON2)->SetWindowText(_T("--¤w¿ï¨ú--"));
+		GetDlgItem(IDC_BUTTON2)->SetWindowText(_T("--å·²é¸å–--"));
 		day[2] = 1;
 	}
 	else
@@ -514,7 +526,7 @@ void CMFCApplicationDlg::OnBnClickedButton3()
 	static int n = 2;
 	if (n % 2 == 0)
 	{
-		GetDlgItem(IDC_BUTTON3)->SetWindowText(_T("--¤w¿ï¨ú--"));
+		GetDlgItem(IDC_BUTTON3)->SetWindowText(_T("--å·²é¸å–--"));
 		day[3] = 1;
 	}
 	else
@@ -535,7 +547,7 @@ void CMFCApplicationDlg::OnBnClickedButton4()
 	static int n = 2;
 	if (n % 2 == 0)
 	{
-		GetDlgItem(IDC_BUTTON4)->SetWindowText(_T("--¤w¿ï¨ú--"));
+		GetDlgItem(IDC_BUTTON4)->SetWindowText(_T("--å·²é¸å–--"));
 		day[4] = 1;
 	}
 	else
@@ -556,7 +568,7 @@ void CMFCApplicationDlg::OnBnClickedButton5()
 	static int n = 2;
 	if (n % 2 == 0)
 	{
-		GetDlgItem(IDC_BUTTON5)->SetWindowText(_T("--¤w¿ï¨ú--"));
+		GetDlgItem(IDC_BUTTON5)->SetWindowText(_T("--å·²é¸å–--"));
 		day[5] = 1;
 	}
 	else
@@ -578,7 +590,7 @@ void CMFCApplicationDlg::OnBnClickedButton6()
 	static int n = 2;
 	if (n % 2 == 0)
 	{
-		GetDlgItem(IDC_BUTTON6)->SetWindowText(_T("--¤w¿ï¨ú--"));
+		GetDlgItem(IDC_BUTTON6)->SetWindowText(_T("--å·²é¸å–--"));
 		day[6] = 1;
 	}
 	else
@@ -600,7 +612,7 @@ void CMFCApplicationDlg::OnBnClickedButton7()
 	static int n = 2;
 	if (n % 2 == 0)
 	{
-		GetDlgItem(IDC_BUTTON7)->SetWindowText(_T("--¤w¿ï¨ú--"));
+		GetDlgItem(IDC_BUTTON7)->SetWindowText(_T("--å·²é¸å–--"));
 		day[7] = 1;
 	}
 	else
@@ -622,7 +634,7 @@ void CMFCApplicationDlg::OnBnClickedButton8()
 	static int n = 2;
 	if (n % 2 == 0)
 	{
-		GetDlgItem(IDC_BUTTON8)->SetWindowText(_T("--¤w¿ï¨ú--"));
+		GetDlgItem(IDC_BUTTON8)->SetWindowText(_T("--å·²é¸å–--"));
 		day[8] = 1;
 	}
 	else
@@ -644,7 +656,7 @@ void CMFCApplicationDlg::OnBnClickedButton9()
 	static int n = 2;
 	if (n % 2 == 0)
 	{
-		GetDlgItem(IDC_BUTTON9)->SetWindowText(_T("--¤w¿ï¨ú--"));
+		GetDlgItem(IDC_BUTTON9)->SetWindowText(_T("--å·²é¸å–--"));
 		day[9] = 1;
 	}
 	else
@@ -666,7 +678,7 @@ void CMFCApplicationDlg::OnBnClickedButton10()
 	static int n = 2;
 	if (n % 2 == 0)
 	{
-		GetDlgItem(IDC_BUTTON10)->SetWindowText(_T("--¤w¿ï¨ú--"));
+		GetDlgItem(IDC_BUTTON10)->SetWindowText(_T("--å·²é¸å–--"));
 		day[10] = 1;
 	}
 	else
@@ -688,7 +700,7 @@ void CMFCApplicationDlg::OnBnClickedButton11()
 	static int n = 2;
 	if (n % 2 == 0)
 	{
-		GetDlgItem(IDC_BUTTON11)->SetWindowText(_T("--¤w¿ï¨ú--"));
+		GetDlgItem(IDC_BUTTON11)->SetWindowText(_T("--å·²é¸å–--"));
 		day[11] = 1;
 	}
 	else
@@ -710,7 +722,7 @@ void CMFCApplicationDlg::OnBnClickedButton12()
 	static int n = 2;
 	if (n % 2 == 0)
 	{
-		GetDlgItem(IDC_BUTTON12)->SetWindowText(_T("--¤w¿ï¨ú--"));
+		GetDlgItem(IDC_BUTTON12)->SetWindowText(_T("--å·²é¸å–--"));
 		day[12] = 1;
 	}
 	else
@@ -732,7 +744,7 @@ void CMFCApplicationDlg::OnBnClickedButton13()
 	static int n = 2;
 	if (n % 2 == 0)
 	{
-		GetDlgItem(IDC_BUTTON13)->SetWindowText(_T("--¤w¿ï¨ú--"));
+		GetDlgItem(IDC_BUTTON13)->SetWindowText(_T("--å·²é¸å–--"));
 		day[13] = 1;
 	}
 	else
@@ -754,7 +766,7 @@ void CMFCApplicationDlg::OnBnClickedButton14()
 	static int n = 2;
 	if (n % 2 == 0)
 	{
-		GetDlgItem(IDC_BUTTON14)->SetWindowText(_T("--¤w¿ï¨ú--"));
+		GetDlgItem(IDC_BUTTON14)->SetWindowText(_T("--å·²é¸å–--"));
 		day[14] = 1;
 	}
 	else
@@ -776,7 +788,7 @@ void CMFCApplicationDlg::OnBnClickedButton15()
 	static int n = 2;
 	if (n % 2 == 0)
 	{
-		GetDlgItem(IDC_BUTTON15)->SetWindowText(_T("--¤w¿ï¨ú--"));
+		GetDlgItem(IDC_BUTTON15)->SetWindowText(_T("--å·²é¸å–--"));
 		day[15] = 1;
 	}
 	else
@@ -798,7 +810,7 @@ void CMFCApplicationDlg::OnBnClickedButton16()
 	static int n = 2;
 	if (n % 2 == 0)
 	{
-		GetDlgItem(IDC_BUTTON16)->SetWindowText(_T("--¤w¿ï¨ú--"));
+		GetDlgItem(IDC_BUTTON16)->SetWindowText(_T("--å·²é¸å–--"));
 		day[16] = 1;
 	}
 	else
@@ -820,7 +832,7 @@ void CMFCApplicationDlg::OnBnClickedButton17()
 	static int n = 2;
 	if (n % 2 == 0)
 	{
-		GetDlgItem(IDC_BUTTON17)->SetWindowText(_T("--¤w¿ï¨ú--"));
+		GetDlgItem(IDC_BUTTON17)->SetWindowText(_T("--å·²é¸å–--"));
 		day[17] = 1;
 	}
 	else
@@ -842,7 +854,7 @@ void CMFCApplicationDlg::OnBnClickedButton18()
 	static int n = 2;
 	if (n % 2 == 0)
 	{
-		GetDlgItem(IDC_BUTTON18)->SetWindowText(_T("--¤w¿ï¨ú--"));
+		GetDlgItem(IDC_BUTTON18)->SetWindowText(_T("--å·²é¸å–--"));
 		day[18] = 1;
 	}
 	else
@@ -864,7 +876,7 @@ void CMFCApplicationDlg::OnBnClickedButton19()
 	static int n = 2;
 	if (n % 2 == 0)
 	{
-		GetDlgItem(IDC_BUTTON19)->SetWindowText(_T("--¤w¿ï¨ú--"));
+		GetDlgItem(IDC_BUTTON19)->SetWindowText(_T("--å·²é¸å–--"));
 		day[19] = 1;
 	}
 	else
@@ -886,7 +898,7 @@ void CMFCApplicationDlg::OnBnClickedButton20()
 	static int n = 2;
 	if (n % 2 == 0)
 	{
-		GetDlgItem(IDC_BUTTON20)->SetWindowText(_T("--¤w¿ï¨ú--"));
+		GetDlgItem(IDC_BUTTON20)->SetWindowText(_T("--å·²é¸å–--"));
 		day[20] = 1;
 	}
 	else
@@ -908,7 +920,7 @@ void CMFCApplicationDlg::OnBnClickedButton21()
 	static int n = 2;
 	if (n % 2 == 0)
 	{
-		GetDlgItem(IDC_BUTTON21)->SetWindowText(_T("--¤w¿ï¨ú--"));
+		GetDlgItem(IDC_BUTTON21)->SetWindowText(_T("--å·²é¸å–--"));
 		day[21] = 1;
 	}
 	else
@@ -930,7 +942,7 @@ void CMFCApplicationDlg::OnBnClickedButton22()
 	static int n = 2;
 	if (n % 2 == 0)
 	{
-		GetDlgItem(IDC_BUTTON22)->SetWindowText(_T("--¤w¿ï¨ú--"));
+		GetDlgItem(IDC_BUTTON22)->SetWindowText(_T("--å·²é¸å–--"));
 		day[22] = 1;
 	}
 	else
@@ -952,7 +964,7 @@ void CMFCApplicationDlg::OnBnClickedButton23()
 	static int n = 2;
 	if (n % 2 == 0)
 	{
-		GetDlgItem(IDC_BUTTON23)->SetWindowText(_T("--¤w¿ï¨ú--"));
+		GetDlgItem(IDC_BUTTON23)->SetWindowText(_T("--å·²é¸å–--"));
 		day[23] = 1;
 	}
 	else
@@ -974,7 +986,7 @@ void CMFCApplicationDlg::OnBnClickedButton24()
 	static int n = 2;
 	if (n % 2 == 0)
 	{
-		GetDlgItem(IDC_BUTTON24)->SetWindowText(_T("--¤w¿ï¨ú--"));
+		GetDlgItem(IDC_BUTTON24)->SetWindowText(_T("--å·²é¸å–--"));
 		day[24] = 1;
 	}
 	else
@@ -996,7 +1008,7 @@ void CMFCApplicationDlg::OnBnClickedButton25()
 	static int n = 2;
 	if (n % 2 == 0)
 	{
-		GetDlgItem(IDC_BUTTON25)->SetWindowText(_T("--¤w¿ï¨ú--"));
+		GetDlgItem(IDC_BUTTON25)->SetWindowText(_T("--å·²é¸å–--"));
 		day[25] = 1;
 	}
 	else
@@ -1018,7 +1030,7 @@ void CMFCApplicationDlg::OnBnClickedButton26()
 	static int n = 2;
 	if (n % 2 == 0)
 	{
-		GetDlgItem(IDC_BUTTON26)->SetWindowText(_T("--¤w¿ï¨ú--"));
+		GetDlgItem(IDC_BUTTON26)->SetWindowText(_T("--å·²é¸å–--"));
 		day[26] = 1;
 	}
 	else
@@ -1040,7 +1052,7 @@ void CMFCApplicationDlg::OnBnClickedButton27()
 	static int n = 2;
 	if (n % 2 == 0)
 	{
-		GetDlgItem(IDC_BUTTON27)->SetWindowText(_T("--¤w¿ï¨ú--"));
+		GetDlgItem(IDC_BUTTON27)->SetWindowText(_T("--å·²é¸å–--"));
 		day[27] = 1;
 	}
 	else
@@ -1062,7 +1074,7 @@ void CMFCApplicationDlg::OnBnClickedButton28()
 	static int n = 2;
 	if (n % 2 == 0)
 	{
-		GetDlgItem(IDC_BUTTON28)->SetWindowText(_T("--¤w¿ï¨ú--"));
+		GetDlgItem(IDC_BUTTON28)->SetWindowText(_T("--å·²é¸å–--"));
 		day[28] = 1;
 	}
 	else
@@ -1084,7 +1096,7 @@ void CMFCApplicationDlg::OnBnClickedButton29()
 	static int n = 2;
 	if (n % 2 == 0)
 	{
-		GetDlgItem(IDC_BUTTON29)->SetWindowText(_T("--¤w¿ï¨ú--"));
+		GetDlgItem(IDC_BUTTON29)->SetWindowText(_T("--å·²é¸å–--"));
 		day[29] = 1;
 	}
 	else
@@ -1106,7 +1118,7 @@ void CMFCApplicationDlg::OnBnClickedButton30()
 	static int n = 2;
 	if (n % 2 == 0)
 	{
-		GetDlgItem(IDC_BUTTON30)->SetWindowText(_T("--¤w¿ï¨ú--"));
+		GetDlgItem(IDC_BUTTON30)->SetWindowText(_T("--å·²é¸å–--"));
 		day[30] = 1;
 	}
 	else
@@ -1318,56 +1330,62 @@ void CMFCApplicationDlg::OnBnClickedAns32()
 
 void CMFCApplicationDlg::buttonFunction(int ID)
 {
-	GetDlgItem(IDC_SAVE)->ShowWindow(SW_SHOW);
-
-	CString temp;
-	if (mode == 1)
+	if (chShow == false)
 	{
-		GetDlgItem(IDC_SOL)->SetWindowText(myWords.chinese[ID - 1] + myWords.ps[ID - 1]);
-		GetDlgItem(IDC_EX)->SetWindowText(myWords.ex[ID - 1]);
-		CString out_Num;
-		out_Num.Format(_T("Rank: %d"), myWords.number[ID - 1]);
-		GetDlgItem(IDC_NUM)->SetWindowText(out_Num);
+		// show
+	}
+	else
+	{
+		GetDlgItem(IDC_SAVE)->ShowWindow(SW_SHOW);
 
-		// Re-draw the color of word
-		int number = IDC_EDIT1 + ID - 1;
-		changeColor_ID = number;
-		for (int i = IDC_EDIT1; i < IDC_EDIT1 + 32; i++)
+		CString temp;
+		if (mode == 1)
 		{
-			GetDlgItem(i)->RedrawWindow();
-			GetDlgItem(i)->InvalidateRect(NULL);
+			GetDlgItem(IDC_SOL)->SetWindowText(myWords.chinese[ID - 1] + myWords.ps[ID - 1]);
+			GetDlgItem(IDC_EX)->SetWindowText(myWords.ex[ID - 1]);
+			CString out_Num;
+			out_Num.Format(_T("Rank: %d"), myWords.number[ID - 1]);
+			GetDlgItem(IDC_NUM)->SetWindowText(out_Num);
+
+			// Re-draw the color of word
+			int number = IDC_EDIT1 + ID - 1;
+			changeColor_ID = number;
+			for (int i = IDC_EDIT1; i < IDC_EDIT1 + 32; i++)
+			{
+				GetDlgItem(i)->RedrawWindow();
+				GetDlgItem(i)->InvalidateRect(NULL);
+			}
+
+			temp = myWords.word[ID - 1];
+			saveRank = myWords.number[ID - 1];
+		}
+		if (mode == 2)
+		{
+			GetDlgItem(IDC_SOL)->SetWindowText(allWords.chinese[(getDay[0] - 1) * 32 + ID - 1] + allWords.ps[(getDay[0] - 1) * 32 + ID - 1]);
+			CString out_Num;
+			out_Num.Format(_T("Rank: %d"), allWords.number_arrange[(getDay[0] - 1) * 32 + ID - 1]);
+			GetDlgItem(IDC_NUM)->SetWindowText(out_Num);
+
+			// Re-draw the color of word
+			int number = IDC_EDIT1 + ID - 1; // ID is my selecting word
+			changeColor_ID = number;
+			for (int i = IDC_EDIT1; i < IDC_EDIT1 + 32; i++)
+			{
+				GetDlgItem(i)->RedrawWindow();
+				GetDlgItem(i)->InvalidateRect(NULL);
+			}
+
+			temp = allWords.word[(getDay[0] - 1) * 32 + ID - 1];
+			saveRank = allWords.number_arrange[(getDay[0] - 1) * 32 + ID - 1];
 		}
 
-		temp = myWords.word[ID - 1];
-		saveRank = myWords.number[ID - 1];
+		//Convert CString to char*, and get the word we select
+		const TCHAR* unicode_string;
+		unicode_string = (LPCTSTR)temp;
+		int size = wcslen(unicode_string);
+		wcstombs(saveWord, unicode_string, size + 1);
+		int a = 1;
 	}
-	if (mode == 2)
-	{
-		GetDlgItem(IDC_SOL)->SetWindowText(allWords.chinese[(getDay[0] - 1) * 32 + ID - 1] + allWords.ps[(getDay[0] - 1) * 32 + ID - 1]);
-		CString out_Num;
-		out_Num.Format(_T("Rank: %d"), allWords.number_arrange[(getDay[0] - 1) * 32 + ID - 1]);
-		GetDlgItem(IDC_NUM)->SetWindowText(out_Num);
-
-		// Re-draw the color of word
-		int number = IDC_EDIT1 + ID - 1;
-		changeColor_ID = number;
-		for (int i = IDC_EDIT1; i < IDC_EDIT1 + 32; i++)
-		{
-			GetDlgItem(i)->RedrawWindow();
-			GetDlgItem(i)->InvalidateRect(NULL);
-		}
-
-		temp = allWords.word[(getDay[0] - 1) * 32 + ID - 1];
-		saveRank = allWords.number_arrange[(getDay[0] - 1) * 32 + ID - 1];
-	}
-
-	//Convert CString to char*, and get the word we select
-	const TCHAR* unicode_string;	
-	unicode_string = (LPCTSTR)temp;
-	int size = wcslen(unicode_string);
-	wcstombs(saveWord, unicode_string, size + 1);
-	int a = 1;
-
 }
 HBRUSH CMFCApplicationDlg::OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor)
 {
@@ -1375,17 +1393,20 @@ HBRUSH CMFCApplicationDlg::OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor)
 
 	if (pWnd->GetDlgCtrlID() == changeColor_ID)
 	{
-		pDC->SetTextColor(RGB(100, 0, 255));  //³]¸m¦rÅéÃC¦â
-		pDC->SetBkMode(TRANSPARENT); //³]¸m¦rÅé­I´º¬°³z©ú
-		// TODO: Return a different brush if the default is not desired
-		return (HBRUSH)::GetStockObject(WHITE_BRUSH);  // ³]¸m­I´º¦â
+		pDC->SetTextColor(RGB(0, 0, 0));  //è¨­ç½®å­—é«”é¡è‰²
+		//pDC->SetBkMode(TRANSPARENT); //è¨­ç½®å­—é«”èƒŒæ™¯ç‚ºé€æ˜
+
+		pDC->SetBkColor(RGB(255, 255, 100)); // è¨­ç½®èƒŒæ™¯è‰²
+		HBRUSH brush = CreateSolidBrush(RGB(255, 255, 100));
+		return brush;
 	}
 	else
 	{
-		pDC->SetTextColor(RGB(0, 0, 0));  //³]¸m¦rÅéÃC¦â
-		pDC->SetBkMode(TRANSPARENT); //³]¸m¦rÅé­I´º¬°³z©ú
-		// TODO: Return a different brush if the default is not desired
-		return (HBRUSH)::GetStockObject(WHITE_BRUSH);  // ³]¸m­I´º¦â
+		pDC->SetTextColor(RGB(0, 0, 0));  //è¨­ç½®å­—é«”é¡è‰²
+		//pDC->SetBkMode(TRANSPARENT); //è¨­ç½®å­—é«”èƒŒæ™¯ç‚ºé€æ˜
+		pDC->SetBkColor(RGB(240, 255, 240)); // è¨­ç½®èƒŒæ™¯è‰²
+		HBRUSH brush = CreateSolidBrush(RGB(240, 255, 240));
+		return brush;
 	}
 	//return hbr;
 }
@@ -1476,7 +1497,7 @@ void CMFCApplicationDlg::OnMenuExplain()
 {
 	ControlDisplay_DAY(SW_HIDE);
 	GetDlgItem(IDC_EDITBIG)->ShowWindow(SW_SHOW);
-	GetDlgItem(IDC_EDITBIG)->SetWindowText(_T("1. ¦¹³nÅé°Ñ¦Ò¦h¯q3000¦r®Ñ¥»¡A¨Ì·Ó¦h¯q¦Ò¸Õ¥X²{ªº³æ¦rÀW²v¤À¬°DAY1¨ìDAY30\r\n2. ³nÅé¥\¯à¡G\r\n  a. ³æ¦rÅã¥Ü: ¥ª¤W¨¤¥i¥H¿ï¾Ü¥HDAYÅã¥Ü©Î¥HA~ZÅã¥Ü\r\n  b. ÀH¾÷´úÅç: ¿ï¦h­ÓDAY«ö¤UÀH¾÷´úÅç«ö¶s¡A¥i¥H¶i¦æ­^Â½¤¤©Î¤¤Â½­^ªº½m²ß\r\n  c. Àx¦s³æ¦r: ¥i±N¤£¼ô³æ¦rÀx¦s¤U¨Ó¡A·|¥X²{¦bEnglishWords.txt¸Ì­±\r\n  d. ¼½©ñ¥\¯à: ®Ú¾Ú¿ï¾Ü¤£¦PªºDAY·|¼½©ñ³æ¦rªºmp3­^Å¥"));
+	GetDlgItem(IDC_EDITBIG)->SetWindowText(_T("1. æ­¤è»Ÿé«”åƒè€ƒå¤šç›Š3000å­—æ›¸æœ¬ï¼Œä¾ç…§å¤šç›Šè€ƒè©¦å‡ºç¾çš„å–®å­—é »ç‡åˆ†ç‚ºDAY1åˆ°DAY30\r\n2. è»Ÿé«”åŠŸèƒ½ï¼š\r\n  a. å–®å­—é¡¯ç¤º: å·¦ä¸Šè§’å¯ä»¥é¸æ“‡ä»¥DAYé¡¯ç¤ºæˆ–ä»¥A~Zé¡¯ç¤º\r\n  b. éš¨æ©Ÿæ¸¬é©—: é¸å¤šå€‹DAYæŒ‰ä¸‹éš¨æ©Ÿæ¸¬é©—æŒ‰éˆ•ï¼Œå¯ä»¥é€²è¡Œè‹±ç¿»ä¸­æˆ–ä¸­ç¿»è‹±çš„ç·´ç¿’\r\n  c. å„²å­˜å–®å­—: å¯å°‡ä¸ç†Ÿå–®å­—å„²å­˜ä¸‹ä¾†ï¼Œæœƒå‡ºç¾åœ¨EnglishWords.txtè£¡é¢\r\n  d. æ’­æ”¾åŠŸèƒ½: æ ¹æ“šé¸æ“‡ä¸åŒçš„DAYæœƒæ’­æ”¾å–®å­—çš„mp3è‹±è½"));
 }
 
 
@@ -1484,7 +1505,7 @@ void CMFCApplicationDlg::OnMenuSetting()
 {
 	ControlDisplay_DAY(SW_HIDE);
 	GetDlgItem(IDC_EDITBIG)->ShowWindow(SW_SHOW);
-	GetDlgItem(IDC_EDITBIG)->SetWindowText(_T("µL"));
+	GetDlgItem(IDC_EDITBIG)->SetWindowText(_T("ç„¡"));
 }
 
 void CMFCApplicationDlg::ControlDisplay_DAY(int show)
@@ -1680,6 +1701,21 @@ void CMFCApplicationDlg::OnMenuDay()
 	GetDlgItem(IDC_NUM)->SetWindowText(_T(""));
 	for (int i = 0; i < 32; i++)
 		GetDlgItem(IDC_EDIT1 + i)->SetWindowText(_T(""));
+
+	for (int i = IDC_BUTTON1; i < IDC_BUTTON1 + 30; i++)
+	{
+		GetDlgItem(i)->RedrawWindow();
+		GetDlgItem(i)->InvalidateRect(NULL);
+	}
+
+	// Re-draw the color of word
+	changeColor_ID = 0; // é‚„åŸ
+	for (int i = IDC_EDIT1; i < IDC_EDIT1 + 32; i++)
+	{
+		GetDlgItem(i)->RedrawWindow();
+		GetDlgItem(i)->InvalidateRect(NULL);
+	}
+	chShow = false;
 }
 
 
@@ -1700,7 +1736,21 @@ void CMFCApplicationDlg::OnMenuAll()
 	for (int i = 0; i < 32; i++)
 		GetDlgItem(IDC_EDIT1 + i)->SetWindowText(_T(""));
 
-	getAllWords(); // Âà´«¬°¬ö¿ı©Ò¦³³æ¦rªº°}¦C
+	for (int i = IDC_BUTTON1; i < IDC_BUTTON1 + 30; i++)
+	{
+		GetDlgItem(i)->RedrawWindow();
+		GetDlgItem(i)->InvalidateRect(NULL);
+	}
+
+	// Re-draw the color of word
+	changeColor_ID = 0; // é‚„åŸ
+	for (int i = IDC_EDIT1; i < IDC_EDIT1 + 32; i++)
+	{
+		GetDlgItem(i)->RedrawWindow();
+		GetDlgItem(i)->InvalidateRect(NULL);
+	}
+	chShow = false;
+	getAllWords(); // è½‰æ›ç‚ºç´€éŒ„æ‰€æœ‰å–®å­—çš„é™£åˆ—
 
 
 }
@@ -1712,7 +1762,7 @@ void CMFCApplicationDlg::OnBnClickedPron()
 	voice_Dlg = new voiceDlg(this);
 	voice_Dlg->mDay = getDay[0];
 	BOOL kk = voice_Dlg->Create(IDD_VOICE, NULL);
-	voice_Dlg->ShowWindow(SW_SHOWNORMAL);  // ª`·N: ¤@©w­n showWindow §_«h¨q¤£¥X¨Ó
+	voice_Dlg->ShowWindow(SW_SHOWNORMAL);  // æ³¨æ„: ä¸€å®šè¦ showWindow å¦å‰‡ç§€ä¸å‡ºä¾†
 
 	CString out_Num;
 	out_Num.Format(_T("DAY-%d"), getDay[0]);
@@ -1760,7 +1810,7 @@ void CMFCApplicationDlg::OnBnClickedSave()
 	// Create dialog
 	save_Dlg = new saveDlg(this);
 	BOOL kk = save_Dlg->Create(IDD_SAVEMSG, NULL);
-	save_Dlg->ShowWindow(SW_SHOWNORMAL);  // ª`·N: ¤@©w­n showWindow §_«h¨q¤£¥X¨Ó
+	save_Dlg->ShowWindow(SW_SHOWNORMAL);  // æ³¨æ„: ä¸€å®šè¦ showWindow å¦å‰‡ç§€ä¸å‡ºä¾†
 
 	CRect m_rect;
 	this->GetWindowRect(m_rect);
@@ -1772,13 +1822,13 @@ void CMFCApplicationDlg::OnBnClickedSave()
 
 void CMFCApplicationDlg::OnCancel()
 {
-	// TODO: ¦b¦¹¥[¤J¯S©wªºµ{¦¡½X©M (©Î) ©I¥s°ò©³Ãş§O
+	// TODO: åœ¨æ­¤åŠ å…¥ç‰¹å®šçš„ç¨‹å¼ç¢¼å’Œ (æˆ–) å‘¼å«åŸºåº•é¡åˆ¥
 	DestroyWindow();
 }
 
 void CMFCApplicationDlg::PostNcDestroy()
 {
-	// TODO: ¦b¦¹¥[¤J¯S©wªºµ{¦¡½X©M (©Î) ©I¥s°ò©³Ãş§O
+	// TODO: åœ¨æ­¤åŠ å…¥ç‰¹å®šçš„ç¨‹å¼ç¢¼å’Œ (æˆ–) å‘¼å«åŸºåº•é¡åˆ¥
 
 	CDialog::PostNcDestroy();
 
