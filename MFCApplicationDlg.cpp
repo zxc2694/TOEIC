@@ -431,6 +431,14 @@ void CMFCApplicationDlg::OnBnClickedWordshow() // 顯示全部單字按鈕
 		{
 			GetDlgItem(IDC_SOL)->SetWindowText(_T("顯示單字: 只能選擇一個字母\r\n隨機測驗: 可以選擇多個字母，並隨機抽考10個\r\n\r\n(請再案一次已選取的字母，可以取消......)"));
 		}
+
+		// Re-draw the color of word
+		changeColor_ID = 0; // 還原
+		for (int i = IDC_EDIT1; i < IDC_EDIT1 + 32; i++)
+		{
+			GetDlgItem(i)->RedrawWindow();
+			GetDlgItem(i)->InvalidateRect(NULL);
+		}
 	}
 }
 
@@ -1497,7 +1505,7 @@ void CMFCApplicationDlg::OnMenuExplain()
 {
 	ControlDisplay_DAY(SW_HIDE);
 	GetDlgItem(IDC_EDITBIG)->ShowWindow(SW_SHOW);
-	GetDlgItem(IDC_EDITBIG)->SetWindowText(_T("1. 此軟體參考多益3000字書本，依照多益考試出現的單字頻率分為DAY1到DAY30\r\n2. 軟體功能：\r\n  a. 單字顯示: 左上角可以選擇以DAY顯示或以A~Z顯示\r\n  b. 隨機測驗: 選多個DAY按下隨機測驗按鈕，可以進行英翻中或中翻英的練習\r\n  c. 儲存單字: 可將不熟單字儲存下來，會出現在EnglishWords.txt裡面\r\n  d. 播放功能: 根據選擇不同的DAY會播放單字的mp3英聽"));
+	GetDlgItem(IDC_EDITBIG)->SetWindowText(_T("1. 此軟體參考多益3000字書本，依照多益考試出現的單字頻率分為DAY1到DAY30。\r\n\r\n2. 軟體功能：\r\n\r\n  a. 單字顯示: 左上角可以選擇以DAY顯示或以A~Z顯示。\r\n\r\n  b. 隨機測驗: 選多個DAY按下隨機測驗按鈕，可以進行英翻中或中翻英的練習。\r\n\r\n  c. 儲存單字: 可將不熟單字儲存下來，會出現在EnglishWords.txt裡面。\r\n\r\n  d. 播放功能: 根據選擇不同的DAY會播放單字的mp3英聽。"));
 }
 
 
