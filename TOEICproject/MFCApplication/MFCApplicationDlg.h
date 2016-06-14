@@ -133,4 +133,5 @@ public:
 	afx_msg void OnMenuSetting();
 	afx_msg void OnBnClickedPron();
 	afx_msg void OnBnClickedSave();
+	afx_msg void OnStnClickedStaticFig();
 };

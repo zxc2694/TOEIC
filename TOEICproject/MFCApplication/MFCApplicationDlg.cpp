@@ -145,6 +145,7 @@ BEGIN_MESSAGE_MAP(CMFCApplicationDlg, CDialogEx)
 	ON_COMMAND(ID_MENU_SETTING, &CMFCApplicationDlg::OnMenuSetting)
 	ON_BN_CLICKED(IDC_PRON, &CMFCApplicationDlg::OnBnClickedPron)
 	ON_BN_CLICKED(IDC_SAVE, &CMFCApplicationDlg::OnBnClickedSave)
+	ON_STN_CLICKED(IDC_STATIC_FIG, &CMFCApplicationDlg::OnStnClickedStaticFig)
 END_MESSAGE_MAP()
 
 
@@ -171,6 +172,20 @@ BOOL CMFCApplicationDlg::OnInitDialog()
 		push[i] = 2;
 	
 	srand((int)time(NULL));
+
+	SetWindowPos(GetDlgItem(IDD_ABOUTBOX), 0, 0, 590, 480, SWP_NOMOVE); //調整大小
+
+	//获取对话框上图片控件的句柄  
+	CStatic* pWnd = (CStatic*)GetDlgItem(IDC_STATIC_FIG);
+	//设置静态控件窗口风格为位图居中显示  
+	pWnd->ModifyStyle(0xf, SS_BITMAP | SS_CENTERIMAGE);
+	//显示图片  
+	pWnd->SetBitmap((HBITMAP)::LoadImage(NULL,
+		_T("bitmap1.bmp"),  //资源号或本地文件名  
+		IMAGE_BITMAP,       //装载位图 IMAGE_CURSOR光标 IMAGE_ICON图标  
+		0,                  //宽度 0为默认大小  
+		0,                  //高度 像素为单位  
+		LR_CREATEDIBSECTION | LR_DEFAULTSIZE | LR_LOADFROMFILE));
 
 	// IDM_ABOUTBOX 必須在系統命令範圍之中。
 	ASSERT((IDM_ABOUTBOX & 0xFFF0) == IDM_ABOUTBOX);
@@ -243,11 +258,10 @@ void CMFCApplicationDlg::OnPaint()
 		CPaintDC dc(this);
 		CRect rect;
 		GetClientRect(rect);
-		dc.FillSolidRect(rect, RGB(200, 240, 255));   //设置为背景色  
+		dc.FillSolidRect(rect, RGB(186, 238, 254));   //设置为背景色  
 		//dc.FillSolidRect(rect, RGB(255, 255, 255));   //设置为背景色  
 
 		CDialogEx::OnPaint();
-
 		 
 	}
 }
@@ -1503,6 +1517,8 @@ void CMFCApplicationDlg::OnMenuEnd()
 
 void CMFCApplicationDlg::OnMenuExplain()
 {
+	SetWindowPos(GetDlgItem(IDD_ABOUTBOX), 0, 0, 680, 300, SWP_NOMOVE);
+	GetDlgItem(IDC_STATIC_FIG)->ShowWindow(SW_HIDE);
 	ControlDisplay_DAY(SW_HIDE);
 	GetDlgItem(IDC_EDITBIG)->ShowWindow(SW_SHOW);
 	GetDlgItem(IDC_EDITBIG)->SetWindowText(_T("1. 此軟體參考多益3000字書本，依照多益考試出現的單字頻率分為DAY1到DAY30。\r\n\r\n2. 軟體功能：\r\n\r\n  a. 單字顯示: 左上角可以選擇以DAY顯示或以A~Z顯示。\r\n\r\n  b. 隨機測驗: 選多個DAY按下隨機測驗按鈕，可以進行英翻中或中翻英的練習。\r\n\r\n  c. 儲存單字: 可將不熟單字儲存下來，會出現在EnglishWords.txt裡面。\r\n\r\n  d. 播放功能: 根據選擇不同的DAY會播放單字的mp3英聽。"));
@@ -1511,6 +1527,8 @@ void CMFCApplicationDlg::OnMenuExplain()
 
 void CMFCApplicationDlg::OnMenuSetting()
 {
+	SetWindowPos(GetDlgItem(IDD_ABOUTBOX), 0, 0, 680, 300, SWP_NOMOVE);
+	GetDlgItem(IDC_STATIC_FIG)->ShowWindow(SW_HIDE);
 	ControlDisplay_DAY(SW_HIDE);
 	GetDlgItem(IDC_EDITBIG)->ShowWindow(SW_SHOW);
 	GetDlgItem(IDC_EDITBIG)->SetWindowText(_T("無"));
@@ -1723,6 +1741,8 @@ void CMFCApplicationDlg::OnMenuDay()
 		GetDlgItem(i)->RedrawWindow();
 		GetDlgItem(i)->InvalidateRect(NULL);
 	}
+	SetWindowPos(GetDlgItem(IDD_ABOUTBOX), 0, 0, 990, 520, SWP_NOMOVE);
+	GetDlgItem(IDC_STATIC_FIG)->ShowWindow(SW_HIDE);
 	chShow = false;
 }
 
@@ -1757,6 +1777,9 @@ void CMFCApplicationDlg::OnMenuAll()
 		GetDlgItem(i)->RedrawWindow();
 		GetDlgItem(i)->InvalidateRect(NULL);
 	}
+
+	SetWindowPos(GetDlgItem(IDD_ABOUTBOX), 0, 0, 990, 520, SWP_NOMOVE);
+	GetDlgItem(IDC_STATIC_FIG)->ShowWindow(SW_HIDE);
 	chShow = false;
 	getAllWords(); // 轉換為紀錄所有單字的陣列
 
@@ -1842,4 +1865,9 @@ void CMFCApplicationDlg::PostNcDestroy()
 
 	//if (menuEND == false)
 		//delete this;
+}
+
+void CMFCApplicationDlg::OnStnClickedStaticFig()
+{
+	// TODO: Add your control notification handler code here
 }
