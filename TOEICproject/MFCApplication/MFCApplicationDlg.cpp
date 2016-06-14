@@ -1788,7 +1788,7 @@ void CMFCApplicationDlg::OnBnClickedPron()
 void CMFCApplicationDlg::OnBnClickedSave()
 {
 	char line[20000],temp[20000];
-	char filename[100] = "..\\..\\savedWord\\EnglishWords.txt"; //========== My English Words List ==========
+	char filename[100] = "..\\..\\Saved_words.txt"; //========== My English Words List ==========
 	fstream fr;
 	int j = 0;
 	fr.open(filename, ios::in);
