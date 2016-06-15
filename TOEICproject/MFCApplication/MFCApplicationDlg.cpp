@@ -181,7 +181,7 @@ BOOL CMFCApplicationDlg::OnInitDialog()
 	pWnd->ModifyStyle(0xf, SS_BITMAP | SS_CENTERIMAGE);
 	//显示图片  
 	pWnd->SetBitmap((HBITMAP)::LoadImage(NULL,
-		_T("bitmap1.bmp"),  //资源号或本地文件名  
+		_T("MP3\\bitmap1.bmp"),  //资源号或本地文件名  
 		IMAGE_BITMAP,       //装载位图 IMAGE_CURSOR光标 IMAGE_ICON图标  
 		0,                  //宽度 0为默认大小  
 		0,                  //高度 像素为单位  
@@ -1517,21 +1517,21 @@ void CMFCApplicationDlg::OnMenuEnd()
 
 void CMFCApplicationDlg::OnMenuExplain()
 {
-	SetWindowPos(GetDlgItem(IDD_ABOUTBOX), 0, 0, 680, 300, SWP_NOMOVE);
+	SetWindowPos(GetDlgItem(IDD_ABOUTBOX), 0, 0, 680, 410, SWP_NOMOVE);
 	GetDlgItem(IDC_STATIC_FIG)->ShowWindow(SW_HIDE);
 	ControlDisplay_DAY(SW_HIDE);
 	GetDlgItem(IDC_EDITBIG)->ShowWindow(SW_SHOW);
-	GetDlgItem(IDC_EDITBIG)->SetWindowText(_T("1. 此軟體參考多益3000字書本，依照多益考試出現的單字頻率分為DAY1到DAY30。\r\n\r\n2. 軟體功能：\r\n\r\n  a. 單字顯示: 左上角可以選擇以DAY顯示或以A~Z顯示。\r\n\r\n  b. 隨機測驗: 選多個DAY按下隨機測驗按鈕，可以進行英翻中或中翻英的練習。\r\n\r\n  c. 儲存單字: 可將不熟單字儲存下來，會出現在EnglishWords.txt裡面。\r\n\r\n  d. 播放功能: 根據選擇不同的DAY會播放單字的mp3英聽。"));
+	GetDlgItem(IDC_EDITBIG)->SetWindowText(_T("1. 此軟體參考多益3000字書本，依照多益考試出現的單字頻率分為DAY1到DAY30。\r\n\r\n2. 軟體功能：\r\n\r\n  a. 單字顯示: 左上角可以選擇以DAY顯示或以A~Z顯示。\r\n\r\n  b. 隨機測驗: 選多個DAY按下隨機測驗按鈕，可以進行英翻中或中翻英的練習。\r\n\r\n  c. 儲存單字: 可將不熟單字儲存下來，會出現在EnglishWords.txt裡面。\r\n\r\n  d. 播放功能: 根據選擇不同的DAY會播放單字的mp3英聽。\r\n\r\n3. 版權聲明：\r\n\r\n  [純自學使用，***不販售***，避免違反著作權問題]\r\n\r\n  a. 書本作者:李聖龍、崔伊鈴 著\r\n\r\n  b. 軟體製作:劉政德"));
 }
 
 
 void CMFCApplicationDlg::OnMenuSetting()
 {
-	SetWindowPos(GetDlgItem(IDD_ABOUTBOX), 0, 0, 680, 300, SWP_NOMOVE);
+	SetWindowPos(GetDlgItem(IDD_ABOUTBOX), 0, 0, 680, 410, SWP_NOMOVE);
 	GetDlgItem(IDC_STATIC_FIG)->ShowWindow(SW_HIDE);
 	ControlDisplay_DAY(SW_HIDE);
 	GetDlgItem(IDC_EDITBIG)->ShowWindow(SW_SHOW);
-	GetDlgItem(IDC_EDITBIG)->SetWindowText(_T("無"));
+	GetDlgItem(IDC_EDITBIG)->SetWindowText(_T("1. MP3資料夾、TOEIC.exe、Saved_words.txt需要放在同一個資料夾底下。\r\n\r\n2. 若想將已儲存的單字刪除，直接在Saved_words記事本裡面刪掉該單字在存檔即可。"));
 }
 
 void CMFCApplicationDlg::ControlDisplay_DAY(int show)
@@ -1811,7 +1811,7 @@ void CMFCApplicationDlg::OnBnClickedPron()
 void CMFCApplicationDlg::OnBnClickedSave()
 {
 	char line[20000],temp[20000];
-	char filename[100] = "..\\..\\Saved_words.txt"; //========== My English Words List ==========
+	char filename[100] = "Saved_words.txt"; //========== My English Words List ==========
 	fstream fr;
 	int j = 0;
 	fr.open(filename, ios::in);
