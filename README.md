@@ -11,7 +11,7 @@
 
 ## Development
 
-* The tool is made by MFC of Visual Studio based on C/C++ programming.
+* The tool is made by MFC of Visual Studio 2013 based on C/C++ programming.
 
 * Functions:
 
