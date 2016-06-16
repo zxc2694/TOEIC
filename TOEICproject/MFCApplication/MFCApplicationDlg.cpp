@@ -1,4 +1,4 @@
-﻿
+
 // MFCApplicationDlg.cpp : 實作檔
 //
 
@@ -173,7 +173,7 @@ BOOL CMFCApplicationDlg::OnInitDialog()
 	
 	srand((int)time(NULL));
 
-	SetWindowPos(GetDlgItem(IDD_ABOUTBOX), 0, 0, 590, 480, SWP_NOMOVE); //調整大小
+	SetWindowPos(GetDlgItem(IDD_ABOUTBOX), 0, 0, 730, 550, SWP_NOMOVE); //590 480
 
 	//获取对话框上图片控件的句柄  
 	CStatic* pWnd = (CStatic*)GetDlgItem(IDC_STATIC_FIG);
@@ -1517,7 +1517,7 @@ void CMFCApplicationDlg::OnMenuEnd()
 
 void CMFCApplicationDlg::OnMenuExplain()
 {
-	SetWindowPos(GetDlgItem(IDD_ABOUTBOX), 0, 0, 680, 410, SWP_NOMOVE);
+	SetWindowPos(GetDlgItem(IDD_ABOUTBOX), 0, 0, 850, 510, SWP_NOMOVE);// 480  410
 	GetDlgItem(IDC_STATIC_FIG)->ShowWindow(SW_HIDE);
 	ControlDisplay_DAY(SW_HIDE);
 	GetDlgItem(IDC_EDITBIG)->ShowWindow(SW_SHOW);
@@ -1527,7 +1527,7 @@ void CMFCApplicationDlg::OnMenuExplain()
 
 void CMFCApplicationDlg::OnMenuSetting()
 {
-	SetWindowPos(GetDlgItem(IDD_ABOUTBOX), 0, 0, 680, 410, SWP_NOMOVE);
+	SetWindowPos(GetDlgItem(IDD_ABOUTBOX), 0, 0, 850, 510, SWP_NOMOVE);
 	GetDlgItem(IDC_STATIC_FIG)->ShowWindow(SW_HIDE);
 	ControlDisplay_DAY(SW_HIDE);
 	GetDlgItem(IDC_EDITBIG)->ShowWindow(SW_SHOW);
@@ -1741,7 +1741,7 @@ void CMFCApplicationDlg::OnMenuDay()
 		GetDlgItem(i)->RedrawWindow();
 		GetDlgItem(i)->InvalidateRect(NULL);
 	}
-	SetWindowPos(GetDlgItem(IDD_ABOUTBOX), 0, 0, 990, 520, SWP_NOMOVE);
+	SetWindowPos(GetDlgItem(IDD_ABOUTBOX), 0, 0, 1240, 650, SWP_NOMOVE); //990 520
 	GetDlgItem(IDC_STATIC_FIG)->ShowWindow(SW_HIDE);
 	chShow = false;
 }
@@ -1778,7 +1778,7 @@ void CMFCApplicationDlg::OnMenuAll()
 		GetDlgItem(i)->InvalidateRect(NULL);
 	}
 
-	SetWindowPos(GetDlgItem(IDD_ABOUTBOX), 0, 0, 990, 520, SWP_NOMOVE);
+	SetWindowPos(GetDlgItem(IDD_ABOUTBOX), 0, 0, 1240, 650, SWP_NOMOVE); //990 520
 	GetDlgItem(IDC_STATIC_FIG)->ShowWindow(SW_HIDE);
 	chShow = false;
 	getAllWords(); // 轉換為紀錄所有單字的陣列
